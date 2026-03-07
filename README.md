@@ -10,7 +10,8 @@ Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-A
 We propose a novel medical VLP framework combining **MAGEN** (Multi-Agent data GENeration) and **O-MAKE** (Ontology-based Multi-Aspect Knowledge-Enhanced pretraining). MAGEN synthesizes knowledge-enriched image descriptions via a foundation model-assisted captioning and retrieval-based verification pipeline. O-MAKE decomposes long clinical texts into distinct knowledge aspects, enabling fine-grained alignment at both global and patch levels with ontology-guided modeling. Validated on dermatology, our approach achieves state-of-the-art zero-shot performance on disease classification and cross-modal retrieval across eight datasets.
 
 <p align="center">
-    <img src="assets/Overview" width="100%"> <br>
+    <img src="assets/Overview.png
+    " width="100%"> <br>
 </p>
 
 **Our code and the augmented dataset Derm1M-AgentAug comprising over 400k skin-image-text pairs will be released upon acceptance.**
