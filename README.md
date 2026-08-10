@@ -95,26 +95,15 @@ tar -xzf MAGEN-O-MAKE_downstream.tar.gz    # creates data/downstream/
 
 ```
 data
-├── pretrain/                 Derm1M-AgentAug (released on Hugging Face upon acceptance)
+├── pretrain/                 Derm1M-AgentAug (pretrained dataset)
 └── downstream/
     ├── Daffodil/   ├── ISIC2018/   ├── SD-128/    ├── SNU/
     ├── F17K/       ├── PAD/        ├── SD-198/    └── skin_cap/
 ```
 
-Every dataset directory holds `images/` plus its metadata CSVs. All image paths are **relative to the
-repository root** (`data/downstream/<dataset>/images/<file>`), so run every command below from the
-repository root. The bundle contains only the 51,431 images the metadata actually references.
-
-The `meta/downstream/*-LP.csv` files shipped in this repository add the train/val/test splits used by
-linear probing and fine-tuning.
-
-To rebuild the bundle from a differently organised copy of the datasets:
-
-```bash
-python script/build_downstream_bundle.py \
-    --source /path/to/old/data --out /path/to/staging \
-    --tar /path/to/MAGEN-O-MAKE_downstream.tar.gz
-```
+Each dataset directory holds `images/` plus its metadata CSVs. Every image path is relative to the
+repository root, so run all commands from there. Linear probing and fine-tuning additionally use the
+split files in `meta/downstream/`.
 
 ## Zero-shot disease classification
 
@@ -152,8 +141,6 @@ ensemble (`OPENAI_SKIN_TEMPLATES`):
 The last two rows are long-tail splits covering rare conditions.
 
 ## Cross-modal retrieval
-
-Ranks every SkinCAP image against all 3,989 captions and vice versa:
 
 ```bash
 bash script/retrieval_eval.sh
