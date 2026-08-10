@@ -111,17 +111,26 @@ split files in `meta/downstream/`.
 bash script/zeroshot_eval.sh
 ```
 
-`src/test.py` takes one `--eval-<dataset>` flag per benchmark, so you can evaluate any subset:
+which runs all seven benchmarks:
 
 ```bash
 python src/test.py \
-    --model ViT-B-16 --resume checkpoints/O-MAKE_epoch_15.pt \
-    --batch-size 512 --csv-img-key filename --csv-label-key label \
-    --eval-pad data/downstream/PAD/MAKE_PAD.csv \
-    --eval-sd-tails data/downstream/SD-198/SD-tails-70.csv
+    --model 'ViT-B-16' \
+    --resume checkpoints/O-MAKE_epoch_15.pt \
+    --batch-size 512 \
+    --workers 8 \
+    --csv-img-key filename \
+    --csv-label-key label \
+    --eval-pad       data/downstream/PAD/MAKE_PAD.csv \
+    --eval-f17k      data/downstream/F17K/MAKE_F17K.csv \
+    --eval-snu       data/downstream/SNU/MAKE_SNU.csv \
+    --eval-sd128     data/downstream/SD-128/MAKE_SD-128.csv \
+    --eval-daffodil  data/downstream/Daffodil/MAKE_Daffodil.csv \
+    --eval-sd-tails  data/downstream/SD-198/SD-tails-70.csv \
+    --eval-snu-tails data/downstream/SNU/MAKE_SNU_tails.csv
 ```
 
-Run `python src/test.py --help` for the full list of benchmarks.
+Drop any `--eval-<dataset>` flag to skip that benchmark.
 
 ### Results
 
