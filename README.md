@@ -85,8 +85,8 @@ hf download Xieji-Li/MAGEN-O-MAKE O-MAKE_epoch_15.pt --local-dir checkpoints
 
 ## Data preparation
 
-Download the downstream benchmark bundle from
-[Google Drive](TODO: paste the share link after uploading MAGEN-O-MAKE_downstream.tar.gz) and unpack
+Download `MAGEN-O-MAKE_downstream.tar.gz` (7.0 GB) from
+[Google Drive](https://drive.google.com/drive/folders/1OnLA1gBFg0To7TplSVEE7FzO6vmmLvQ4) and unpack
 it at the repository root:
 
 ```bash
