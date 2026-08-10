@@ -16,28 +16,17 @@ We propose a novel medical VLP framework combining **MAGEN** (Multi-Agent data G
     <img src="assets/Overview.png" width="100%"> <br>
 </p>
 
-## Updates
-
-- [x] Released the O-MAKE checkpoint and the zero-shot, linear-probing, and fine-tuning pipelines.
-- [x] Added cross-modal retrieval evaluation and repackaged the downstream benchmark bundle.
-- [ ] The augmented dataset **Derm1M-AgentAug** (400K+ skin image-text pairs) will be released on Hugging Face upon acceptance.
-
 ## Repository layout
 
 ```
 ├── src/                        O-MAKE pretraining + evaluation
-│   ├── main.py                   pretraining entry point
-│   ├── test.py                   zero-shot disease classification
-│   ├── retrieval.py              cross-modal retrieval
-│   ├── open_clip/                model definitions (vendored open_clip fork)
-│   └── open_clip_train/          losses, data, ontology sampler, eval
 ├── linear_probe/               frozen-encoder linear probing
 ├── finetune/                   end-to-end fine-tuning
 ├── meta/downstream/            train/val/test splits for probing & fine-tuning
 ├── script/                     one command per experiment
 └── data/                       images (downloaded separately)
-    ├── pretrain/                 Derm1M-AgentAug
-    └── downstream/               benchmark datasets
+    ├── pretrain/               Derm1M-AgentAug
+    └── downstream/             zero-shot benchmark datasets
 ```
 
 ## Environment
