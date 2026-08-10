@@ -134,20 +134,23 @@ Drop any `--eval-<dataset>` flag to skip that benchmark.
 
 ### Results
 
-Produced by `bash script/zeroshot_eval.sh` with the released checkpoint, using the 8-template prompt
-ensemble (`OPENAI_SKIN_TEMPLATES`):
+Top-1 accuracy against open-source dermatology and general-domain VLMs, using the 8-template prompt
+ensemble (`OPENAI_SKIN_TEMPLATES`). The last two columns are long-tail splits covering rare
+conditions the model was never given a label for.
 
-| Benchmark | Classes | Metric(ACC) | Score |
-|---|---|---|---|
-| PAD-UFES-20 | 6 | Top-1 | 0.6675 |
-| Fitzpatrick17K | 113 | Top-1 / Top-5 | 0.3716 / 0.6620 |
-| SNU | 134 | Top-1 / Top-5 | 0.3898 / 0.7235 |
-| SD-128 | 128 | Top-1 / Top-5 | 0.4595 / 0.7711 |
-| Daffodil | 5 | Top-1 | 0.8321 |
-| SD-tails | 70 | Top-1 / Top-5 | 0.5565 / 0.8301 |
-| SNU-tails | 85 | Top-1 / Top-5 | 0.4573 / 0.7882 |
+| Model | PAD | F17K | SD-128 | SNU-134 | Daffodil | **Avg.** | SD-Tails | SNU-Tails | **Avg.** |
+|---|---|---|---|---|---|---|---|---|---|
+| *Classes* | *6* | *113* | *128* | *134* | *5* | | *70* | *85* | |
+| CLIP-OPENAI | 0.433 | 0.063 | 0.073 | 0.073 | 0.454 | 0.219 | 0.148 | 0.118 | 0.133 |
+| BMC-CLIP | 0.526 | 0.107 | 0.137 | 0.140 | 0.682 | 0.318 | 0.205 | 0.175 | 0.190 |
+| BioMedCLIP | 0.430 | 0.089 | 0.132 | 0.097 | 0.589 | 0.267 | 0.192 | 0.136 | 0.164 |
+| MONET | 0.474 | 0.150 | 0.217 | 0.150 | 0.758 | 0.350 | 0.311 | 0.179 | 0.245 |
+| DermLIP-PanDerm | 0.615 | 0.319 | 0.403 | 0.322 | 0.799 | 0.492 | 0.513 | 0.419 | 0.466 |
+| DermLIP-ViTB16 | 0.627 | 0.229 | 0.287 | 0.253 | 0.733 | 0.426 | 0.424 | 0.312 | 0.368 |
+| **O-MAKE (ours)** | **0.667** | **0.371** | **0.460** | **0.390** | **0.832** | **0.544** | **0.558** | **0.457** | **0.508** |
 
-The last two rows are long-tail splits covering rare conditions.
+See the paper for the full comparison, which also covers models re-pretrained on the same corpus
+(SigLIP, CoCa, CLIP, KEP) and the MICCAI'25 MAKE baseline.
 
 ## Cross-modal retrieval
 
