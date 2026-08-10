@@ -134,9 +134,9 @@ Drop any `--eval-<dataset>` flag to skip that benchmark.
 
 ### Results
 
-Top-1 accuracy against open-source dermatology and general-domain VLMs, using the 8-template prompt
-ensemble (`OPENAI_SKIN_TEMPLATES`). The last two columns are long-tail splits covering rare
-conditions the model was never given a label for.
+Top-1 accuracy against open-source dermatology and general-domain VLMs, as reported in the paper,
+using the 8-template prompt ensemble (`OPENAI_SKIN_TEMPLATES`). The last two columns are long-tail
+splits covering rare conditions the model was never given a label for.
 
 | Model | PAD | F17K | SD-128 | SNU-134 | Daffodil | **Avg.** | SD-Tails | SNU-Tails | **Avg.** |
 |---|---|---|---|---|---|---|---|---|---|
