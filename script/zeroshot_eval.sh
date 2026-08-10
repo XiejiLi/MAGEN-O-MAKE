@@ -20,6 +20,5 @@ CUDA_VISIBLE_DEVICES=${GPU} python src/test.py \
     --eval-snu       data/SNU/MAKE_SNU.csv \
     --eval-sd128     data/SD-128/MAKE_SD-128.csv \
     --eval-daffodil  data/Daffodil/MAKE_Daffodil.csv \
-    --eval-ham       data/HAM-official/meta.csv \
     --eval-sd-tails  data/SD-198/SD-tails-70.csv \
     --eval-snu-tails data/SNU/MAKE_SNU_tails.csv

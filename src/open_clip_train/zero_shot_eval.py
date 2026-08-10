@@ -20,7 +20,6 @@ from tqdm import tqdm
 from open_clip import get_input_dtype, get_tokenizer, build_zero_shot_classifier, OPENAI_SKIN_TEMPLATES
 from open_clip import (
     PAD_CLASSNAMES,
-    HAM_CLASSNAMES,
     F17K_DISEASE_113_CLASSES,
     SNU_134_CLASSNAMES,
     SD_128_CLASSNAMES,
@@ -30,8 +29,6 @@ from open_clip import (
     SD_128_tails_50_CLASSNAMES,
     SD_tails_CLASSNAMES,
     SNU_tails_CLASSNAMES,
-    MIDAS_CLASSNAMES,
-    MIDAS_BINARY_CLASSNAMES,
 )
 from open_clip import (
     PAD_CLASSNAMES_ONTOLOGY_AUG,
@@ -144,9 +141,6 @@ EVAL_TASKS = (
     EvalTask('daffodil', 'zeroshot_daffodil_5', DAFFODIL_5_CLASSNAMES, 'acc',
              ('zeroshot-Daffodil-5-top1-acc', 'zeroshot-Daffodil-5-top5-acc'),
              DAFFODIL_5_CLASSNAMES_ONTOLOGY_AUG, 'Daffodil, 5 classes'),
-    EvalTask('ham', 'zeroshot_ham_7', HAM_CLASSNAMES, 'acc3',
-             ('zeroshot-HAM-top1-acc', 'zeroshot-HAM-top3-acc'),
-             None, 'HAM10000, 7 classes'),
     EvalTask('sd128-tail10', 'zeroshot_sd128_tail10', SD_128_tails_10_CLASSNAMES, 'acc',
              ('zeroshot-SD-128(10% tail)-top1-acc', 'zeroshot-SD-128(10% tail)-top5-acc'),
              None, 'SD-128 rarest 10 percent of classes (26)'),
@@ -162,12 +156,6 @@ EVAL_TASKS = (
     EvalTask('snu-tails', 'zeroshot_snu_tails', SNU_tails_CLASSNAMES, 'acc',
              ('zeroshot-SNU-tails-top1-acc', 'zeroshot-SNU-tails-top5-acc'),
              None, 'SNU classes with <15 samples (85)'),
-    EvalTask('midas', 'zeroshot_midas', MIDAS_CLASSNAMES, 'f1+acc',
-             ('zeroshot-MIDAS-acc', 'zeroshot-MIDAS-wf1'),
-             None, 'MIDAS fine-grained, 10 classes'),
-    EvalTask('midas-binary', 'zeroshot_midas_binary', MIDAS_BINARY_CLASSNAMES, 'auroc+acc',
-             ('zeroshot-MIDAS-binary-auroc', 'zeroshot-MIDAS-binary-acc'),
-             None, 'MIDAS benign vs. malignant'),
 )
 
 EVAL_TASKS_BY_NAME = {t.name: t for t in EVAL_TASKS}

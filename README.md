@@ -96,8 +96,8 @@ unzip, and place the contents in `data/`:
 
 ```
 data
-├── Daffodil/       ├── HAM-official/   ├── PAD/       ├── SD-198/
-├── F17K/           ├── ISIC2018/       ├── SD-128/    └── SNU/
+├── Daffodil/   ├── ISIC2018/   ├── SD-128/   └── SNU/
+├── F17K/       ├── PAD/        ├── SD-198/
 ```
 
 Each dataset ships a metadata CSV whose `filename` column is a path relative to the repository root,
@@ -134,7 +134,6 @@ ensemble (`OPENAI_SKIN_TEMPLATES`):
 | SNU | 134 | Top-1 / Top-5 | 0.3898 / 0.7235 |
 | SD-128 | 128 | Top-1 / Top-5 | 0.4595 / 0.7711 |
 | Daffodil | 5 | Top-1 | 0.8321 |
-| HAM10000 | 7 | Top-1 / Top-3 | 0.4405 / 0.9434 |
 | SD-tails (SD-198 \ SD-128) | 70 | Top-1 / Top-5 | 0.5565 / 0.8301 |
 | SNU-tails (<15 samples/class) | 85 | Top-1 / Top-5 | 0.4573 / 0.7882 |
 
