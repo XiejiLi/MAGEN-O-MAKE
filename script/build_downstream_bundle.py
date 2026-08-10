@@ -46,6 +46,10 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--source', required=True, help='existing data/ directory to read from')
     ap.add_argument('--out', required=True, help='staging directory to build into')
+    ap.add_argument('--meta', default=os.path.join(os.path.dirname(os.path.dirname(
+                        os.path.abspath(__file__))), 'meta', 'downstream'),
+                    help='linear-probe / fine-tuning split CSVs to ship alongside the images '
+                         '(default: this repository\'s meta/downstream)')
     ap.add_argument('--tar', default=None, help='also write a .tar.gz archive here')
     ap.add_argument('--dry-run', action='store_true', help='report sizes without copying')
     args = ap.parse_args()
@@ -96,11 +100,24 @@ def main():
     if missing:
         print(f'MISSING {len(missing)} images, e.g. {missing[:3]}')
 
+    # Ship the probing / fine-tuning splits with the images so the archive is
+    # self-contained. The repository copy stays authoritative; this is a copy of it.
+    meta_out = os.path.join(args.out, 'meta', 'downstream')
+    if not os.path.isdir(args.meta):
+        sys.exit(f'split directory not found: {args.meta}')
+    splits = sorted(f for f in os.listdir(args.meta) if f.endswith('.csv'))
+    if not args.dry_run:
+        os.makedirs(meta_out, exist_ok=True)
+        for name in splits:
+            shutil.copy2(os.path.join(args.meta, name), os.path.join(meta_out, name))
+    print(f'meta/downstream: {len(splits)} split CSVs from {args.meta}')
+
     if args.tar and not args.dry_run:
         os.makedirs(os.path.dirname(os.path.abspath(args.tar)), exist_ok=True)
         print(f'\nwriting {args.tar} ...')
         with tarfile.open(args.tar, 'w:gz') as tf:
             tf.add(os.path.join(args.out, 'data'), arcname='data')
+            tf.add(meta_out, arcname='meta/downstream')
         print(f'archive: {os.path.getsize(args.tar) / 1e9:.2f} GB')
 
 

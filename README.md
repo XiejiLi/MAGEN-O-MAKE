@@ -90,7 +90,7 @@ Download the downstream benchmark bundle from
 it at the repository root:
 
 ```bash
-tar -xzf MAGEN-O-MAKE_downstream.tar.gz    # creates data/downstream/
+tar -xzf MAGEN-O-MAKE_downstream.tar.gz    # creates data/downstream/ and meta/downstream/
 ```
 
 ```
@@ -101,9 +101,9 @@ data
     ├── F17K/       ├── PAD/        ├── SD-198/    └── skin_cap/
 ```
 
-Each dataset directory holds `images/` plus its metadata CSVs. Every image path is relative to the
-repository root, so run all commands from there. Linear probing and fine-tuning additionally use the
-split files in `meta/downstream/`.
+Each dataset directory holds `images/` plus its metadata CSVs, and `meta/downstream/` carries the
+train/val/test splits used by linear probing and fine-tuning. Every image path is relative to the
+repository root, so run all commands from there.
 
 ## Zero-shot disease classification
 
@@ -154,14 +154,12 @@ See the paper for the full comparison, which also covers models re-pretrained on
 
 ## Cross-modal retrieval
 
+Ranks every SkinCAP image against all captions and vice versa, reporting Recall@{10,50,100} and
+mean/median rank in both directions:
+
 ```bash
 bash script/retrieval_eval.sh
 ```
-
-| Direction | R@10 | R@50 | R@100 | Median rank |
-|---|---|---|---|---|
-| image → text | 0.2464 | 0.4954 | 0.6074 | 52 |
-| text → image | 0.2429 | 0.5069 | 0.6174 | 48 |
 
 ## Linear probing
 
