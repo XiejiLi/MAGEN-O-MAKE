@@ -7,10 +7,10 @@ Example
         --resume checkpoints/O-MAKE_epoch_15.pt \
         --batch-size 512 \
         --csv-img-key filename --csv-label-key label \
-        --eval-pad      data/PAD/MAKE_PAD.csv \
-        --eval-f17k     data/F17K/MAKE_F17K.csv \
-        --eval-snu      data/SNU/MAKE_SNU.csv \
-        --eval-sd128    data/SD-128/MAKE_SD-128.csv
+        --eval-pad      data/downstream/PAD/MAKE_PAD.csv \
+        --eval-f17k     data/downstream/F17K/MAKE_F17K.csv \
+        --eval-snu      data/downstream/SNU/MAKE_SNU.csv \
+        --eval-sd128    data/downstream/SD-128/MAKE_SD-128.csv
 
 Run `python src/test.py --help` for the full list of `--eval-<dataset>` flags.
 """
@@ -56,7 +56,7 @@ def main(args):
     if not requested_tasks(args):
         raise SystemExit(
             'No benchmark selected. Pass at least one --eval-<dataset> flag, '
-            'e.g. --eval-pad data/PAD/MAKE_PAD.csv (see --help).')
+            'e.g. --eval-pad data/downstream/PAD/MAKE_PAD.csv (see --help).')
 
     logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(message)s')
 

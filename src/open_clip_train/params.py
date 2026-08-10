@@ -602,6 +602,9 @@ def parse_args(args):
             f'--eval-{task.name}', type=str, default=None,
             help=f"Metadata CSV for {task.help}.")
 
+    parser.add_argument('--retrieval-data', type=str, default=None,
+                        help="Metadata CSV of image-caption pairs for cross-modal "
+                             "retrieval (src/retrieval.py).")
     parser.add_argument('--parent-path', type=str, default='',
                         help="parent path.")
 

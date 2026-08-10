@@ -15,10 +15,10 @@ CUDA_VISIBLE_DEVICES=${GPU} python src/test.py \
     --workers 8 \
     --csv-img-key filename \
     --csv-label-key label \
-    --eval-pad       data/PAD/MAKE_PAD.csv \
-    --eval-f17k      data/F17K/MAKE_F17K.csv \
-    --eval-snu       data/SNU/MAKE_SNU.csv \
-    --eval-sd128     data/SD-128/MAKE_SD-128.csv \
-    --eval-daffodil  data/Daffodil/MAKE_Daffodil.csv \
-    --eval-sd-tails  data/SD-198/SD-tails-70.csv \
-    --eval-snu-tails data/SNU/MAKE_SNU_tails.csv
+    --eval-pad       data/downstream/PAD/MAKE_PAD.csv \
+    --eval-f17k      data/downstream/F17K/MAKE_F17K.csv \
+    --eval-snu       data/downstream/SNU/MAKE_SNU.csv \
+    --eval-sd128     data/downstream/SD-128/MAKE_SD-128.csv \
+    --eval-daffodil  data/downstream/Daffodil/MAKE_Daffodil.csv \
+    --eval-sd-tails  data/downstream/SD-198/SD-tails-70.csv \
+    --eval-snu-tails data/downstream/SNU/MAKE_SNU_tails.csv

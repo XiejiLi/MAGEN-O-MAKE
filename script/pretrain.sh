@@ -6,8 +6,8 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-TRAIN_DATA=${TRAIN_DATA:-'data/Derm1M-AgentAug/MAGEN_train.csv'}
-VAL_DATA=${VAL_DATA:-'data/Derm1M-AgentAug/MAGEN_valid.csv'}
+TRAIN_DATA=${TRAIN_DATA:-'data/pretrain/MAGEN_train.csv'}
+VAL_DATA=${VAL_DATA:-'data/pretrain/MAGEN_valid.csv'}
 LOGS=${LOGS:-'logs/pretrain'}
 
 python src/main.py \
@@ -40,9 +40,9 @@ python src/main.py \
     --OHCL_beta 0.5 \
     --loss_type 'cross entropy' \
     --zeroshot-frequency 1 \
-    --zeroshot-eval3=data/F17K/MAKE_F17K.csv \
-    --zeroshot-eval9=data/SNU/MAKE_SNU.csv \
-    --zeroshot-eval12=data/SD-128/MAKE_SD-128.csv \
+    --zeroshot-eval3=data/downstream/F17K/MAKE_F17K.csv \
+    --zeroshot-eval9=data/downstream/SNU/MAKE_SNU.csv \
+    --zeroshot-eval12=data/downstream/SD-128/MAKE_SD-128.csv \
     --save-frequency 15 \
     --copy-codebase \
     --report-to wandb \
