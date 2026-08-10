@@ -40,6 +40,7 @@ def main():
     ap.add_argument('--out', required=True, help='directory to write parquet shards into')
     ap.add_argument('--shard-bytes', type=int, default=450 * 1024 * 1024,
                     help='approximate uncompressed image bytes per shard (default 450MB)')
+    ap.add_argument('--split', default='train', help='split name used in the shard filenames')
     ap.add_argument('--limit', type=int, default=None, help='only process the first N rows')
     args = ap.parse_args()
 
@@ -65,7 +66,7 @@ def main():
         nonlocal rows, shard_bytes, shard_idx, total_rows
         if not rows:
             return
-        path = os.path.join(args.out, f'train-{shard_idx:05d}.parquet')
+        path = os.path.join(args.out, f'{args.split}-{shard_idx:05d}.parquet')
         Dataset.from_list(rows, features=features).to_parquet(path)
         print(f'  {os.path.basename(path)}  {len(rows):6d} rows  '
               f'{os.path.getsize(path) / 1e6:7.1f} MB', flush=True)

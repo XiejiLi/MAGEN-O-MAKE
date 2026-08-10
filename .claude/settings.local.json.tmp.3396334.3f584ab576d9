@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import huggingface_hub; print\\(huggingface_hub.__version__\\)\")",
+      "Read(//mnt/hdd/sda/xjli/.cache/huggingface/**)",
+      "Bash(rsync -a --exclude='__pycache__' --exclude='*.pyc' --exclude='*.csv' /mnt/hdd/sda/xjli/repos/MICCAI-MAKE/src/ ./src/)",
+      "Bash(PYTHONPATH=src /mnt/hdd/sda/xjli/miniconda3/envs_old/MAKE/bin/python src/test.py --help)",
+      "Bash(CUDA_VISIBLE_DEVICES=0 PYTHONPATH=src /mnt/hdd/sda/xjli/miniconda3/envs_old/MAKE/bin/python src/test.py --model ViT-B-16 --resume '/mnt/hdd/sda/xjli/repos/MICCAI-MAKE/logs/3_Ablation/Multi-Agent-System\\(Recaption-all\\)/O-MAKE-0.5/baseline_caption-agent-w.tool_disease-agent-no_discard/epoch_15.pt' --batch-size 512 --workers 8 --csv-img-key filename --csv-label-key label --eval-pad data/PAD/MAKE_PAD.csv --eval-snu-tails data/SNU/MAKE_SNU_tails.csv)",
+      "Bash(/mnt/hdd/sda/xjli/miniconda3/envs_old/MAKE/bin/python -c ' *)",
+      "Bash(/mnt/hdd/sda/xjli/miniconda3/envs_old/MAKE/bin/python -c \"import open_clip; print\\('pip open_clip', open_clip.__version__\\)\")",
+      "Bash(/mnt/hdd/sda/xjli/miniconda3/envs_old/PanDerm/bin/python *)",
+      "Bash(sed -i \"s|CHECKPOINT=\\\\${CHECKPOINT:-'checkpoints/O-MAKE_epoch_15.pt'}|CHECKPOINT=\\\\${CHECKPOINT-'checkpoints/O-MAKE_epoch_15.pt'}  # note: '-' not ':-', so CHECKPOINT='' means \\\\\"no checkpoint\\\\\"|\" script/linear_probe.sh)",
+      "Bash(MODEL=open_clip_ViT-B-16 CHECKPOINT='' bash -c 'CHECKPOINT=${CHECKPOINT-default}; echo \"resolved: [$CHECKPOINT]\"')",
+      "Bash(sed -i '/^| HAM10000 | 7 | Top-1 \\\\/ Top-3 | 0.4405 \\\\/ 0.9434 |$/d' README.md)",
+      "Bash(sed -i 's|├── Daffodil/       ├── HAM-official/   ├── PAD/       ├── SD-198/|├── Daffodil/       ├── ISIC2018/       ├── PAD/       ├── SD-198/|' README.md)",
+      "Bash(sed -n '/^| Benchmark/,/^$/p' README.md)",
+      "Bash(/mnt/hdd/sda/xjli/miniconda3/envs_old/MAKE/bin/python *)",
+      "Read(//mnt/hdd/sda/xjli/MAGEN-O-MAKE-release/**)",
+      "Bash(md5sum MAGEN-O-MAKE_downstream.tar.gz)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
