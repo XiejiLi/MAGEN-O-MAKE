@@ -1,0 +1,758 @@
+import torch
+import torch.nn as nn
+from torch.nn import functional as F
+import numpy as np
+from open_clip.logging_util import *
+import numpy as np
+import math
+
+try:
+    import torch.distributed.nn
+    from torch import distributed as dist
+
+    has_distributed = True
+except ImportError:
+    has_distributed = False
+
+try:
+    import horovod.torch as hvd
+except ImportError:
+    hvd = None
+
+
+def to_2d_labels(labels_1d, ignore_index=-100):
+    # Convert 1d labels to 2d
+    batch_size = labels_1d.size(0)
+    labels_2d = torch.zeros(batch_size, batch_size, device=labels_1d.device)
+    valid_mask = (labels_1d != ignore_index)
+    if valid_mask.any():
+        labels_2d[torch.where(valid_mask)[0], labels_1d[valid_mask]] = 1.0
+    return labels_2d, valid_mask
+
+def gather_features(
+        image_features,
+        text_features,
+        local_loss=False,
+        gather_with_grad=False,
+        rank=0,
+        world_size=1,
+        use_horovod=False
+):
+    assert has_distributed, 'torch.distributed did not import correctly, please use a PyTorch version with support.'
+    if use_horovod:
+        assert hvd is not None, 'Please install horovod'
+        if gather_with_grad:
+            all_image_features = hvd.allgather(image_features)
+            all_text_features = hvd.allgather(text_features)
+        else:
+            with torch.no_grad():
+                all_image_features = hvd.allgather(image_features)
+                all_text_features = hvd.allgather(text_features)
+            if not local_loss:
+                # ensure grads for local rank when all_* features don't have a gradient
+                gathered_image_features = list(all_image_features.chunk(world_size, dim=0))
+                gathered_text_features = list(all_text_features.chunk(world_size, dim=0))
+                gathered_image_features[rank] = image_features
+                gathered_text_features[rank] = text_features
+                all_image_features = torch.cat(gathered_image_features, dim=0)
+                all_text_features = torch.cat(gathered_text_features, dim=0)
+    else:
+        # We gather tensors from all gpus
+        if gather_with_grad:
+            all_image_features = torch.cat(torch.distributed.nn.all_gather(image_features), dim=0)
+            all_text_features = torch.cat(torch.distributed.nn.all_gather(text_features), dim=0)
+        else:
+            gathered_image_features = [torch.zeros_like(image_features) for _ in range(world_size)]
+            gathered_text_features = [torch.zeros_like(text_features) for _ in range(world_size)]
+            dist.all_gather(gathered_image_features, image_features)
+            dist.all_gather(gathered_text_features, text_features)
+            if not local_loss:
+                # ensure grads for local rank when all_* features don't have a gradient
+                gathered_image_features[rank] = image_features
+                gathered_text_features[rank] = text_features
+            all_image_features = torch.cat(gathered_image_features, dim=0)
+            all_text_features = torch.cat(gathered_text_features, dim=0)
+
+    return all_image_features, all_text_features
+
+class MKCLLoss(nn.Module):
+    def __init__(
+        self,
+        lambda_m,
+        lambda_s,
+        local_loss=False,
+        gather_with_grad=False,
+        cache_labels=False,
+        rank=0,
+        world_size=1,
+        use_horovod=False,
+        use_disease_specific_weight=False,
+        num_subcaption=8,
+        use_ontology_hierarchical_contrastive_loss=False,
+        temp=0.07,
+        loss_type='cross entropy',
+        beta=0.5,
+        max_epochs=15
+    ):
+        super().__init__()
+        self.local_loss = local_loss
+        self.gather_with_grad = gather_with_grad
+        self.cache_labels = cache_labels
+        self.rank = rank
+        self.world_size = world_size
+        self.use_horovod = use_horovod
+        self.prev_num_logits = 0
+        self.labels_cache = {}
+        self.lambda_m = lambda_m
+        self.lambda_s = lambda_s
+        self.num_subcaption = num_subcaption
+        self.use_disease_specific_weight = use_disease_specific_weight
+        self.use_ontology_hierarchical_contrastive_loss = use_ontology_hierarchical_contrastive_loss
+        self.temp=temp
+        self.loss_type = loss_type
+        
+        # Softlabel hyper-parameters
+        self.initial_beta = beta
+        self.beta = beta
+        self.current_epoch = 0
+        self.max_epochs = max_epochs
+        
+        if self.use_ontology_hierarchical_contrastive_loss:
+            self.ontology_distance_matrix = torch.from_numpy(np.load('src/open_clip_train/ontology/ontology_distance.npy')).cuda()
+
+        MKCL_loss_logging(self)
+    
+    def step(self):
+       self.current_epoch += 1
+    
+       decay_epochs = int(self.max_epochs)  
+    
+       # Decaying beta from inital to final epoch
+       if self.current_epoch <= decay_epochs:
+           progress = min(self.current_epoch / decay_epochs, 1.0)
+           cosine_factor = 0.5 * (1 + math.cos(progress * math.pi))
+           self.beta = self.initial_beta * cosine_factor
+       else:
+           self.beta = 0.0
+    
+       logging.info(f"Epoch {self.current_epoch}: current softlabel beta is {self.beta}")
+        
+
+    def get_ground_truth(self, device, num_logits):
+        if self.prev_num_logits != num_logits or device not in self.labels_cache:
+            labels = torch.arange(num_logits, device=device)
+            if self.world_size > 1 and self.local_loss:
+                labels += num_logits * self.rank
+            if self.cache_labels:
+                self.labels_cache[device] = labels
+                self.prev_num_logits = num_logits
+        else:
+            labels = self.labels_cache[device]
+        return labels
+
+    def gather(self, image_features, text_features):
+        if self.world_size > 1:
+            return gather_features(
+                image_features, text_features,
+                self.local_loss, self.gather_with_grad,
+                self.rank, self.world_size, self.use_horovod
+            )
+        return image_features, text_features
+
+    # import torchsnooper
+    # @torchsnooper.snoop()
+    def forward(
+        self,
+        weighted_patch_embeddings_sum, # (B, d)
+        image_features,           # (B, d)
+        text_features,            # (11*B, d)
+        caption_mask,             # (B, 11) => 1=valid, 0=invalid
+        logit_scale,              # scalar or (1,)
+        ontology_targets=None,    # (B)
+        output_dict=False
+    ):
+        device = image_features.device
+        B_actual = image_features.shape[0]
+        num_caption = self.num_subcaption + 3 # 3: the number of knowledge caption
+
+        B, d = image_features.shape
+
+        # Gather if needed
+        all_image_features, all_text_features = self.gather(image_features, text_features)
+
+        all_text_features_chunks = torch.chunk(all_text_features, num_caption, dim=0)
+        ontology_text_features = all_text_features_chunks[1] if len(all_text_features_chunks) > 1 else None
+
+        # Retreive subcation features
+        if len(all_text_features_chunks) > 3:
+            subcaption_features = torch.concat(all_text_features_chunks[3:(self.num_subcaption + 3)], dim=0)
+        else:
+            subcaption_features = None
+        
+        # Compute similarity weight between prototype text features and subcaption text features
+        if self.use_disease_specific_weight:
+            prototype_text_features = ontology_text_features
+            subcaption_similarity = prototype_text_features @ subcaption_features.T
+            subcaption_similarity = subcaption_similarity.reshape(B, -1 , B)
+            subcaption_indices = torch.arange(B)
+            subcaption_similarity = subcaption_similarity[subcaption_indices, :, subcaption_indices] 
+
+            # Apply subcaption mask
+            subcaption_mask = caption_mask[:, 3:]
+            subcaption_similarity = torch.masked_fill(subcaption_similarity, subcaption_mask == 0, float('-inf'))
+            
+            subcaption_similarity = F.softmax(subcaption_similarity, dim=-1) # convert to weight
+
+            # Scaling
+            scaler = torch.max(subcaption_similarity, dim=1)[0].unsqueeze(dim=-1)
+            subcaption_similarity = subcaption_similarity / scaler
+
+            # Get ontology mask to mask invalid row
+            ontology_mask = caption_mask[:, 1].unsqueeze(dim=1).repeat(1, subcaption_similarity.shape[-1])
+            subcaption_similarity = torch.masked_fill(subcaption_similarity, ontology_mask == 0, 1)
+
+            # concate one-mask for origin_caption, ontology_caption, visiual_concept_caption
+            ones_mask = torch.ones([B, 3], device=subcaption_similarity.device) 
+            subcaption_similarity = torch.concat([ones_mask, subcaption_similarity], dim=1)
+            subcaption_similarity_1d = subcaption_similarity.reshape(-1)
+            
+            # Disable gradient on subcaition_similarity_1d
+            subcaption_similarity_1d = subcaption_similarity_1d.detach()
+            subcaption_similarity_1d.requires_grad_(False)
+        else:
+            subcaption_similarity_1d = None
+
+        if self.local_loss:
+            # 分离MKCL和OHCL的text features
+            mkcl_text_features = all_text_features[:B*(self.num_subcaption + 3)]  # [MKCL_size*B, d]
+
+            # MKCL logits计算
+            logits_mkcl_per_image = logit_scale * (image_features @ mkcl_text_features.T)  # [B, MKCL_size*B]
+            logits_mkcl_sgl = logit_scale * (weighted_patch_embeddings_sum @ mkcl_text_features.T)
+            logits_mkcl_per_text = logit_scale * (mkcl_text_features @ all_image_features.T)  # [MKCL_size*B, B]
+
+        else:
+            raise NotImplementedError('Not Implemented')
+        
+        T = logits_mkcl_per_image.shape[1]
+
+        # If single-positive scenario
+        if T == B_actual:
+            labels = self.get_ground_truth(device, B_actual)
+            loss = 0.5 * (
+                F.cross_entropy(logits_mkcl_per_image, labels)
+                + F.cross_entropy(logits_mkcl_per_text, labels)
+            )
+            return {"contrastive_loss": loss} if output_dict else loss
+
+        # Multi-positive scenario
+        # (A) Image -> Text
+        expanded_i2t = logits_mkcl_per_image.unsqueeze(1).expand(-1, self.num_subcaption + 3, -1).reshape(B_actual * (self.num_subcaption + 3), T)
+        expanded_sgl = logits_mkcl_sgl.unsqueeze(1).expand(-1, self.num_subcaption + 3, -1).reshape(B_actual * (self.num_subcaption + 3), T)
+
+        labels_i2t = torch.arange(B_actual * (self.num_subcaption + 3), device=device)
+
+        # This mask is used to mask invalid captions
+        mask_1d = caption_mask.view(-1)
+        for idx in range(B_actual * (self.num_subcaption + 3)):
+            if mask_1d[idx].item() < 0.5:
+                labels_i2t[idx] = -100
+        
+        if self.use_ontology_hierarchical_contrastive_loss:
+            # Convert 1d target to 2d views
+            labels_i2t_2d = torch.zeros(labels_i2t.size(0), labels_i2t.size(0), device=labels_i2t.device)
+            valid_mask = (labels_i2t != -100)
+            labels_i2t_2d[torch.where(valid_mask)[0], labels_i2t[valid_mask]] = 1.0
+
+            # Expand ontology targets
+            expanded_ontology_targets = ontology_targets.squeeze().unsqueeze(1).expand(-1, self.num_subcaption + 3).reshape(B_actual * (self.num_subcaption + 3))
+            x_grid, y_grid = torch.meshgrid(expanded_ontology_targets, expanded_ontology_targets, indexing='ij')
+            grid = torch.stack([x_grid, y_grid], dim=-1)
+
+            # build soft labels
+            distances = self.gather_distance(grid)
+
+            if valid_mask.any():
+               valid_indices = torch.where(valid_mask)[0]
+               original_targets = labels_i2t[valid_mask]
+
+               # creating hard label matrix
+               hard_labels_2d = labels_i2t_2d[valid_indices].clone()
+
+               distances[valid_indices, original_targets] = 1.0
+
+               # scaling
+               similarities = torch.exp(distances / self.temp).float()
+               valid_similarities = similarities[valid_indices]
+
+               # normalize
+               normalized_similarities = valid_similarities / valid_similarities.sum(dim=1, keepdim=True)
+
+               # soft ratio mixing
+               labels_i2t_2d[valid_indices] = (1 - self.beta) * hard_labels_2d + self.beta * normalized_similarities
+
+            # mask invalid logits and mask
+            valid_logits = expanded_i2t[valid_mask]
+            valid_labels_2d = labels_i2t_2d[valid_mask]
+            valid_class_indices = labels_i2t[valid_mask]
+
+            # calculate loss
+            if self.loss_type == 'cross entropy':
+                log_probs = F.log_softmax(valid_logits, dim=-1)
+                loss_i2t = -(valid_labels_2d * log_probs).sum(dim=-1)
+            elif self.loss_type == 'KL':
+                loss_i2t = F.kl_div(F.log_softmax(valid_logits, dim=-1),
+                                     valid_labels_2d,
+                                     reduction='none').sum(dim=-1)
+
+            # disease weighting loss
+            if subcaption_similarity_1d is not None:
+                class_weights = subcaption_similarity_1d[valid_class_indices]
+                loss_i2t = (loss_i2t * class_weights).sum() / class_weights.sum()
+            else:
+                # Mean loss directly if we don't use disease weigting
+                loss_i2t = loss_i2t.mean()
+            
+        else:
+            loss_i2t = F.cross_entropy(expanded_i2t, labels_i2t, ignore_index=-100, weight=subcaption_similarity_1d, reduction='mean')
+
+        # Mask ontology caption loss part
+        label_sgl = labels_i2t.clone() 
+        label_sgl[:B_actual] = -100 # Mask original caption part
+
+        slra_loss = F.cross_entropy(expanded_sgl, label_sgl, ignore_index=-100, weight=subcaption_similarity_1d)
+
+        # (B) Text -> Image
+        labels_t2i = torch.empty(T, device=device, dtype=torch.long)
+
+        for r in range(T):
+            i = r // (self.num_subcaption + 3)
+            if mask_1d[r].item() < 0.5:
+                labels_t2i[r] = -100
+            else:
+                labels_t2i[r] = i
+
+        if self.use_ontology_hierarchical_contrastive_loss:
+            # Convert 1d target to 2d views
+            labels_t2i_2d = torch.zeros(logits_mkcl_per_text.size(0), logits_mkcl_per_text.size(1), device=labels_t2i.device)
+            valid_mask = (labels_t2i != -100)
+            labels_t2i_2d[torch.where(valid_mask)[0], labels_t2i[valid_mask]] = 1.0
+
+            # Expand ontology targets
+            expanded_ontology_targets = ontology_targets.squeeze().unsqueeze(1).expand(-1, self.num_subcaption + 3).reshape(B_actual * (self.num_subcaption + 3))
+            x_grid, y_grid = torch.meshgrid(expanded_ontology_targets, ontology_targets.squeeze(), indexing='ij')
+            grid = torch.stack([x_grid, y_grid], dim=-1)
+
+            # build soft labels
+            distances = self.gather_distance(grid)
+
+            if valid_mask.any():
+               valid_indices = torch.where(valid_mask)[0]
+               original_targets = labels_t2i[valid_mask]
+
+               # creating hard label matrix
+               hard_labels_2d = labels_t2i_2d[valid_indices].clone()
+
+               distances[valid_indices, original_targets] = 1.0
+
+               # scaling
+               similarities = torch.exp(distances / self.temp).float()
+               valid_similarities = similarities[valid_indices]
+
+               # normalize
+               normalized_similarities = valid_similarities / valid_similarities.sum(dim=1, keepdim=True)
+
+               # soft ratio mixing
+               labels_t2i_2d[valid_indices] = (1 - self.beta) * hard_labels_2d + self.beta * normalized_similarities
+                
+            # mask invalid logits and mask
+            valid_logits = logits_mkcl_per_text[valid_mask]
+            valid_labels_2d = labels_t2i_2d[valid_mask]
+            valid_class_indices = labels_t2i[valid_mask]
+        
+            # calculate loss
+            if self.loss_type == 'cross entropy':
+                log_probs = F.log_softmax(valid_logits, dim=-1)
+                loss_t2i = -(valid_labels_2d * log_probs).sum(dim=-1) # Softlabel cross entropy
+            elif self.loss_type == 'KL':
+                loss_t2i = F.kl_div(F.log_softmax(valid_logits, dim=-1),
+                                     valid_labels_2d,
+                                     reduction='none').sum(dim=-1)
+        
+            # disease weighting loss
+            if subcaption_similarity_1d is not None:
+                class_weights = subcaption_similarity_1d[valid_class_indices]
+                loss_t2i = (loss_t2i * class_weights).sum() / class_weights.sum()
+            else:
+                # Mean loss directly if we don't use disease weigting
+                loss_t2i = loss_t2i.mean()
+            
+        else:
+            loss_t2i = F.cross_entropy(logits_mkcl_per_text, labels_t2i, ignore_index=-100)
+
+        MKCL_loss = 0.5 * (loss_i2t + loss_t2i)
+
+        total_loss = self.lambda_m*MKCL_loss + self.lambda_s*slra_loss
+
+        return {"muti-knowledges-contrastive-loss": MKCL_loss* self.lambda_m,
+                "subcaption-local-region-alignment-loss": slra_loss*self.lambda_s,
+                } if output_dict else total_loss
+    
+    def gather_distance(self, grid):
+        # extract coordinates
+        x_coords = grid[:, :, 0].long()
+        y_coords = grid[:, :, 1].long()
+
+        # create valid mask
+        valid_mask = (x_coords != -1) & (y_coords != -1)
+
+        distances = torch.zeros_like(x_coords, dtype=self.ontology_distance_matrix.dtype, device=self.ontology_distance_matrix.device)
+
+        # for the invalid position, the element value should be 0
+        if valid_mask.any():
+            valid_x = x_coords[valid_mask]
+            valid_y = y_coords[valid_mask]
+            distances[valid_mask] = self.ontology_distance_matrix[valid_x, valid_y]
+
+        return distances
+
+class ClipLoss(nn.Module):
+
+    def __init__(
+            self,
+            local_loss=False,
+            gather_with_grad=False,
+            cache_labels=False,
+            rank=0,
+            world_size=1,
+            use_horovod=False,
+    ):
+        super().__init__()
+        self.local_loss = local_loss
+        self.gather_with_grad = gather_with_grad
+        self.cache_labels = cache_labels
+        self.rank = rank
+        self.world_size = world_size
+        self.use_horovod = use_horovod
+
+        # cache state
+        self.prev_num_logits = 0
+        self.labels = {}
+
+    def get_ground_truth(self, device, num_logits) -> torch.Tensor:
+        # calculated ground-truth and cache if enabled
+        if self.prev_num_logits != num_logits or device not in self.labels:
+            labels = torch.arange(num_logits, device=device, dtype=torch.long)
+            if self.world_size > 1 and self.local_loss:
+                labels = labels + num_logits * self.rank
+            if self.cache_labels:
+                self.labels[device] = labels
+                self.prev_num_logits = num_logits
+        else:
+            labels = self.labels[device]
+        return labels
+
+    def get_logits(self, image_features, text_features, logit_scale):
+        if self.world_size > 1:
+            all_image_features, all_text_features = gather_features(
+                image_features, text_features,
+                self.local_loss, self.gather_with_grad, self.rank, self.world_size, self.use_horovod)
+
+            if self.local_loss:
+                logits_per_image = logit_scale * image_features @ all_text_features.T
+                logits_per_text = logit_scale * text_features @ all_image_features.T
+            else:
+                logits_per_image = logit_scale * all_image_features @ all_text_features.T
+                logits_per_text = logits_per_image.T
+        else:
+            logits_per_image = logit_scale * image_features @ text_features.T
+            logits_per_text = logit_scale * text_features @ image_features.T
+        
+        return logits_per_image, logits_per_text
+
+    def forward(self, image_features, text_features, logit_scale, output_dict=False):
+        device = image_features.device
+        logits_per_image, logits_per_text = self.get_logits(image_features, text_features, logit_scale)
+
+        labels = self.get_ground_truth(device, logits_per_image.shape[0])
+
+        total_loss = (
+            F.cross_entropy(logits_per_image, labels) +
+            F.cross_entropy(logits_per_text, labels)
+        ) / 2
+
+        return {"contrastive_loss": total_loss} if output_dict else total_loss
+
+class CoCaLoss(ClipLoss):
+    def __init__(
+            self,
+            caption_loss_weight,
+            clip_loss_weight,
+            pad_id=0,  # pad_token for open_clip custom tokenizer
+            local_loss=False,
+            gather_with_grad=False,
+            cache_labels=False,
+            rank=0,
+            world_size=1,
+            use_horovod=False,
+    ):
+        super().__init__(
+            local_loss=local_loss,
+            gather_with_grad=gather_with_grad,
+            cache_labels=cache_labels,
+            rank=rank,
+            world_size=world_size,
+            use_horovod=use_horovod
+        )
+
+        self.clip_loss_weight = clip_loss_weight
+        self.caption_loss_weight = caption_loss_weight
+        self.caption_loss = nn.CrossEntropyLoss(ignore_index=pad_id)
+
+    def forward(self, image_features, text_features, logits, labels, logit_scale, output_dict=False):
+        
+        clip_loss = torch.tensor(0)
+        
+        if self.clip_loss_weight:
+            clip_loss = super().forward(image_features, text_features, logit_scale)
+            clip_loss = self.clip_loss_weight * clip_loss
+
+        caption_loss = self.caption_loss(
+            logits.permute(0, 2, 1),
+            labels,
+        )
+        caption_loss = caption_loss * self.caption_loss_weight
+
+        if output_dict:
+            return {"contrastive_loss": clip_loss, "caption_loss": caption_loss}
+
+        return clip_loss, caption_loss
+
+class DistillClipLoss(ClipLoss):
+
+    def dist_loss(self, teacher_logits, student_logits):
+        return -(teacher_logits.softmax(dim=1) * student_logits.log_softmax(dim=1)).sum(dim=1).mean(dim=0)
+
+    def forward(
+            self,
+            image_features,
+            text_features,
+            logit_scale,
+            dist_image_features,
+            dist_text_features,
+            dist_logit_scale,
+            output_dict=False,
+    ):
+        logits_per_image, logits_per_text = \
+            self.get_logits(image_features, text_features, logit_scale)
+
+        dist_logits_per_image, dist_logits_per_text = \
+            self.get_logits(dist_image_features, dist_text_features, dist_logit_scale)
+
+        labels = self.get_ground_truth(image_features.device, logits_per_image.shape[0])
+
+        contrastive_loss = (
+            F.cross_entropy(logits_per_image, labels) +
+            F.cross_entropy(logits_per_text, labels)
+        ) / 2
+
+        distill_loss = (
+            self.dist_loss(dist_logits_per_image, logits_per_image) +
+            self.dist_loss(dist_logits_per_text, logits_per_text)
+        ) / 2
+
+        if output_dict:
+            return {"contrastive_loss": contrastive_loss, "distill_loss": distill_loss}
+
+        return contrastive_loss, distill_loss
+
+def neighbour_exchange(from_rank, to_rank, tensor, group=None):
+    tensor_recv = torch.zeros_like(tensor)
+    send_op = torch.distributed.P2POp(
+        torch.distributed.isend,
+        tensor,
+        to_rank,
+        group=group,
+    )
+    recv_op = torch.distributed.P2POp(
+        torch.distributed.irecv,
+        tensor_recv,
+        from_rank,
+        group=group,
+    )
+    reqs = torch.distributed.batch_isend_irecv([send_op, recv_op])
+    for req in reqs:
+        req.wait()
+    return tensor_recv
+
+def neighbour_exchange_bidir(left_rank, right_rank, tensor_to_left, tensor_to_right, group=None):
+    tensor_from_left = torch.zeros_like(tensor_to_right)
+    tensor_from_right = torch.zeros_like(tensor_to_left)
+    send_op_left = torch.distributed.P2POp(
+        torch.distributed.isend,
+        tensor_to_left,
+        left_rank,
+        group=group,
+    )
+    send_op_right = torch.distributed.P2POp(
+        torch.distributed.isend,
+        tensor_to_right,
+        right_rank,
+        group=group,
+    )
+    recv_op_left = torch.distributed.P2POp(
+        torch.distributed.irecv,
+        tensor_from_left,
+        left_rank,
+        group=group,
+    )
+    recv_op_right = torch.distributed.P2POp(
+        torch.distributed.irecv,
+        tensor_from_right,
+        right_rank,
+        group=group,
+    )
+    reqs = torch.distributed.batch_isend_irecv([send_op_right, send_op_left, recv_op_right, recv_op_left])
+    for req in reqs:
+        req.wait()
+    return tensor_from_right, tensor_from_left
+
+class NeighbourExchange(torch.autograd.Function):
+    @staticmethod
+    def forward(ctx, from_rank, to_rank, group, tensor):
+        ctx.group = group
+        ctx.from_rank = from_rank
+        ctx.to_rank = to_rank
+        return neighbour_exchange(from_rank, to_rank, tensor, group=group)
+
+    @staticmethod
+    def backward(ctx, grad_output):
+        return (None, None, None) + (NeighbourExchange.apply(ctx.to_rank, ctx.from_rank, ctx.group, grad_output),)
+
+def neighbour_exchange_with_grad(from_rank, to_rank, tensor, group=None):
+    return NeighbourExchange.apply(from_rank, to_rank, group, tensor)
+
+class NeighbourExchangeBidir(torch.autograd.Function):
+    @staticmethod
+    def forward(ctx, left_rank, right_rank, group, tensor_to_left, tensor_to_right):
+        ctx.group = group
+        ctx.left_rank = left_rank
+        ctx.right_rank = right_rank
+        return neighbour_exchange_bidir(left_rank, right_rank, tensor_to_left, tensor_to_right, group=group)
+
+    @staticmethod
+    def backward(ctx, *grad_outputs):
+        return (None, None, None) + \
+            NeighbourExchangeBidir.apply(ctx.right_rank, ctx.left_rank, ctx.group, *grad_outputs)
+
+def neighbour_exchange_bidir_with_grad(left_rank, right_rank, tensor_to_left, tensor_to_right, group=None):
+    return NeighbourExchangeBidir.apply(left_rank, right_rank, group, tensor_to_left, tensor_to_right)
+
+class SigLipLoss(nn.Module):
+    """ Sigmoid Loss for Language Image Pre-Training (SigLIP) - https://arxiv.org/abs/2303.15343
+
+    @article{zhai2023sigmoid,
+      title={Sigmoid loss for language image pre-training},
+      author={Zhai, Xiaohua and Mustafa, Basil and Kolesnikov, Alexander and Beyer, Lucas},
+      journal={arXiv preprint arXiv:2303.15343},
+      year={2023}
+    }
+    """
+    def __init__(
+            self,
+            cache_labels=False,
+            rank=0,
+            world_size=1,
+            bidir=True,
+            use_horovod=False,
+    ):
+        super().__init__()
+        self.cache_labels = cache_labels
+        self.rank = rank
+        self.world_size = world_size
+        assert not use_horovod  # FIXME need to look at hvd ops for ring transfers
+        self.use_horovod = use_horovod
+        self.bidir = bidir
+
+        # cache state FIXME cache not currently used, worthwhile?
+        self.prev_num_logits = 0
+        self.labels = {}
+
+    def get_ground_truth(self, device, dtype, num_logits, negative_only=False) -> torch.Tensor:
+        labels = -torch.ones((num_logits, num_logits), device=device, dtype=dtype)
+        if not negative_only:
+            labels = 2 * torch.eye(num_logits, device=device, dtype=dtype) + labels
+        return labels
+
+    def get_logits(self, image_features, text_features, logit_scale, logit_bias=None):
+        logits = logit_scale * image_features @ text_features.T
+        if logit_bias is not None:
+            logits += logit_bias
+        return logits
+
+    def _loss(self, image_features, text_features, logit_scale, logit_bias=None, negative_only=False):
+        logits = self.get_logits(image_features, text_features, logit_scale, logit_bias)
+        labels = self.get_ground_truth(
+            image_features.device,
+            image_features.dtype,
+            image_features.shape[0],
+            negative_only=negative_only,
+        )
+        loss = -F.logsigmoid(labels * logits).sum() / image_features.shape[0]
+        return loss
+
+    def forward(self, image_features, text_features, logit_scale, logit_bias, output_dict=False):
+        loss = self._loss(image_features, text_features, logit_scale, logit_bias)
+
+        if self.world_size > 1:
+            # exchange text features w/ neighbour world_size - 1 times
+            right_rank = (self.rank + 1) % self.world_size
+            left_rank = (self.rank - 1 + self.world_size) % self.world_size
+            if self.bidir:
+                text_features_to_right = text_features_to_left = text_features
+                num_bidir, remainder = divmod(self.world_size - 1, 2)
+                for i in range(num_bidir):
+                    text_features_recv = neighbour_exchange_bidir_with_grad(
+                        left_rank,
+                        right_rank,
+                        text_features_to_left,
+                        text_features_to_right,
+                    )
+
+                    for f in text_features_recv:
+                        loss += self._loss(
+                            image_features,
+                            f,
+                            logit_scale,
+                            logit_bias,
+                            negative_only=True,
+                        )
+                    text_features_to_left, text_features_to_right = text_features_recv
+
+                if remainder:
+                    text_features_recv = neighbour_exchange_with_grad(
+                        left_rank, right_rank, text_features_to_right)
+
+                    loss += self._loss(
+                        image_features,
+                        text_features_recv,
+                        logit_scale,
+                        logit_bias,
+                        negative_only=True,
+                    )
+            else:
+                text_features_to_right = text_features
+                for i in range(self.world_size - 1):
+                    text_features_from_left = neighbour_exchange_with_grad(
+                        left_rank, right_rank, text_features_to_right)
+
+                    loss += self._loss(
+                        image_features,
+                        text_features_from_left,
+                        logit_scale,
+                        logit_bias,
+                        negative_only=True,
+                    )
+                    text_features_to_right = text_features_from_left
+
+        return {"contrastive_loss": loss} if output_dict else loss

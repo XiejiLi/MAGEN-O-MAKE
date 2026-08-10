@@ -1,0 +1,29 @@
+# Core
+torch>=2.1
+torchvision>=0.16
+timm>=0.9.16
+numpy
+pandas
+scipy
+scikit-learn
+Pillow
+tqdm
+pyyaml
+
+# open_clip runtime (this repo vendors open_clip under src/, these are its deps)
+ftfy
+regex
+huggingface-hub
+safetensors
+fsspec
+braceexpand
+webdataset
+
+# Zero-shot / linear-probe evaluation
+prettytable
+
+# Fine-tuning
+albumentations
+opencv-python
+tensorboardX
+wandb

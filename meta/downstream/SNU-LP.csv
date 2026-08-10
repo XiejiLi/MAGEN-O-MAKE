@@ -1,0 +1,2102 @@
+image_path,diag,split,label
+data/SNU/images/epidermalcyst_11.jpg,epidermal cyst,train,0
+data/SNU/images/paronychia_3.jpg,paronychia,test,1
+data/SNU/images/otanevus_8.jpg,ota nevus,train,2
+data/SNU/images/condyloma_7.jpg,condyloma,test,3
+data/SNU/images/keloid_6.jpg,keloid,train,4
+data/SNU/images/alopeciaareata_8.jpg,alopecia areata,train,5
+data/SNU/images/cellulitis_2.jpg,cellulitis,train,6
+data/SNU/images/pyogenicgranuloma_16.jpg,pyogenic granuloma,test,7
+data/SNU/images/fifthdisease_21.jpg,fifth disease,test,8
+data/SNU/images/dermatofibroma_41.jpg,dermatofibroma,train,9
+data/SNU/images/perioraldermatitis_12.jpg,perioral dermatitis,val,10
+data/SNU/images/squamouscellcarcinoma_13.jpg,squamous cell carcinoma,train,11
+data/SNU/images/wart_5.jpg,wart,train,12
+data/SNU/images/riehlmelanosis_7.jpg,riehl melanosis,test,13
+data/SNU/images/urticariapigmentosa_2.jpg,urticaria pigmentosa,train,14
+data/SNU/images/furuncle_6.jpg,furuncle,train,15
+data/SNU/images/bullousdisease_4.jpg,bullous disease,train,16
+data/SNU/images/herpessimplex_4.jpg,herpes simplex,train,17
+data/SNU/images/tineafaciale_1.jpg,tinea faciale,val,18
+data/SNU/images/lupuserythematosus_13.jpg,lupus erythematosus,train,19
+data/SNU/images/striaedistensae_16.jpg,striae distensae,train,20
+data/SNU/images/hemangioma_32.jpg,hemangioma,val,21
+data/SNU/images/herpeszoster_17.jpg,herpes zoster,test,22
+data/SNU/images/hemangioma_26.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_12.jpg,malignant melanoma,val,23
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_13.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/pompholyx_10.jpg,pompholyx,train,25
+data/SNU/images/nevusspilus_1.jpg,nevus spilus,train,26
+data/SNU/images/juvenilexanthogranuloma_10.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/actinickeratosis_3.jpg,actinic keratosis,test,28
+data/SNU/images/malignantmelanoma_7.jpg,malignant melanoma,test,23
+data/SNU/images/nummulareczema_7.jpg,nummular eczema,train,29
+data/SNU/images/folliculitis_9.jpg,folliculitis,train,30
+data/SNU/images/xeroticeczema_16.jpg,xerotic eczema,test,31
+data/SNU/images/subungalhematoma_0.jpg,subungual hematoma,test,32
+data/SNU/images/androgenicalopecia_6.jpg,androgenic alopecia,val,33
+data/SNU/images/prurigonodularis_0.jpg,prurigo nodularis,test,34
+data/SNU/images/handeczema_1.jpg,hand eczema,test,35
+data/SNU/images/basalcellcarcinoma_25.jpg,basal cell carcinoma,test,36
+data/SNU/images/melanocyticnevus_56.jpg,melanocytic nevus,train,37
+data/SNU/images/lymphangioma_8.jpg,lymphangioma,test,38
+data/SNU/images/melanocyticnevus_42.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_44.jpg,seborrheic keratosis,train,39
+data/SNU/images/basalcellcarcinoma_31.jpg,basal cell carcinoma,train,36
+data/SNU/images/hypertrophicscar_4.jpg,hypertrophic scar,train,40
+data/SNU/images/idiopathicguttatehypomelanosis_3.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/keratoderma_11.jpg,keratoderma,train,42
+data/SNU/images/erythemaabigne_7.jpg,erythema ab igne,train,43
+data/SNU/images/lichenstriatus_4.jpg,lichen striatus,train,44
+data/SNU/images/striaedistensae_0.jpg,striae distensae,train,20
+data/SNU/images/basalcellcarcinoma_19.jpg,basal cell carcinoma,test,36
+data/SNU/images/ingrowingnail_13.jpg,ingrowing nail,val,45
+data/SNU/images/varicella_2.jpg,varicella,test,46
+data/SNU/images/cafeaulaitmacule_6.jpg,cafe au lait macule,test,47
+data/SNU/images/poikiloderma_3.jpg,poikiloderma,val,48
+data/SNU/images/melanocyticnevus_9.jpg,melanocytic nevus,train,37
+data/SNU/images/morphea_7.jpg,morphea,test,49
+data/SNU/images/eczemaherpeticum_2.jpg,eczema herpeticum,train,50
+data/SNU/images/handeczema_17.jpg,hand eczema,train,35
+data/SNU/images/milia_4.jpg,milia,test,51
+data/SNU/images/naildystrophy_2.jpg,nail dystrophy,train,52
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_4.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/lichennitidus_4.jpg,lichen nitidus,test,53
+data/SNU/images/acanthosisnigricans_1.jpg,acanthosis nigricans,test,54
+data/SNU/images/angularcheilitis_3.jpg,angular cheilitis,test,55
+data/SNU/images/angularcheilitis_2.jpg,angular cheilitis,train,55
+data/SNU/images/lichennitidus_5.jpg,lichen nitidus,train,53
+data/SNU/images/acanthosisnigricans_0.jpg,acanthosis nigricans,train,54
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_5.jpg,pityriasis lichenoides et varioliformis acuta,test,24
+data/SNU/images/naildystrophy_3.jpg,nail dystrophy,train,52
+data/SNU/images/milia_5.jpg,milia,train,51
+data/SNU/images/handeczema_16.jpg,hand eczema,test,35
+data/SNU/images/eczemaherpeticum_3.jpg,eczema herpeticum,test,50
+data/SNU/images/melanocyticnevus_8.jpg,melanocytic nevus,test,37
+data/SNU/images/morphea_6.jpg,morphea,train,49
+data/SNU/images/varicella_3.jpg,varicella,val,46
+data/SNU/images/ingrowingnail_12.jpg,ingrowing nail,train,45
+data/SNU/images/poikiloderma_2.jpg,poikiloderma,train,48
+data/SNU/images/cafeaulaitmacule_7.jpg,cafe au lait macule,val,47
+data/SNU/images/keratoderma_10.jpg,keratoderma,train,42
+data/SNU/images/idiopathicguttatehypomelanosis_2.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/hypertrophicscar_5.jpg,hypertrophic scar,test,40
+data/SNU/images/basalcellcarcinoma_18.jpg,basal cell carcinoma,train,36
+data/SNU/images/striaedistensae_1.jpg,striae distensae,train,20
+data/SNU/images/lichenstriatus_5.jpg,lichen striatus,train,44
+data/SNU/images/erythemaabigne_6.jpg,erythema ab igne,test,43
+data/SNU/images/basalcellcarcinoma_30.jpg,basal cell carcinoma,test,36
+data/SNU/images/seborrheickeratosis_45.jpg,seborrheic keratosis,test,39
+data/SNU/images/melanocyticnevus_43.jpg,melanocytic nevus,val,37
+data/SNU/images/lymphangioma_9.jpg,lymphangioma,train,38
+data/SNU/images/melanocyticnevus_57.jpg,melanocytic nevus,train,37
+data/SNU/images/basalcellcarcinoma_24.jpg,basal cell carcinoma,train,36
+data/SNU/images/handeczema_0.jpg,hand eczema,train,35
+data/SNU/images/prurigonodularis_1.jpg,prurigo nodularis,train,34
+data/SNU/images/androgenicalopecia_7.jpg,androgenic alopecia,test,33
+data/SNU/images/xeroticeczema_17.jpg,xerotic eczema,train,31
+data/SNU/images/subungalhematoma_1.jpg,subungual hematoma,train,32
+data/SNU/images/nummulareczema_6.jpg,nummular eczema,val,29
+data/SNU/images/folliculitis_8.jpg,folliculitis,train,30
+data/SNU/images/nevusspilus_0.jpg,nevus spilus,train,26
+data/SNU/images/malignantmelanoma_6.jpg,malignant melanoma,test,23
+data/SNU/images/juvenilexanthogranuloma_11.jpg,juvenile xanthogranuloma,val,27
+data/SNU/images/actinickeratosis_2.jpg,actinic keratosis,val,28
+data/SNU/images/herpeszoster_16.jpg,herpes zoster,train,22
+data/SNU/images/hemangioma_27.jpg,hemangioma,test,21
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_12.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/malignantmelanoma_13.jpg,malignant melanoma,train,23
+data/SNU/images/confluentreticulatedpapillomatosis_12.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/hemangioma_33.jpg,hemangioma,train,21
+data/SNU/images/striaedistensae_17.jpg,striae distensae,train,20
+data/SNU/images/herpessimplex_5.jpg,herpes simplex,val,17
+data/SNU/images/lupuserythematosus_12.jpg,lupus erythematosus,train,19
+data/SNU/images/tineafaciale_0.jpg,tinea faciale,train,18
+data/SNU/images/bullousdisease_5.jpg,bullous disease,train,16
+data/SNU/images/furuncle_7.jpg,furuncle,test,15
+data/SNU/images/riehlmelanosis_6.jpg,riehl melanosis,train,13
+data/SNU/images/urticariapigmentosa_3.jpg,urticaria pigmentosa,train,14
+data/SNU/images/perioraldermatitis_13.jpg,perioral dermatitis,train,10
+data/SNU/images/dermatofibroma_40.jpg,dermatofibroma,train,9
+data/SNU/images/wart_4.jpg,wart,train,12
+data/SNU/images/squamouscellcarcinoma_12.jpg,squamous cell carcinoma,train,11
+data/SNU/images/fifthdisease_20.jpg,fifth disease,test,8
+data/SNU/images/cellulitis_3.jpg,cellulitis,train,6
+data/SNU/images/pyogenicgranuloma_17.jpg,pyogenic granuloma,train,7
+data/SNU/images/alopeciaareata_9.jpg,alopecia areata,train,5
+data/SNU/images/keloid_7.jpg,keloid,train,4
+data/SNU/images/condyloma_6.jpg,condyloma,train,3
+data/SNU/images/otanevus_9.jpg,ota nevus,train,2
+data/SNU/images/paronychia_2.jpg,paronychia,train,1
+data/SNU/images/syringoma_10.jpg,syringoma,train,57
+data/SNU/images/epidermalcyst_10.jpg,epidermal cyst,train,0
+data/SNU/images/mucouscyst_9.jpg,mucous cyst,test,58
+data/SNU/images/paronychia_0.jpg,paronychia,test,1
+data/SNU/images/epidermalcyst_12.jpg,epidermal cyst,train,0
+data/SNU/images/condyloma_4.jpg,condyloma,test,3
+data/SNU/images/dermatofibroma_8.jpg,dermatofibroma,test,9
+data/SNU/images/pyogenicgranuloma_29.jpg,pyogenic granuloma,val,7
+data/SNU/images/keloid_5.jpg,keloid,train,4
+data/SNU/images/fifthdisease_22.jpg,fifth disease,train,8
+data/SNU/images/pyogenicgranuloma_15.jpg,pyogenic granuloma,train,7
+data/SNU/images/cellulitis_1.jpg,cellulitis,val,6
+data/SNU/images/urticariapigmentosa_1.jpg,urticaria pigmentosa,test,14
+data/SNU/images/riehlmelanosis_4.jpg,riehl melanosis,test,13
+data/SNU/images/wart_6.jpg,wart,test,12
+data/SNU/images/squamouscellcarcinoma_10.jpg,squamous cell carcinoma,val,11
+data/SNU/images/dermatofibroma_42.jpg,dermatofibroma,train,9
+data/SNU/images/perioraldermatitis_11.jpg,perioral dermatitis,train,10
+data/SNU/images/tineafaciale_2.jpg,tinea faciale,train,18
+data/SNU/images/lupuserythematosus_10.jpg,lupus erythematosus,train,19
+data/SNU/images/squamouscellcarcinoma_38.jpg,squamous cell carcinoma,test,11
+data/SNU/images/herpessimplex_7.jpg,herpes simplex,train,17
+data/SNU/images/keratoderma_9.jpg,keratoderma,train,42
+data/SNU/images/furuncle_5.jpg,furuncle,train,15
+data/SNU/images/bullousdisease_7.jpg,bullous disease,train,16
+data/SNU/images/confluentreticulatedpapillomatosis_10.jpg,confluent and reticulated papillomatosis,test,56
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_10.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/malignantmelanoma_11.jpg,malignant melanoma,train,23
+data/SNU/images/hemangioma_25.jpg,hemangioma,test,21
+data/SNU/images/herpeszoster_14.jpg,herpes zoster,train,22
+data/SNU/images/striaedistensae_15.jpg,striae distensae,test,20
+data/SNU/images/hemangioma_31.jpg,hemangioma,train,21
+data/SNU/images/actinickeratosis_0.jpg,actinic keratosis,train,28
+data/SNU/images/juvenilexanthogranuloma_13.jpg,juvenile xanthogranuloma,val,27
+data/SNU/images/malignantmelanoma_4.jpg,malignant melanoma,train,23
+data/SNU/images/nevusspilus_2.jpg,nevus spilus,train,26
+data/SNU/images/hemangioma_19.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_39.jpg,malignant melanoma,train,23
+data/SNU/images/nummulareczema_4.jpg,nummular eczema,test,29
+data/SNU/images/beckernevus_8.jpg,becker nevus,val,59
+data/SNU/images/androgenicalopecia_5.jpg,androgenic alopecia,train,33
+data/SNU/images/prurigonodularis_3.jpg,prurigo nodularis,train,34
+data/SNU/images/subungalhematoma_3.jpg,subungual hematoma,train,32
+data/SNU/images/xeroticeczema_15.jpg,xerotic eczema,train,31
+data/SNU/images/melanocyticnevus_41.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_47.jpg,seborrheic keratosis,val,39
+data/SNU/images/basalcellcarcinoma_32.jpg,basal cell carcinoma,train,36
+data/SNU/images/handeczema_2.jpg,hand eczema,val,35
+data/SNU/images/basalcellcarcinoma_26.jpg,basal cell carcinoma,train,36
+data/SNU/images/melanocyticnevus_55.jpg,melanocytic nevus,train,37
+data/SNU/images/erythemaabigne_4.jpg,erythema ab igne,train,43
+data/SNU/images/lichenstriatus_7.jpg,lichen striatus,val,44
+data/SNU/images/striaedistensae_3.jpg,striae distensae,train,20
+data/SNU/images/hypertrophicscar_7.jpg,hypertrophic scar,train,40
+data/SNU/images/idiopathicguttatehypomelanosis_0.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/morphea_4.jpg,morphea,train,49
+data/SNU/images/cafeaulaitmacule_5.jpg,cafe au lait macule,train,47
+data/SNU/images/poikiloderma_0.jpg,poikiloderma,val,48
+data/SNU/images/ingrowingnail_10.jpg,ingrowing nail,train,45
+data/SNU/images/varicella_1.jpg,varicella,train,46
+data/SNU/images/handeczema_14.jpg,hand eczema,train,35
+data/SNU/images/milia_7.jpg,milia,train,51
+data/SNU/images/tineaversicolor_14.jpg,tinea versicolor,train,60
+data/SNU/images/naildystrophy_1.jpg,nail dystrophy,val,52
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_7.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/eczemaherpeticum_1.jpg,eczema herpeticum,train,50
+data/SNU/images/juvenilexanthogranuloma_9.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/psoriasis_8.jpg,psoriasis,test,61
+data/SNU/images/angularcheilitis_0.jpg,angular cheilitis,train,55
+data/SNU/images/acanthosisnigricans_2.jpg,acanthosis nigricans,train,54
+data/SNU/images/lichennitidus_7.jpg,lichen nitidus,train,53
+data/SNU/images/acanthosisnigricans_3.jpg,acanthosis nigricans,train,54
+data/SNU/images/lichennitidus_6.jpg,lichen nitidus,val,53
+data/SNU/images/angularcheilitis_1.jpg,angular cheilitis,train,55
+data/SNU/images/psoriasis_9.jpg,psoriasis,train,61
+data/SNU/images/juvenilexanthogranuloma_8.jpg,juvenile xanthogranuloma,test,27
+data/SNU/images/eczemaherpeticum_0.jpg,eczema herpeticum,train,50
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_6.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/naildystrophy_0.jpg,nail dystrophy,train,52
+data/SNU/images/milia_6.jpg,milia,train,51
+data/SNU/images/handeczema_15.jpg,hand eczema,train,35
+data/SNU/images/poikiloderma_1.jpg,poikiloderma,train,48
+data/SNU/images/cafeaulaitmacule_4.jpg,cafe au lait macule,test,47
+data/SNU/images/varicella_0.jpg,varicella,train,46
+data/SNU/images/ingrowingnail_11.jpg,ingrowing nail,test,45
+data/SNU/images/morphea_5.jpg,morphea,train,49
+data/SNU/images/striaedistensae_2.jpg,striae distensae,train,20
+data/SNU/images/lichenstriatus_6.jpg,lichen striatus,train,44
+data/SNU/images/erythemaabigne_5.jpg,erythema ab igne,val,43
+data/SNU/images/idiopathicguttatehypomelanosis_1.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/hypertrophicscar_6.jpg,hypertrophic scar,train,40
+data/SNU/images/melanocyticnevus_54.jpg,melanocytic nevus,train,37
+data/SNU/images/basalcellcarcinoma_27.jpg,basal cell carcinoma,train,36
+data/SNU/images/handeczema_3.jpg,hand eczema,train,35
+data/SNU/images/basalcellcarcinoma_33.jpg,basal cell carcinoma,train,36
+data/SNU/images/seborrheickeratosis_46.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_40.jpg,melanocytic nevus,test,37
+data/SNU/images/subungalhematoma_2.jpg,subungual hematoma,train,32
+data/SNU/images/xeroticeczema_14.jpg,xerotic eczema,val,31
+data/SNU/images/prurigonodularis_2.jpg,prurigo nodularis,train,34
+data/SNU/images/androgenicalopecia_4.jpg,androgenic alopecia,train,33
+data/SNU/images/beckernevus_9.jpg,becker nevus,train,59
+data/SNU/images/nummulareczema_5.jpg,nummular eczema,test,29
+data/SNU/images/malignantmelanoma_38.jpg,malignant melanoma,train,23
+data/SNU/images/malignantmelanoma_5.jpg,malignant melanoma,train,23
+data/SNU/images/actinickeratosis_1.jpg,actinic keratosis,test,28
+data/SNU/images/juvenilexanthogranuloma_12.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/hemangioma_18.jpg,hemangioma,train,21
+data/SNU/images/nevusspilus_3.jpg,nevus spilus,test,26
+data/SNU/images/hemangioma_30.jpg,hemangioma,train,21
+data/SNU/images/striaedistensae_14.jpg,striae distensae,train,20
+data/SNU/images/malignantmelanoma_10.jpg,malignant melanoma,test,23
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_11.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/confluentreticulatedpapillomatosis_11.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/hemangioma_24.jpg,hemangioma,train,21
+data/SNU/images/herpeszoster_15.jpg,herpes zoster,val,22
+data/SNU/images/bullousdisease_6.jpg,bullous disease,test,16
+data/SNU/images/furuncle_4.jpg,furuncle,train,15
+data/SNU/images/keratoderma_8.jpg,keratoderma,train,42
+data/SNU/images/lupuserythematosus_11.jpg,lupus erythematosus,train,19
+data/SNU/images/tineafaciale_3.jpg,tinea faciale,test,18
+data/SNU/images/herpessimplex_6.jpg,herpes simplex,train,17
+data/SNU/images/squamouscellcarcinoma_39.jpg,squamous cell carcinoma,train,11
+data/SNU/images/squamouscellcarcinoma_11.jpg,squamous cell carcinoma,train,11
+data/SNU/images/wart_7.jpg,wart,train,12
+data/SNU/images/perioraldermatitis_10.jpg,perioral dermatitis,test,10
+data/SNU/images/dermatofibroma_43.jpg,dermatofibroma,train,9
+data/SNU/images/urticariapigmentosa_0.jpg,urticaria pigmentosa,train,14
+data/SNU/images/riehlmelanosis_5.jpg,riehl melanosis,train,13
+data/SNU/images/pyogenicgranuloma_14.jpg,pyogenic granuloma,train,7
+data/SNU/images/cellulitis_0.jpg,cellulitis,train,6
+data/SNU/images/fifthdisease_23.jpg,fifth disease,val,8
+data/SNU/images/pyogenicgranuloma_28.jpg,pyogenic granuloma,test,7
+data/SNU/images/keloid_4.jpg,keloid,train,4
+data/SNU/images/dermatofibroma_9.jpg,dermatofibroma,train,9
+data/SNU/images/portwinestain_14.jpg,port wine stain,train,62
+data/SNU/images/condyloma_5.jpg,condyloma,train,3
+data/SNU/images/epidermalcyst_13.jpg,epidermal cyst,train,0
+data/SNU/images/mucouscyst_8.jpg,mucous cyst,test,58
+data/SNU/images/paronychia_1.jpg,paronychia,train,1
+data/SNU/images/condyloma_1.jpg,condyloma,train,3
+data/SNU/images/portwinestain_10.jpg,port wine stain,train,62
+data/SNU/images/paronychia_5.jpg,paronychia,train,1
+data/SNU/images/epidermalcyst_17.jpg,epidermal cyst,train,0
+data/SNU/images/neurofibromatosis_11.jpg,neurofibromatosis,train,63
+data/SNU/images/tineacruris_8.jpg,tinea cruris,train,64
+data/SNU/images/cellulitis_4.jpg,cellulitis,train,6
+data/SNU/images/pyogenicgranuloma_10.jpg,pyogenic granuloma,val,7
+data/SNU/images/actinickeratosis_48.jpg,actinic keratosis,val,28
+data/SNU/images/pyogenicgranuloma_38.jpg,pyogenic granuloma,train,7
+data/SNU/images/keloid_0.jpg,keloid,train,4
+data/SNU/images/herpessimplex_2.jpg,herpes simplex,train,17
+data/SNU/images/tineafaciale_7.jpg,tinea faciale,train,18
+data/SNU/images/lupuserythematosus_15.jpg,lupus erythematosus,val,19
+data/SNU/images/furuncle_0.jpg,furuncle,train,15
+data/SNU/images/bullousdisease_2.jpg,bullous disease,train,16
+data/SNU/images/squamouscellcarcinoma_29.jpg,squamous cell carcinoma,test,11
+data/SNU/images/riehlmelanosis_1.jpg,riehl melanosis,val,13
+data/SNU/images/varicella_11.jpg,varicella,train,46
+data/SNU/images/urticariapigmentosa_4.jpg,urticaria pigmentosa,train,14
+data/SNU/images/perioraldermatitis_14.jpg,perioral dermatitis,train,10
+data/SNU/images/wart_3.jpg,wart,val,12
+data/SNU/images/squamouscellcarcinoma_15.jpg,squamous cell carcinoma,test,11
+data/SNU/images/nevusspilus_7.jpg,nevus spilus,test,26
+data/SNU/images/juvenilexanthogranuloma_16.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/actinickeratosis_5.jpg,actinic keratosis,test,28
+data/SNU/images/malignantmelanoma_28.jpg,malignant melanoma,train,23
+data/SNU/images/malignantmelanoma_1.jpg,malignant melanoma,test,23
+data/SNU/images/keloid_12.jpg,keloid,train,4
+data/SNU/images/herpeszoster_11.jpg,herpes zoster,test,22
+data/SNU/images/hemangioma_20.jpg,hemangioma,train,21
+data/SNU/images/xanthelasma_8.jpg,xanthelasma,test,65
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_15.jpg,pityriasis lichenoides et varioliformis acuta,test,24
+data/SNU/images/molluscumcontagiosum_9.jpg,molluscum contagiosum,test,66
+data/SNU/images/malignantmelanoma_14.jpg,malignant melanoma,test,23
+data/SNU/images/striaedistensae_10.jpg,striae distensae,train,20
+data/SNU/images/hemangioma_34.jpg,hemangioma,test,21
+data/SNU/images/androgenicalopecia_0.jpg,androgenic alopecia,train,33
+data/SNU/images/prurigonodularis_6.jpg,prurigo nodularis,val,34
+data/SNU/images/xeroticeczema_10.jpg,xerotic eczema,test,31
+data/SNU/images/subungalhematoma_6.jpg,subungual hematoma,val,32
+data/SNU/images/erythemaannularecentrifugum_8.jpg,erythema annulare centrifugum,test,67
+data/SNU/images/nummulareczema_1.jpg,nummular eczema,train,29
+data/SNU/images/idiopathicguttatehypomelanosis_5.jpg,idiopathic guttate hypomelanosis,val,41
+data/SNU/images/hypertrophicscar_2.jpg,hypertrophic scar,train,40
+data/SNU/images/erythemaabigne_1.jpg,erythema ab igne,train,43
+data/SNU/images/striaedistensae_6.jpg,striae distensae,test,20
+data/SNU/images/lichenstriatus_2.jpg,lichen striatus,test,44
+data/SNU/images/melanocyticnevus_44.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_42.jpg,seborrheic keratosis,train,39
+data/SNU/images/onychomycosis_9.jpg,onychomycosis,test,68
+data/SNU/images/handeczema_7.jpg,hand eczema,train,35
+data/SNU/images/scabies_9.jpg,scabies,val,69
+data/SNU/images/basalcellcarcinoma_23.jpg,basal cell carcinoma,train,36
+data/SNU/images/melanocyticnevus_50.jpg,melanocytic nevus,train,37
+data/SNU/images/handeczema_11.jpg,hand eczema,test,35
+data/SNU/images/milia_2.jpg,milia,train,51
+data/SNU/images/tineaversicolor_11.jpg,tinea versicolor,train,60
+data/SNU/images/neurofibroma_9.jpg,neurofibroma,train,70
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_2.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/naildystrophy_4.jpg,nail dystrophy,train,52
+data/SNU/images/eczemaherpeticum_4.jpg,eczema herpeticum,train,50
+data/SNU/images/mucosalmelanoticmacule_8.jpg,mucosal melanotic macule,val,71
+data/SNU/images/morphea_1.jpg,morphea,val,49
+data/SNU/images/varicella_4.jpg,varicella,test,46
+data/SNU/images/cafeaulaitmacule_0.jpg,cafe au lait macule,train,47
+data/SNU/images/poikiloderma_5.jpg,poikiloderma,train,48
+data/SNU/images/angularcheilitis_5.jpg,angular cheilitis,train,55
+data/SNU/images/rosacea_8.jpg,rosacea,train,72
+data/SNU/images/lichennitidus_2.jpg,lichen nitidus,train,53
+data/SNU/images/acanthosisnigricans_7.jpg,acanthosis nigricans,test,54
+data/SNU/images/keratoacanthoma_8.jpg,keratoacanthoma,test,73
+data/SNU/images/angiofibroma_12.jpg,angiofibroma,train,74
+data/SNU/images/keratoacanthoma_9.jpg,keratoacanthoma,val,73
+data/SNU/images/lichennitidus_3.jpg,lichen nitidus,test,53
+data/SNU/images/acanthosisnigricans_6.jpg,acanthosis nigricans,train,54
+data/SNU/images/rosacea_9.jpg,rosacea,train,72
+data/SNU/images/angularcheilitis_4.jpg,angular cheilitis,test,55
+data/SNU/images/varicella_5.jpg,varicella,train,46
+data/SNU/images/poikiloderma_4.jpg,poikiloderma,test,48
+data/SNU/images/cafeaulaitmacule_1.jpg,cafe au lait macule,train,47
+data/SNU/images/morphea_0.jpg,morphea,train,49
+data/SNU/images/mucosalmelanoticmacule_9.jpg,mucosal melanotic macule,train,71
+data/SNU/images/eczemaherpeticum_5.jpg,eczema herpeticum,train,50
+data/SNU/images/naildystrophy_5.jpg,nail dystrophy,test,52
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_3.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/neurofibroma_8.jpg,neurofibroma,train,70
+data/SNU/images/tineaversicolor_10.jpg,tinea versicolor,train,60
+data/SNU/images/milia_3.jpg,milia,train,51
+data/SNU/images/handeczema_10.jpg,hand eczema,train,35
+data/SNU/images/onychomycosis_8.jpg,onychomycosis,val,68
+data/SNU/images/melanocyticnevus_51.jpg,melanocytic nevus,train,37
+data/SNU/images/basalcellcarcinoma_22.jpg,basal cell carcinoma,val,36
+data/SNU/images/scabies_8.jpg,scabies,test,69
+data/SNU/images/handeczema_6.jpg,hand eczema,train,35
+data/SNU/images/seborrheickeratosis_43.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_45.jpg,melanocytic nevus,train,37
+data/SNU/images/hypertrophicscar_3.jpg,hypertrophic scar,train,40
+data/SNU/images/idiopathicguttatehypomelanosis_4.jpg,idiopathic guttate hypomelanosis,test,41
+data/SNU/images/lichenstriatus_3.jpg,lichen striatus,train,44
+data/SNU/images/striaedistensae_7.jpg,striae distensae,train,20
+data/SNU/images/erythemaabigne_0.jpg,erythema ab igne,test,43
+data/SNU/images/nummulareczema_0.jpg,nummular eczema,train,29
+data/SNU/images/erythemaannularecentrifugum_9.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/xeroticeczema_11.jpg,xerotic eczema,train,31
+data/SNU/images/subungalhematoma_7.jpg,subungual hematoma,train,32
+data/SNU/images/prurigonodularis_7.jpg,prurigo nodularis,train,34
+data/SNU/images/androgenicalopecia_1.jpg,androgenic alopecia,train,33
+data/SNU/images/hemangioma_35.jpg,hemangioma,train,21
+data/SNU/images/striaedistensae_11.jpg,striae distensae,train,20
+data/SNU/images/xanthelasma_9.jpg,xanthelasma,val,65
+data/SNU/images/herpeszoster_10.jpg,herpes zoster,train,22
+data/SNU/images/hemangioma_21.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_15.jpg,malignant melanoma,train,23
+data/SNU/images/molluscumcontagiosum_8.jpg,molluscum contagiosum,train,66
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_14.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/keloid_13.jpg,keloid,test,4
+data/SNU/images/nevusspilus_6.jpg,nevus spilus,train,26
+data/SNU/images/malignantmelanoma_0.jpg,malignant melanoma,train,23
+data/SNU/images/malignantmelanoma_29.jpg,malignant melanoma,train,23
+data/SNU/images/juvenilexanthogranuloma_17.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/actinickeratosis_4.jpg,actinic keratosis,val,28
+data/SNU/images/perioraldermatitis_15.jpg,perioral dermatitis,test,10
+data/SNU/images/squamouscellcarcinoma_14.jpg,squamous cell carcinoma,train,11
+data/SNU/images/wart_2.jpg,wart,test,12
+data/SNU/images/varicella_10.jpg,varicella,test,46
+data/SNU/images/riehlmelanosis_0.jpg,riehl melanosis,train,13
+data/SNU/images/urticariapigmentosa_5.jpg,urticaria pigmentosa,train,14
+data/SNU/images/bullousdisease_3.jpg,bullous disease,train,16
+data/SNU/images/furuncle_1.jpg,furuncle,train,15
+data/SNU/images/squamouscellcarcinoma_28.jpg,squamous cell carcinoma,train,11
+data/SNU/images/herpessimplex_3.jpg,herpes simplex,train,17
+data/SNU/images/lupuserythematosus_14.jpg,lupus erythematosus,train,19
+data/SNU/images/tineafaciale_6.jpg,tinea faciale,test,18
+data/SNU/images/keloid_1.jpg,keloid,train,4
+data/SNU/images/pyogenicgranuloma_39.jpg,pyogenic granuloma,train,7
+data/SNU/images/cellulitis_5.jpg,cellulitis,val,6
+data/SNU/images/tineacruris_9.jpg,tinea cruris,train,64
+data/SNU/images/actinickeratosis_49.jpg,actinic keratosis,val,28
+data/SNU/images/pyogenicgranuloma_11.jpg,pyogenic granuloma,train,7
+data/SNU/images/neurofibromatosis_10.jpg,neurofibromatosis,test,63
+data/SNU/images/epidermalcyst_16.jpg,epidermal cyst,train,0
+data/SNU/images/paronychia_4.jpg,paronychia,train,1
+data/SNU/images/portwinestain_11.jpg,port wine stain,train,62
+data/SNU/images/condyloma_0.jpg,condyloma,train,3
+data/SNU/images/angiofibroma_9.jpg,angiofibroma,test,74
+data/SNU/images/portwinestain_13.jpg,port wine stain,val,62
+data/SNU/images/melanonychia_8.jpg,melanonychia,test,75
+data/SNU/images/condyloma_2.jpg,condyloma,train,3
+data/SNU/images/epidermalcyst_14.jpg,epidermal cyst,train,0
+data/SNU/images/paronychia_6.jpg,paronychia,train,1
+data/SNU/images/pyogenicgranuloma_13.jpg,pyogenic granuloma,test,7
+data/SNU/images/cellulitis_7.jpg,cellulitis,test,6
+data/SNU/images/neurofibromatosis_12.jpg,neurofibromatosis,train,63
+data/SNU/images/fifthdisease_24.jpg,fifth disease,test,8
+data/SNU/images/keloid_3.jpg,keloid,test,4
+data/SNU/images/fifthdisease_18.jpg,fifth disease,val,8
+data/SNU/images/organoidnevus_9.jpg,organoid nevus,test,76
+data/SNU/images/furuncle_3.jpg,furuncle,val,15
+data/SNU/images/bullousdisease_1.jpg,bullous disease,test,16
+data/SNU/images/tineafaciale_4.jpg,tinea faciale,train,18
+data/SNU/images/herpessimplex_1.jpg,herpes simplex,test,17
+data/SNU/images/squamouscellcarcinoma_16.jpg,squamous cell carcinoma,train,11
+data/SNU/images/wart_0.jpg,wart,train,12
+data/SNU/images/dermatofibroma_44.jpg,dermatofibroma,test,9
+data/SNU/images/perioraldermatitis_17.jpg,perioral dermatitis,train,10
+data/SNU/images/urticariapigmentosa_7.jpg,urticaria pigmentosa,train,14
+data/SNU/images/riehlmelanosis_2.jpg,riehl melanosis,train,13
+data/SNU/images/keloid_11.jpg,keloid,train,4
+data/SNU/images/actinickeratosis_6.jpg,actinic keratosis,train,28
+data/SNU/images/juvenilexanthogranuloma_15.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/malignantmelanoma_2.jpg,malignant melanoma,train,23
+data/SNU/images/nevusdepigmentosus_8.jpg,nevus depigmentosus,train,77
+data/SNU/images/beckernevus_10.jpg,becker nevus,train,59
+data/SNU/images/nevusspilus_4.jpg,nevus spilus,val,26
+data/SNU/images/striaedistensae_13.jpg,striae distensae,train,20
+data/SNU/images/epidermalnevus_9.jpg,epidermal nevus,train,78
+data/SNU/images/malignantmelanoma_17.jpg,malignant melanoma,train,23
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_16.jpg,pityriasis lichenoides et varioliformis acuta,test,24
+data/SNU/images/hemangioma_23.jpg,hemangioma,train,21
+data/SNU/images/herpeszoster_12.jpg,herpes zoster,train,22
+data/SNU/images/tineacorporis_8.jpg,tinea corporis,train,79
+data/SNU/images/subungalhematoma_5.jpg,subungual hematoma,test,32
+data/SNU/images/xeroticeczema_13.jpg,xerotic eczema,train,31
+data/SNU/images/androgenicalopecia_3.jpg,androgenic alopecia,train,33
+data/SNU/images/prurigonodularis_5.jpg,prurigo nodularis,test,34
+data/SNU/images/nummulareczema_2.jpg,nummular eczema,train,29
+data/SNU/images/erythemaabigne_2.jpg,erythema ab igne,train,43
+data/SNU/images/striaedistensae_5.jpg,striae distensae,train,20
+data/SNU/images/lichenstriatus_1.jpg,lichen striatus,train,44
+data/SNU/images/idiopathicguttatehypomelanosis_6.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/hypertrophicscar_1.jpg,hypertrophic scar,train,40
+data/SNU/images/handeczema_4.jpg,hand eczema,train,35
+data/SNU/images/basalcellcarcinoma_20.jpg,basal cell carcinoma,train,36
+data/SNU/images/melanocyticnevus_53.jpg,melanocytic nevus,val,37
+data/SNU/images/melanocyticnevus_47.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_41.jpg,seborrheic keratosis,test,39
+data/SNU/images/eczemaherpeticum_7.jpg,eczema herpeticum,train,50
+data/SNU/images/handeczema_12.jpg,hand eczema,train,35
+data/SNU/images/tineaversicolor_12.jpg,tinea versicolor,train,60
+data/SNU/images/milia_1.jpg,milia,train,51
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_1.jpg,pityriasis lichenoides et varioliformis acuta,val,24
+data/SNU/images/naildystrophy_7.jpg,nail dystrophy,train,52
+data/SNU/images/cafeaulaitmacule_3.jpg,cafe au lait macule,train,47
+data/SNU/images/poikiloderma_6.jpg,poikiloderma,test,48
+data/SNU/images/varicella_7.jpg,varicella,train,46
+data/SNU/images/morphea_2.jpg,morphea,train,49
+data/SNU/images/acanthosisnigricans_4.jpg,acanthosis nigricans,val,54
+data/SNU/images/lichennitidus_1.jpg,lichen nitidus,train,53
+data/SNU/images/angularcheilitis_6.jpg,angular cheilitis,train,55
+data/SNU/images/angiofibroma_10.jpg,angiofibroma,test,74
+data/SNU/images/angiofibroma_11.jpg,angiofibroma,train,74
+data/SNU/images/angularcheilitis_7.jpg,angular cheilitis,train,55
+data/SNU/images/acanthosisnigricans_5.jpg,acanthosis nigricans,train,54
+data/SNU/images/lichennitidus_0.jpg,lichen nitidus,train,53
+data/SNU/images/morphea_3.jpg,morphea,test,49
+data/SNU/images/poikiloderma_7.jpg,poikiloderma,test,48
+data/SNU/images/cafeaulaitmacule_2.jpg,cafe au lait macule,train,47
+data/SNU/images/varicella_6.jpg,varicella,train,46
+data/SNU/images/naildystrophy_6.jpg,nail dystrophy,train,52
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_0.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/milia_0.jpg,milia,train,51
+data/SNU/images/tineaversicolor_13.jpg,tinea versicolor,train,60
+data/SNU/images/handeczema_13.jpg,hand eczema,train,35
+data/SNU/images/eczemaherpeticum_6.jpg,eczema herpeticum,val,50
+data/SNU/images/seborrheickeratosis_40.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_46.jpg,melanocytic nevus,test,37
+data/SNU/images/melanocyticnevus_52.jpg,melanocytic nevus,train,37
+data/SNU/images/basalcellcarcinoma_21.jpg,basal cell carcinoma,train,36
+data/SNU/images/handeczema_5.jpg,hand eczema,train,35
+data/SNU/images/lichenstriatus_0.jpg,lichen striatus,test,44
+data/SNU/images/striaedistensae_4.jpg,striae distensae,train,20
+data/SNU/images/erythemaabigne_3.jpg,erythema ab igne,train,43
+data/SNU/images/hypertrophicscar_0.jpg,hypertrophic scar,val,40
+data/SNU/images/idiopathicguttatehypomelanosis_7.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/nummulareczema_3.jpg,nummular eczema,train,29
+data/SNU/images/prurigonodularis_4.jpg,prurigo nodularis,train,34
+data/SNU/images/androgenicalopecia_2.jpg,androgenic alopecia,train,33
+data/SNU/images/subungalhematoma_4.jpg,subungual hematoma,test,32
+data/SNU/images/xeroticeczema_12.jpg,xerotic eczema,train,31
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_17.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/malignantmelanoma_16.jpg,malignant melanoma,train,23
+data/SNU/images/tineacorporis_9.jpg,tinea corporis,test,79
+data/SNU/images/hemangioma_22.jpg,hemangioma,test,21
+data/SNU/images/herpeszoster_13.jpg,herpes zoster,train,22
+data/SNU/images/hemangioma_36.jpg,hemangioma,train,21
+data/SNU/images/striaedistensae_12.jpg,striae distensae,train,20
+data/SNU/images/epidermalnevus_8.jpg,epidermal nevus,train,78
+data/SNU/images/nevusdepigmentosus_9.jpg,nevus depigmentosus,test,77
+data/SNU/images/malignantmelanoma_3.jpg,malignant melanoma,train,23
+data/SNU/images/actinickeratosis_7.jpg,actinic keratosis,train,28
+data/SNU/images/juvenilexanthogranuloma_14.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/nevusspilus_5.jpg,nevus spilus,train,26
+data/SNU/images/keloid_10.jpg,keloid,test,4
+data/SNU/images/urticariapigmentosa_6.jpg,urticaria pigmentosa,test,14
+data/SNU/images/riehlmelanosis_3.jpg,riehl melanosis,train,13
+data/SNU/images/wart_1.jpg,wart,train,12
+data/SNU/images/squamouscellcarcinoma_17.jpg,squamous cell carcinoma,train,11
+data/SNU/images/perioraldermatitis_16.jpg,perioral dermatitis,test,10
+data/SNU/images/dermatofibroma_45.jpg,dermatofibroma,train,9
+data/SNU/images/tineafaciale_5.jpg,tinea faciale,train,18
+data/SNU/images/herpessimplex_0.jpg,herpes simplex,train,17
+data/SNU/images/organoidnevus_8.jpg,organoid nevus,train,76
+data/SNU/images/bullousdisease_0.jpg,bullous disease,train,16
+data/SNU/images/furuncle_2.jpg,furuncle,train,15
+data/SNU/images/fifthdisease_19.jpg,fifth disease,train,8
+data/SNU/images/keloid_2.jpg,keloid,train,4
+data/SNU/images/neurofibromatosis_13.jpg,neurofibromatosis,train,63
+data/SNU/images/pyogenicgranuloma_12.jpg,pyogenic granuloma,train,7
+data/SNU/images/cellulitis_6.jpg,cellulitis,train,6
+data/SNU/images/paronychia_7.jpg,paronychia,val,1
+data/SNU/images/epidermalcyst_15.jpg,epidermal cyst,test,0
+data/SNU/images/condyloma_3.jpg,condyloma,train,3
+data/SNU/images/melanonychia_9.jpg,melanonychia,val,75
+data/SNU/images/portwinestain_12.jpg,port wine stain,test,62
+data/SNU/images/angiofibroma_8.jpg,angiofibroma,val,74
+data/SNU/images/pyogenicgranuloma_6.jpg,pyogenic granuloma,test,7
+data/SNU/images/drugeruption_19.jpg,drug eruption,test,80
+data/SNU/images/freckle_1.jpg,freckle,train,81
+data/SNU/images/actinickeratosis_11.jpg,actinic keratosis,train,28
+data/SNU/images/vitiligo_3.jpg,vitiligo,train,82
+data/SNU/images/poroma_2.jpg,poroma,train,83
+data/SNU/images/perioraldermatitis_4.jpg,perioral dermatitis,train,10
+data/SNU/images/pityriasisalba_2.jpg,pityriasis alba,train,84
+data/SNU/images/viralexanthem_5.jpg,viral exanthem,train,85
+data/SNU/images/bluenevus_4.jpg,blue nevus,train,86
+data/SNU/images/acne_5.jpg,acne,train,87
+data/SNU/images/tineacorporis_13.jpg,tinea corporis,train,79
+data/SNU/images/actinickeratosis_39.jpg,actinic keratosis,train,28
+data/SNU/images/dermatofibroma_22.jpg,dermatofibroma,train,9
+data/SNU/images/venouslake_5.jpg,venous lake,train,88
+data/SNU/images/dermatofibroma_36.jpg,dermatofibroma,train,9
+data/SNU/images/atopicdermatitis_8.jpg,atopic dermatitis,train,89
+data/SNU/images/lupuserythematosus_2.jpg,lupus erythematosus,train,19
+data/SNU/images/xeroticeczema_8.jpg,xerotic eczema,val,31
+data/SNU/images/seborrheicdermatitis_0.jpg,seborrheic dermatitis,test,90
+data/SNU/images/lichenplanus_3.jpg,lichen planus,train,91
+data/SNU/images/viralexanthem_10.jpg,viral exanthem,train,85
+data/SNU/images/exfoliativedermatitis_4.jpg,exfoliative dermatitis,train,92
+data/SNU/images/molluscumcontagiosum_13.jpg,molluscum contagiosum,train,66
+data/SNU/images/melasma_13.jpg,melasma,train,93
+data/SNU/images/abscess_6.jpg,abscess,train,94
+data/SNU/images/morphea_13.jpg,morphea,val,49
+data/SNU/images/syringoma_9.jpg,syringoma,train,57
+data/SNU/images/acutegeneralizedexanthematouspustulosis_8.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/tineaversicolor_8.jpg,tinea versicolor,test,60
+data/SNU/images/portwinestain_4.jpg,port wine stain,train,62
+data/SNU/images/urticarialvasculitis_13.jpg,urticarial vasculitis,train,96
+data/SNU/images/neurofibromatosis_4.jpg,neurofibromatosis,train,63
+data/SNU/images/vasculitis_12.jpg,vasculitis,test,97
+data/SNU/images/prurigopigmentosa_0.jpg,prurigo pigmentosa,train,98
+data/SNU/images/impetigo_3.jpg,impetigo,train,99
+data/SNU/images/confluentreticulatedpapillomatosis_7.jpg,confluent and reticulated papillomatosis,test,56
+data/SNU/images/pityriasislichenoideschronica_4.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/squamouscellcarcinoma_0.jpg,squamous cell carcinoma,train,11
+data/SNU/images/bowendisease_20.jpg,bowen disease,train,101
+data/SNU/images/granulomaannulare_7.jpg,granuloma annulare,train,102
+data/SNU/images/melanocyticnevus_35.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_33.jpg,seborrheic keratosis,train,39
+data/SNU/images/amyloidosis_2.jpg,amyloidosis,train,103
+data/SNU/images/urticaria_5.jpg,urticaria,test,104
+data/SNU/images/keratosispilaris_4.jpg,keratosis pilaris,train,105
+data/SNU/images/urticarialvasculitis_8.jpg,urticarial vasculitis,test,96
+data/SNU/images/subungalhematoma_16.jpg,subungual hematoma,train,32
+data/SNU/images/livedoreticularis_6.jpg,livedo reticularis,test,106
+data/SNU/images/bowendisease_4.jpg,bowen disease,train,101
+data/SNU/images/seborrheickeratosis_27.jpg,seborrheic keratosis,train,39
+data/SNU/images/bowendisease_34.jpg,bowen disease,train,101
+data/SNU/images/melanocyticnevus_21.jpg,melanocytic nevus,test,37
+data/SNU/images/erythemaabigne_11.jpg,erythema ab igne,train,43
+data/SNU/images/basalcellcarcinoma_1.jpg,basal cell carcinoma,train,36
+data/SNU/images/steatocystomamultiplex_7.jpg,steatocystoma multiplex,train,107
+data/SNU/images/otanevus_10.jpg,ota nevus,train,2
+data/SNU/images/pityriasisrosea_1.jpg,pityriasis rosea,train,108
+data/SNU/images/mucocele_7.jpg,mucocele,train,109
+data/SNU/images/melasma_7.jpg,melasma,test,93
+data/SNU/images/erythemamultiforme_0.jpg,erythema multiforme,train,110
+data/SNU/images/sebaceoushyperplasia_2.jpg,sebaceous hyperplasia,test,111
+data/SNU/images/rosacea_12.jpg,rosacea,train,72
+data/SNU/images/tineacruris_11.jpg,tinea cruris,train,64
+data/SNU/images/urticariapigmentosa_16.jpg,urticaria pigmentosa,train,14
+data/SNU/images/palmoplantarpustulosis_7.jpg,palmoplantar pustulosis,test,112
+data/SNU/images/epidermalcyst_0.jpg,epidermal cyst,train,0
+data/SNU/images/tineafaciale_10.jpg,tinea faciale,train,18
+data/SNU/images/porokeratosis_1.jpg,porokeratosis,train,113
+data/SNU/images/lentigo_5.jpg,lentigo,test,114
+data/SNU/images/sebaceoushyperplasia_14.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/porokeratosis_0.jpg,porokeratosis,train,113
+data/SNU/images/sebaceoushyperplasia_15.jpg,sebaceous hyperplasia,test,111
+data/SNU/images/lentigo_4.jpg,lentigo,train,114
+data/SNU/images/epidermalcyst_1.jpg,epidermal cyst,train,0
+data/SNU/images/tineafaciale_11.jpg,tinea faciale,test,18
+data/SNU/images/palmoplantarpustulosis_6.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/urticariapigmentosa_17.jpg,urticaria pigmentosa,test,14
+data/SNU/images/sebaceoushyperplasia_3.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/erythemamultiforme_1.jpg,erythema multiforme,train,110
+data/SNU/images/melasma_6.jpg,melasma,train,93
+data/SNU/images/tineacruris_10.jpg,tinea cruris,test,64
+data/SNU/images/rosacea_13.jpg,rosacea,val,72
+data/SNU/images/mucocele_6.jpg,mucocele,test,109
+data/SNU/images/pityriasisrosea_0.jpg,pityriasis rosea,train,108
+data/SNU/images/otanevus_11.jpg,ota nevus,train,2
+data/SNU/images/erythemaabigne_10.jpg,erythema ab igne,train,43
+data/SNU/images/steatocystomamultiplex_6.jpg,steatocystoma multiplex,train,107
+data/SNU/images/basalcellcarcinoma_0.jpg,basal cell carcinoma,train,36
+data/SNU/images/riehlmelanosis_10.jpg,riehl melanosis,train,13
+data/SNU/images/bowendisease_5.jpg,bowen disease,train,101
+data/SNU/images/livedoreticularis_7.jpg,livedo reticularis,train,106
+data/SNU/images/urticarialvasculitis_9.jpg,urticarial vasculitis,train,96
+data/SNU/images/keratosispilaris_5.jpg,keratosis pilaris,val,105
+data/SNU/images/melanocyticnevus_20.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_35.jpg,bowen disease,val,101
+data/SNU/images/seborrheickeratosis_26.jpg,seborrheic keratosis,train,39
+data/SNU/images/seborrheickeratosis_32.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_34.jpg,melanocytic nevus,train,37
+data/SNU/images/granulomaannulare_6.jpg,granuloma annulare,train,102
+data/SNU/images/bowendisease_21.jpg,bowen disease,test,101
+data/SNU/images/urticaria_4.jpg,urticaria,train,104
+data/SNU/images/amyloidosis_3.jpg,amyloidosis,val,103
+data/SNU/images/squamouscellcarcinoma_1.jpg,squamous cell carcinoma,test,11
+data/SNU/images/confluentreticulatedpapillomatosis_6.jpg,confluent and reticulated papillomatosis,val,56
+data/SNU/images/impetigo_2.jpg,impetigo,test,99
+data/SNU/images/prurigopigmentosa_1.jpg,prurigo pigmentosa,train,98
+data/SNU/images/pityriasislichenoideschronica_5.jpg,pityriasis lichenoides chronica,val,100
+data/SNU/images/neurofibromatosis_5.jpg,neurofibromatosis,train,63
+data/SNU/images/urticarialvasculitis_12.jpg,urticarial vasculitis,train,96
+data/SNU/images/vasculitis_13.jpg,vasculitis,train,97
+data/SNU/images/acutegeneralizedexanthematouspustulosis_9.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/syringoma_8.jpg,syringoma,train,57
+data/SNU/images/morphea_12.jpg,morphea,train,49
+data/SNU/images/portwinestain_5.jpg,port wine stain,train,62
+data/SNU/images/tineaversicolor_9.jpg,tinea versicolor,train,60
+data/SNU/images/melasma_12.jpg,melasma,test,93
+data/SNU/images/molluscumcontagiosum_12.jpg,molluscum contagiosum,train,66
+data/SNU/images/abscess_7.jpg,abscess,train,94
+data/SNU/images/exfoliativedermatitis_5.jpg,exfoliative dermatitis,train,92
+data/SNU/images/viralexanthem_11.jpg,viral exanthem,test,85
+data/SNU/images/lichenplanus_2.jpg,lichen planus,val,91
+data/SNU/images/seborrheicdermatitis_1.jpg,seborrheic dermatitis,test,90
+data/SNU/images/xeroticeczema_9.jpg,xerotic eczema,train,31
+data/SNU/images/lupuserythematosus_3.jpg,lupus erythematosus,train,19
+data/SNU/images/atopicdermatitis_9.jpg,atopic dermatitis,test,89
+data/SNU/images/dermatofibroma_37.jpg,dermatofibroma,train,9
+data/SNU/images/venouslake_4.jpg,venous lake,train,88
+data/SNU/images/dermatofibroma_23.jpg,dermatofibroma,train,9
+data/SNU/images/actinickeratosis_38.jpg,actinic keratosis,train,28
+data/SNU/images/tineacorporis_12.jpg,tinea corporis,train,79
+data/SNU/images/acne_4.jpg,acne,train,87
+data/SNU/images/bluenevus_5.jpg,blue nevus,train,86
+data/SNU/images/vitiligo_2.jpg,vitiligo,val,82
+data/SNU/images/actinickeratosis_10.jpg,actinic keratosis,train,28
+data/SNU/images/viralexanthem_4.jpg,viral exanthem,train,85
+data/SNU/images/perioraldermatitis_5.jpg,perioral dermatitis,train,10
+data/SNU/images/pityriasisalba_3.jpg,pityriasis alba,test,84
+data/SNU/images/poroma_3.jpg,poroma,val,83
+data/SNU/images/drugeruption_18.jpg,drug eruption,train,80
+data/SNU/images/freckle_0.jpg,freckle,train,81
+data/SNU/images/pyogenicgranuloma_7.jpg,pyogenic granuloma,train,7
+data/SNU/images/pyogenicgranuloma_5.jpg,pyogenic granuloma,train,7
+data/SNU/images/freckle_2.jpg,freckle,test,81
+data/SNU/images/vasculitis_9.jpg,vasculitis,val,97
+data/SNU/images/bluenevus_7.jpg,blue nevus,train,86
+data/SNU/images/erythemanodosum_8.jpg,erythema nodosum,train,115
+data/SNU/images/erythemanodosum_10.jpg,erythema nodosum,train,115
+data/SNU/images/poroma_1.jpg,poroma,train,83
+data/SNU/images/viralexanthem_6.jpg,viral exanthem,train,85
+data/SNU/images/pityriasisalba_1.jpg,pityriasis alba,test,84
+data/SNU/images/perioraldermatitis_7.jpg,perioral dermatitis,val,10
+data/SNU/images/actinickeratosis_12.jpg,actinic keratosis,train,28
+data/SNU/images/vitiligo_0.jpg,vitiligo,train,82
+data/SNU/images/tineacorporis_10.jpg,tinea corporis,train,79
+data/SNU/images/inflammedcyst_9.jpg,inflammed cyst,train,116
+data/SNU/images/acne_6.jpg,acne,train,87
+data/SNU/images/venouslake_6.jpg,venous lake,test,88
+data/SNU/images/dermatofibroma_35.jpg,dermatofibroma,train,9
+data/SNU/images/dermatofibroma_21.jpg,dermatofibroma,train,9
+data/SNU/images/staphylococcalscaldedskinsyndrome_8.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/contactdermatitis_9.jpg,contact dermatitis,train,118
+data/SNU/images/lupuserythematosus_1.jpg,lupus erythematosus,train,19
+data/SNU/images/seborrheicdermatitis_3.jpg,seborrheic dermatitis,train,90
+data/SNU/images/paronychia_11.jpg,paronychia,train,1
+data/SNU/images/exfoliativedermatitis_7.jpg,exfoliative dermatitis,train,92
+data/SNU/images/lichenplanus_0.jpg,lichen planus,test,91
+data/SNU/images/verrucaplana_9.jpg,verruca plana,val,119
+data/SNU/images/abscess_5.jpg,abscess,train,94
+data/SNU/images/molluscumcontagiosum_10.jpg,molluscum contagiosum,train,66
+data/SNU/images/melasma_10.jpg,melasma,test,93
+data/SNU/images/vasculitis_11.jpg,vasculitis,test,97
+data/SNU/images/urticarialvasculitis_10.jpg,urticarial vasculitis,train,96
+data/SNU/images/congenitalnevus_9.jpg,congenital nevus,train,120
+data/SNU/images/neurofibromatosis_7.jpg,neurofibromatosis,val,63
+data/SNU/images/portwinestain_7.jpg,port wine stain,train,62
+data/SNU/images/morphea_10.jpg,morphea,test,49
+data/SNU/images/squamouscellcarcinoma_3.jpg,squamous cell carcinoma,train,11
+data/SNU/images/pityriasislichenoideschronica_7.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/prurigopigmentosa_3.jpg,prurigo pigmentosa,val,98
+data/SNU/images/confluentreticulatedpapillomatosis_4.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/impetigo_0.jpg,impetigo,val,99
+data/SNU/images/seborrheickeratosis_24.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_22.jpg,melanocytic nevus,train,37
+data/SNU/images/subungalhematoma_15.jpg,subungual hematoma,train,32
+data/SNU/images/keratosispilaris_7.jpg,keratosis pilaris,train,105
+data/SNU/images/livedoreticularis_5.jpg,livedo reticularis,train,106
+data/SNU/images/bowendisease_7.jpg,bowen disease,train,101
+data/SNU/images/amyloidosis_1.jpg,amyloidosis,train,103
+data/SNU/images/urticaria_6.jpg,urticaria,train,104
+data/SNU/images/bowendisease_23.jpg,bowen disease,test,101
+data/SNU/images/granulomaannulare_4.jpg,granuloma annulare,val,102
+data/SNU/images/melanocyticnevus_36.jpg,melanocytic nevus,val,37
+data/SNU/images/seborrheickeratosis_30.jpg,seborrheic keratosis,val,39
+data/SNU/images/seborrheickeratosis_18.jpg,seborrheic keratosis,train,39
+data/SNU/images/steatocystomamultiplex_4.jpg,steatocystoma multiplex,test,107
+data/SNU/images/basalcellcarcinoma_2.jpg,basal cell carcinoma,train,36
+data/SNU/images/epidermalnevus_10.jpg,epidermal nevus,train,78
+data/SNU/images/lichensimplexchronicus_8.jpg,lichen simplex chronicus,train,121
+data/SNU/images/pityriasisrosea_2.jpg,pityriasis rosea,test,108
+data/SNU/images/mucocele_4.jpg,mucocele,train,109
+data/SNU/images/hemangioma_8.jpg,hemangioma,train,21
+data/SNU/images/urticariapigmentosa_15.jpg,urticaria pigmentosa,train,14
+data/SNU/images/palmoplantarpustulosis_4.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/rosacea_11.jpg,rosacea,test,72
+data/SNU/images/tineacruris_12.jpg,tinea cruris,train,64
+data/SNU/images/melasma_4.jpg,melasma,train,93
+data/SNU/images/sebaceoushyperplasia_1.jpg,sebaceous hyperplasia,val,111
+data/SNU/images/erythemamultiforme_3.jpg,erythema multiforme,train,110
+data/SNU/images/lentigo_6.jpg,lentigo,train,114
+data/SNU/images/sebaceoushyperplasia_17.jpg,sebaceous hyperplasia,val,111
+data/SNU/images/porokeratosis_2.jpg,porokeratosis,train,113
+data/SNU/images/epidermalcyst_3.jpg,epidermal cyst,train,0
+data/SNU/images/tineafaciale_12.jpg,tinea faciale,train,18
+data/SNU/images/epidermalcyst_2.jpg,epidermal cyst,train,0
+data/SNU/images/sebaceoushyperplasia_16.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/lentigo_7.jpg,lentigo,train,114
+data/SNU/images/porokeratosis_3.jpg,porokeratosis,test,113
+data/SNU/images/tineacruris_13.jpg,tinea cruris,test,64
+data/SNU/images/rosacea_10.jpg,rosacea,train,72
+data/SNU/images/erythemamultiforme_2.jpg,erythema multiforme,train,110
+data/SNU/images/sebaceoushyperplasia_0.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/melasma_5.jpg,melasma,train,93
+data/SNU/images/palmoplantarpustulosis_5.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/urticariapigmentosa_14.jpg,urticaria pigmentosa,train,14
+data/SNU/images/hemangioma_9.jpg,hemangioma,test,21
+data/SNU/images/otanevus_12.jpg,ota nevus,train,2
+data/SNU/images/mucocele_5.jpg,mucocele,val,109
+data/SNU/images/pityriasisrosea_3.jpg,pityriasis rosea,train,108
+data/SNU/images/lichensimplexchronicus_9.jpg,lichen simplex chronicus,val,121
+data/SNU/images/basalcellcarcinoma_3.jpg,basal cell carcinoma,test,36
+data/SNU/images/steatocystomamultiplex_5.jpg,steatocystoma multiplex,val,107
+data/SNU/images/seborrheickeratosis_19.jpg,seborrheic keratosis,train,39
+data/SNU/images/urticaria_7.jpg,urticaria,train,104
+data/SNU/images/amyloidosis_0.jpg,amyloidosis,test,103
+data/SNU/images/seborrheickeratosis_31.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_37.jpg,melanocytic nevus,train,37
+data/SNU/images/granulomaannulare_5.jpg,granuloma annulare,train,102
+data/SNU/images/bowendisease_22.jpg,bowen disease,train,101
+data/SNU/images/melanocyticnevus_23.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_36.jpg,bowen disease,train,101
+data/SNU/images/seborrheickeratosis_25.jpg,seborrheic keratosis,val,39
+data/SNU/images/bowendisease_6.jpg,bowen disease,train,101
+data/SNU/images/livedoreticularis_4.jpg,livedo reticularis,train,106
+data/SNU/images/guttatepsoriasis_10.jpg,guttate psoriasis,train,122
+data/SNU/images/keratosispilaris_6.jpg,keratosis pilaris,train,105
+data/SNU/images/subungalhematoma_14.jpg,subungual hematoma,train,32
+data/SNU/images/pityriasislichenoideschronica_6.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/impetigo_1.jpg,impetigo,train,99
+data/SNU/images/confluentreticulatedpapillomatosis_5.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/prurigopigmentosa_2.jpg,prurigo pigmentosa,train,98
+data/SNU/images/squamouscellcarcinoma_2.jpg,squamous cell carcinoma,test,11
+data/SNU/images/portwinestain_6.jpg,port wine stain,test,62
+data/SNU/images/morphea_11.jpg,morphea,train,49
+data/SNU/images/vasculitis_10.jpg,vasculitis,train,97
+data/SNU/images/neurofibromatosis_6.jpg,neurofibromatosis,train,63
+data/SNU/images/congenitalnevus_8.jpg,congenital nevus,train,120
+data/SNU/images/urticarialvasculitis_11.jpg,urticarial vasculitis,train,96
+data/SNU/images/abscess_4.jpg,abscess,train,94
+data/SNU/images/scabies_14.jpg,scabies,val,69
+data/SNU/images/melasma_11.jpg,melasma,train,93
+data/SNU/images/molluscumcontagiosum_11.jpg,molluscum contagiosum,train,66
+data/SNU/images/lichenplanus_1.jpg,lichen planus,train,91
+data/SNU/images/verrucaplana_8.jpg,verruca plana,test,119
+data/SNU/images/exfoliativedermatitis_6.jpg,exfoliative dermatitis,train,92
+data/SNU/images/viralexanthem_12.jpg,viral exanthem,train,85
+data/SNU/images/paronychia_10.jpg,paronychia,train,1
+data/SNU/images/contactdermatitis_8.jpg,contact dermatitis,train,118
+data/SNU/images/seborrheicdermatitis_2.jpg,seborrheic dermatitis,train,90
+data/SNU/images/lupuserythematosus_0.jpg,lupus erythematosus,train,19
+data/SNU/images/dermatofibroma_20.jpg,dermatofibroma,train,9
+data/SNU/images/staphylococcalscaldedskinsyndrome_9.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/hypertrophicscar_10.jpg,hypertrophic scar,train,40
+data/SNU/images/dermatofibroma_34.jpg,dermatofibroma,val,9
+data/SNU/images/venouslake_7.jpg,venous lake,val,88
+data/SNU/images/inflammedcyst_8.jpg,inflammed cyst,test,116
+data/SNU/images/acne_7.jpg,acne,train,87
+data/SNU/images/tineacorporis_11.jpg,tinea corporis,test,79
+data/SNU/images/pityriasisalba_0.jpg,pityriasis alba,train,84
+data/SNU/images/perioraldermatitis_6.jpg,perioral dermatitis,train,10
+data/SNU/images/viralexanthem_7.jpg,viral exanthem,train,85
+data/SNU/images/poroma_0.jpg,poroma,train,83
+data/SNU/images/vitiligo_1.jpg,vitiligo,train,82
+data/SNU/images/actinickeratosis_13.jpg,actinic keratosis,train,28
+data/SNU/images/erythemanodosum_9.jpg,erythema nodosum,train,115
+data/SNU/images/bluenevus_6.jpg,blue nevus,train,86
+data/SNU/images/vasculitis_8.jpg,vasculitis,train,97
+data/SNU/images/freckle_3.jpg,freckle,test,81
+data/SNU/images/exfoliativedermatitis_18.jpg,exfoliative dermatitis,train,92
+data/SNU/images/pyogenicgranuloma_4.jpg,pyogenic granuloma,train,7
+data/SNU/images/pompholyx_9.jpg,pompholyx,train,25
+data/SNU/images/freckle_7.jpg,freckle,train,81
+data/SNU/images/pyogenicgranuloma_0.jpg,pyogenic granuloma,train,7
+data/SNU/images/angiokeratoma_9.jpg,angiokeratoma,train,123
+data/SNU/images/herpessimplex_13.jpg,herpes simplex,train,17
+data/SNU/images/tineacorporis_15.jpg,tinea corporis,train,79
+data/SNU/images/acne_3.jpg,acne,test,87
+data/SNU/images/bluenevus_2.jpg,blue nevus,val,86
+data/SNU/images/mucocele_10.jpg,mucocele,train,109
+data/SNU/images/actinickeratosis_17.jpg,actinic keratosis,val,28
+data/SNU/images/vitiligo_5.jpg,vitiligo,train,82
+data/SNU/images/viralexanthem_3.jpg,viral exanthem,test,85
+data/SNU/images/perioraldermatitis_2.jpg,perioral dermatitis,train,10
+data/SNU/images/pityriasisalba_4.jpg,pityriasis alba,train,84
+data/SNU/images/poroma_4.jpg,poroma,train,83
+data/SNU/images/lupuserythematosus_4.jpg,lupus erythematosus,train,19
+data/SNU/images/seborrheicdermatitis_6.jpg,seborrheic dermatitis,train,90
+data/SNU/images/atopicdermatitis_11.jpg,atopic dermatitis,val,89
+data/SNU/images/ingrowingnail_8.jpg,ingrowing nail,train,45
+data/SNU/images/dermatofibroma_18.jpg,dermatofibroma,train,9
+data/SNU/images/venouslake_3.jpg,venous lake,train,88
+data/SNU/images/dermatofibroma_30.jpg,dermatofibroma,test,9
+data/SNU/images/dermatofibroma_24.jpg,dermatofibroma,test,9
+data/SNU/images/melasma_15.jpg,melasma,val,93
+data/SNU/images/scabies_10.jpg,scabies,train,69
+data/SNU/images/seborrheickeratosis_8.jpg,seborrheic keratosis,train,39
+data/SNU/images/abscess_0.jpg,abscess,val,94
+data/SNU/images/exfoliativedermatitis_2.jpg,exfoliative dermatitis,train,92
+data/SNU/images/tineapedis_8.jpg,tinea pedis,train,124
+data/SNU/images/lichenplanus_5.jpg,lichen planus,train,91
+data/SNU/images/squamouscellcarcinoma_6.jpg,squamous cell carcinoma,val,11
+data/SNU/images/insectbite_9.jpg,insect bite,train,125
+data/SNU/images/prurigopigmentosa_6.jpg,prurigo pigmentosa,train,98
+data/SNU/images/confluentreticulatedpapillomatosis_1.jpg,confluent and reticulated papillomatosis,test,56
+data/SNU/images/impetigo_5.jpg,impetigo,train,99
+data/SNU/images/pityriasislichenoideschronica_2.jpg,pityriasis lichenoides chronica,test,100
+data/SNU/images/urticarialvasculitis_15.jpg,urticarial vasculitis,train,96
+data/SNU/images/neurofibromatosis_2.jpg,neurofibromatosis,train,63
+data/SNU/images/vasculitis_14.jpg,vasculitis,train,97
+data/SNU/images/morphea_15.jpg,morphea,train,49
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_9.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/portwinestain_2.jpg,port wine stain,val,62
+data/SNU/images/steatocystomamultiplex_1.jpg,steatocystoma multiplex,train,107
+data/SNU/images/basalcellcarcinoma_7.jpg,basal cell carcinoma,train,36
+data/SNU/images/subungalhematoma_10.jpg,subungual hematoma,train,32
+data/SNU/images/keratosispilaris_2.jpg,keratosis pilaris,train,105
+data/SNU/images/livedoreticularis_0.jpg,livedo reticularis,train,106
+data/SNU/images/bowendisease_2.jpg,bowen disease,train,101
+data/SNU/images/seborrheickeratosis_21.jpg,seborrheic keratosis,train,39
+data/SNU/images/bowendisease_32.jpg,bowen disease,test,101
+data/SNU/images/melanocyticnevus_27.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_26.jpg,bowen disease,train,101
+data/SNU/images/melanocyticnevus_33.jpg,melanocytic nevus,train,37
+data/SNU/images/granulomaannulare_1.jpg,granuloma annulare,train,102
+data/SNU/images/seborrheickeratosis_35.jpg,seborrheic keratosis,train,39
+data/SNU/images/amyloidosis_4.jpg,amyloidosis,train,103
+data/SNU/images/urticaria_3.jpg,urticaria,train,104
+data/SNU/images/mucocele_1.jpg,mucocele,train,109
+data/SNU/images/pityriasisrosea_7.jpg,pityriasis rosea,train,108
+data/SNU/images/porokeratosis_7.jpg,porokeratosis,val,113
+data/SNU/images/lentigo_3.jpg,lentigo,train,114
+data/SNU/images/sebaceoushyperplasia_12.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/epidermalcyst_6.jpg,epidermal cyst,test,0
+data/SNU/images/drugeruption_8.jpg,drug eruption,train,80
+data/SNU/images/urticariapigmentosa_10.jpg,urticaria pigmentosa,train,14
+data/SNU/images/pyodermagangrenosum_9.jpg,pyoderma gangrenosum,test,127
+data/SNU/images/palmoplantarpustulosis_1.jpg,palmoplantar pustulosis,val,112
+data/SNU/images/melasma_1.jpg,melasma,train,93
+data/SNU/images/sebaceoushyperplasia_4.jpg,sebaceous hyperplasia,test,111
+data/SNU/images/erythemamultiforme_6.jpg,erythema multiforme,test,110
+data/SNU/images/rosacea_14.jpg,rosacea,train,72
+data/SNU/images/erythemamultiforme_7.jpg,erythema multiforme,train,110
+data/SNU/images/sebaceoushyperplasia_5.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/melasma_0.jpg,melasma,train,93
+data/SNU/images/rosacea_15.jpg,rosacea,train,72
+data/SNU/images/palmoplantarpustulosis_0.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/pyodermagangrenosum_8.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/urticariapigmentosa_11.jpg,urticaria pigmentosa,val,14
+data/SNU/images/drugeruption_9.jpg,drug eruption,val,80
+data/SNU/images/epidermalcyst_7.jpg,epidermal cyst,val,0
+data/SNU/images/porokeratosis_6.jpg,porokeratosis,train,113
+data/SNU/images/sebaceoushyperplasia_13.jpg,sebaceous hyperplasia,test,111
+data/SNU/images/lentigo_2.jpg,lentigo,val,114
+data/SNU/images/pityriasisrosea_6.jpg,pityriasis rosea,train,108
+data/SNU/images/mucocele_0.jpg,mucocele,test,109
+data/SNU/images/seborrheickeratosis_34.jpg,seborrheic keratosis,test,39
+data/SNU/images/granulomaannulare_0.jpg,granuloma annulare,train,102
+data/SNU/images/melanocyticnevus_32.jpg,melanocytic nevus,test,37
+data/SNU/images/bowendisease_27.jpg,bowen disease,train,101
+data/SNU/images/urticaria_2.jpg,urticaria,train,104
+data/SNU/images/amyloidosis_5.jpg,amyloidosis,train,103
+data/SNU/images/bowendisease_3.jpg,bowen disease,train,101
+data/SNU/images/livedoreticularis_1.jpg,livedo reticularis,val,106
+data/SNU/images/keratosispilaris_3.jpg,keratosis pilaris,train,105
+data/SNU/images/subungalhematoma_11.jpg,subungual hematoma,val,32
+data/SNU/images/melanocyticnevus_26.jpg,melanocytic nevus,test,37
+data/SNU/images/bowendisease_33.jpg,bowen disease,test,101
+data/SNU/images/seborrheickeratosis_20.jpg,seborrheic keratosis,test,39
+data/SNU/images/basalcellcarcinoma_6.jpg,basal cell carcinoma,train,36
+data/SNU/images/steatocystomamultiplex_0.jpg,steatocystoma multiplex,train,107
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_8.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/morphea_14.jpg,morphea,train,49
+data/SNU/images/portwinestain_3.jpg,port wine stain,train,62
+data/SNU/images/neurofibromatosis_3.jpg,neurofibromatosis,train,63
+data/SNU/images/urticarialvasculitis_14.jpg,urticarial vasculitis,train,96
+data/SNU/images/vasculitis_15.jpg,vasculitis,train,97
+data/SNU/images/impetigo_4.jpg,impetigo,train,99
+data/SNU/images/confluentreticulatedpapillomatosis_0.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/prurigopigmentosa_7.jpg,prurigo pigmentosa,test,98
+data/SNU/images/insectbite_8.jpg,insect bite,train,125
+data/SNU/images/pityriasislichenoideschronica_3.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/squamouscellcarcinoma_7.jpg,squamous cell carcinoma,train,11
+data/SNU/images/lichenplanus_4.jpg,lichen planus,train,91
+data/SNU/images/tineapedis_9.jpg,tinea pedis,train,124
+data/SNU/images/exfoliativedermatitis_3.jpg,exfoliative dermatitis,train,92
+data/SNU/images/melasma_14.jpg,melasma,train,93
+data/SNU/images/abscess_1.jpg,abscess,test,94
+data/SNU/images/seborrheickeratosis_9.jpg,seborrheic keratosis,test,39
+data/SNU/images/scabies_11.jpg,scabies,train,69
+data/SNU/images/dermatofibroma_25.jpg,dermatofibroma,test,9
+data/SNU/images/dermatofibroma_31.jpg,dermatofibroma,train,9
+data/SNU/images/venouslake_2.jpg,venous lake,train,88
+data/SNU/images/atopicdermatitis_10.jpg,atopic dermatitis,train,89
+data/SNU/images/dermatofibroma_19.jpg,dermatofibroma,train,9
+data/SNU/images/ingrowingnail_9.jpg,ingrowing nail,train,45
+data/SNU/images/seborrheicdermatitis_7.jpg,seborrheic dermatitis,train,90
+data/SNU/images/lupuserythematosus_5.jpg,lupus erythematosus,test,19
+data/SNU/images/vitiligo_4.jpg,vitiligo,train,82
+data/SNU/images/actinickeratosis_16.jpg,actinic keratosis,train,28
+data/SNU/images/mucocele_11.jpg,mucocele,train,109
+data/SNU/images/poroma_5.jpg,poroma,train,83
+data/SNU/images/perioraldermatitis_3.jpg,perioral dermatitis,train,10
+data/SNU/images/pityriasisalba_5.jpg,pityriasis alba,test,84
+data/SNU/images/viralexanthem_2.jpg,viral exanthem,train,85
+data/SNU/images/bluenevus_3.jpg,blue nevus,train,86
+data/SNU/images/acne_2.jpg,acne,test,87
+data/SNU/images/tineacorporis_14.jpg,tinea corporis,val,79
+data/SNU/images/herpessimplex_12.jpg,herpes simplex,train,17
+data/SNU/images/angiokeratoma_8.jpg,angiokeratoma,train,123
+data/SNU/images/pyogenicgranuloma_1.jpg,pyogenic granuloma,train,7
+data/SNU/images/pompholyx_8.jpg,pompholyx,val,25
+data/SNU/images/freckle_6.jpg,freckle,train,81
+data/SNU/images/pityriasislichenoideschronica_10.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/freckle_4.jpg,freckle,train,81
+data/SNU/images/skintag_8.jpg,skin tag,test,128
+data/SNU/images/drugeruption_20.jpg,drug eruption,train,80
+data/SNU/images/pyogenicgranuloma_3.jpg,pyogenic granuloma,train,7
+data/SNU/images/actinickeratosis_28.jpg,actinic keratosis,test,28
+data/SNU/images/acne_0.jpg,acne,val,87
+data/SNU/images/herpessimplex_10.jpg,herpes simplex,train,17
+data/SNU/images/tineacorporis_16.jpg,tinea corporis,train,79
+data/SNU/images/pityriasisalba_7.jpg,pityriasis alba,train,84
+data/SNU/images/perioraldermatitis_1.jpg,perioral dermatitis,train,10
+data/SNU/images/viralexanthem_0.jpg,viral exanthem,train,85
+data/SNU/images/poroma_7.jpg,poroma,train,83
+data/SNU/images/actinickeratosis_14.jpg,actinic keratosis,train,28
+data/SNU/images/vitiligo_6.jpg,vitiligo,train,82
+data/SNU/images/bluenevus_1.jpg,blue nevus,train,86
+data/SNU/images/atopicdermatitis_12.jpg,atopic dermatitis,train,89
+data/SNU/images/lupuserythematosus_7.jpg,lupus erythematosus,train,19
+data/SNU/images/seborrheicdermatitis_5.jpg,seborrheic dermatitis,train,90
+data/SNU/images/dermatofibroma_27.jpg,dermatofibroma,train,9
+data/SNU/images/venouslake_0.jpg,venous lake,test,88
+data/SNU/images/dermatofibroma_33.jpg,dermatofibroma,train,9
+data/SNU/images/scabies_13.jpg,scabies,train,69
+data/SNU/images/abscess_3.jpg,abscess,test,94
+data/SNU/images/malignantmelanoma_48.jpg,malignant melanoma,train,23
+data/SNU/images/melasma_16.jpg,melasma,train,93
+data/SNU/images/lichenplanus_6.jpg,lichen planus,train,91
+data/SNU/images/exfoliativedermatitis_1.jpg,exfoliative dermatitis,train,92
+data/SNU/images/pityriasislichenoideschronica_1.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/prurigopigmentosa_5.jpg,prurigo pigmentosa,train,98
+data/SNU/images/fifthdisease_9.jpg,fifth disease,train,8
+data/SNU/images/impetigo_6.jpg,impetigo,train,99
+data/SNU/images/confluentreticulatedpapillomatosis_2.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/squamouscellcarcinoma_5.jpg,squamous cell carcinoma,train,11
+data/SNU/images/lichenamyloidosis_9.jpg,lichen amyloidosis,train,129
+data/SNU/images/herpeszoster_8.jpg,herpes zoster,train,22
+data/SNU/images/portwinestain_1.jpg,port wine stain,train,62
+data/SNU/images/morphea_16.jpg,morphea,train,49
+data/SNU/images/urticarialvasculitis_16.jpg,urticarial vasculitis,train,96
+data/SNU/images/neurofibromatosis_1.jpg,neurofibromatosis,test,63
+data/SNU/images/bowendisease_19.jpg,bowen disease,val,101
+data/SNU/images/melanocyticnevus_18.jpg,melanocytic nevus,train,37
+data/SNU/images/basalcellcarcinoma_4.jpg,basal cell carcinoma,train,36
+data/SNU/images/steatocystomamultiplex_2.jpg,steatocystoma multiplex,train,107
+data/SNU/images/amyloidosis_7.jpg,amyloidosis,test,103
+data/SNU/images/urticaria_0.jpg,urticaria,train,104
+data/SNU/images/bowendisease_25.jpg,bowen disease,test,101
+data/SNU/images/melanocyticnevus_30.jpg,melanocytic nevus,train,37
+data/SNU/images/granulomaannulare_2.jpg,granuloma annulare,train,102
+data/SNU/images/seborrheickeratosis_36.jpg,seborrheic keratosis,train,39
+data/SNU/images/seborrheickeratosis_22.jpg,seborrheic keratosis,test,39
+data/SNU/images/bowendisease_31.jpg,bowen disease,train,101
+data/SNU/images/melanocyticnevus_24.jpg,melanocytic nevus,test,37
+data/SNU/images/keratosispilaris_1.jpg,keratosis pilaris,train,105
+data/SNU/images/subungalhematoma_13.jpg,subungual hematoma,train,32
+data/SNU/images/livedoreticularis_3.jpg,livedo reticularis,train,106
+data/SNU/images/bowendisease_1.jpg,bowen disease,train,101
+data/SNU/images/abnom_8.jpg,abnormal,train,130
+data/SNU/images/guttatepsoriasis_8.jpg,guttate psoriasis,train,122
+data/SNU/images/onycholysis_9.jpg,onycholysis,train,131
+data/SNU/images/mucocele_2.jpg,mucocele,train,109
+data/SNU/images/pityriasisrosea_4.jpg,pityriasis rosea,train,108
+data/SNU/images/epidermalcyst_5.jpg,epidermal cyst,val,0
+data/SNU/images/lentigo_0.jpg,lentigo,test,114
+data/SNU/images/sebaceoushyperplasia_11.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/porokeratosis_4.jpg,porokeratosis,train,113
+data/SNU/images/pustularpsoriasis_8.jpg,pustular psoriasis,train,132
+data/SNU/images/rosacea_17.jpg,rosacea,train,72
+data/SNU/images/tineacruris_14.jpg,tinea cruris,test,64
+data/SNU/images/melasma_2.jpg,melasma,val,93
+data/SNU/images/erythemamultiforme_5.jpg,erythema multiforme,val,110
+data/SNU/images/sebaceoushyperplasia_7.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/urticariapigmentosa_13.jpg,urticaria pigmentosa,train,14
+data/SNU/images/palmoplantarpustulosis_2.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/telangiectasia_9.jpg,telangiectasia,val,133
+data/SNU/images/palmoplantarpustulosis_3.jpg,palmoplantar pustulosis,test,112
+data/SNU/images/urticariapigmentosa_12.jpg,urticaria pigmentosa,train,14
+data/SNU/images/telangiectasia_8.jpg,telangiectasia,train,133
+data/SNU/images/rosacea_16.jpg,rosacea,train,72
+data/SNU/images/sebaceoushyperplasia_6.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/erythemamultiforme_4.jpg,erythema multiforme,test,110
+data/SNU/images/melasma_3.jpg,melasma,train,93
+data/SNU/images/sebaceoushyperplasia_10.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/lentigo_1.jpg,lentigo,train,114
+data/SNU/images/pustularpsoriasis_9.jpg,pustular psoriasis,train,132
+data/SNU/images/porokeratosis_5.jpg,porokeratosis,test,113
+data/SNU/images/epidermalcyst_4.jpg,epidermal cyst,test,0
+data/SNU/images/pityriasisrosea_5.jpg,pityriasis rosea,train,108
+data/SNU/images/mucocele_3.jpg,mucocele,train,109
+data/SNU/images/onycholysis_8.jpg,onycholysis,test,131
+data/SNU/images/abnom_9.jpg,abnormal,val,130
+data/SNU/images/guttatepsoriasis_9.jpg,guttate psoriasis,train,122
+data/SNU/images/melanocyticnevus_25.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_30.jpg,bowen disease,train,101
+data/SNU/images/seborrheickeratosis_23.jpg,seborrheic keratosis,train,39
+data/SNU/images/bowendisease_0.jpg,bowen disease,train,101
+data/SNU/images/livedoreticularis_2.jpg,livedo reticularis,train,106
+data/SNU/images/subungalhematoma_12.jpg,subungual hematoma,train,32
+data/SNU/images/keratosispilaris_0.jpg,keratosis pilaris,train,105
+data/SNU/images/urticaria_1.jpg,urticaria,train,104
+data/SNU/images/amyloidosis_6.jpg,amyloidosis,train,103
+data/SNU/images/seborrheickeratosis_37.jpg,seborrheic keratosis,test,39
+data/SNU/images/granulomaannulare_3.jpg,granuloma annulare,train,102
+data/SNU/images/melanocyticnevus_31.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_24.jpg,bowen disease,train,101
+data/SNU/images/steatocystomamultiplex_3.jpg,steatocystoma multiplex,train,107
+data/SNU/images/basalcellcarcinoma_5.jpg,basal cell carcinoma,test,36
+data/SNU/images/melanocyticnevus_19.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_18.jpg,bowen disease,train,101
+data/SNU/images/neurofibromatosis_0.jpg,neurofibromatosis,train,63
+data/SNU/images/urticarialvasculitis_17.jpg,urticarial vasculitis,test,96
+data/SNU/images/portwinestain_0.jpg,port wine stain,train,62
+data/SNU/images/morphea_17.jpg,morphea,train,49
+data/SNU/images/lichenamyloidosis_8.jpg,lichen amyloidosis,test,129
+data/SNU/images/squamouscellcarcinoma_4.jpg,squamous cell carcinoma,test,11
+data/SNU/images/herpeszoster_9.jpg,herpes zoster,val,22
+data/SNU/images/pityriasislichenoideschronica_0.jpg,pityriasis lichenoides chronica,test,100
+data/SNU/images/confluentreticulatedpapillomatosis_3.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/impetigo_7.jpg,impetigo,val,99
+data/SNU/images/fifthdisease_8.jpg,fifth disease,train,8
+data/SNU/images/prurigopigmentosa_4.jpg,prurigo pigmentosa,test,98
+data/SNU/images/exfoliativedermatitis_0.jpg,exfoliative dermatitis,test,92
+data/SNU/images/lichenplanus_7.jpg,lichen planus,train,91
+data/SNU/images/abscess_2.jpg,abscess,train,94
+data/SNU/images/scabies_12.jpg,scabies,train,69
+data/SNU/images/dermatofibroma_32.jpg,dermatofibroma,train,9
+data/SNU/images/venouslake_1.jpg,venous lake,train,88
+data/SNU/images/dermatofibroma_26.jpg,dermatofibroma,test,9
+data/SNU/images/seborrheicdermatitis_4.jpg,seborrheic dermatitis,train,90
+data/SNU/images/lupuserythematosus_6.jpg,lupus erythematosus,test,19
+data/SNU/images/atopicdermatitis_13.jpg,atopic dermatitis,train,89
+data/SNU/images/bluenevus_0.jpg,blue nevus,train,86
+data/SNU/images/poroma_6.jpg,poroma,test,83
+data/SNU/images/viralexanthem_1.jpg,viral exanthem,train,85
+data/SNU/images/pityriasisalba_6.jpg,pityriasis alba,train,84
+data/SNU/images/perioraldermatitis_0.jpg,perioral dermatitis,train,10
+data/SNU/images/vitiligo_7.jpg,vitiligo,train,82
+data/SNU/images/actinickeratosis_15.jpg,actinic keratosis,train,28
+data/SNU/images/tineacorporis_17.jpg,tinea corporis,test,79
+data/SNU/images/herpessimplex_11.jpg,herpes simplex,test,17
+data/SNU/images/acne_1.jpg,acne,train,87
+data/SNU/images/condyloma_10.jpg,condyloma,train,3
+data/SNU/images/actinickeratosis_29.jpg,actinic keratosis,test,28
+data/SNU/images/angularcheilitis_10.jpg,angular cheilitis,train,55
+data/SNU/images/pyogenicgranuloma_2.jpg,pyogenic granuloma,test,7
+data/SNU/images/skintag_9.jpg,skin tag,val,128
+data/SNU/images/freckle_5.jpg,freckle,train,81
+data/SNU/images/freckle_8.jpg,freckle,train,81
+data/SNU/images/drugeruption_10.jpg,drug eruption,train,80
+data/SNU/images/pompholyx_6.jpg,pompholyx,test,25
+data/SNU/images/vasculitis_3.jpg,vasculitis,test,97
+data/SNU/images/skintag_4.jpg,skin tag,train,128
+data/SNU/images/exfoliativedermatitis_13.jpg,exfoliative dermatitis,test,92
+data/SNU/images/angiokeratoma_6.jpg,angiokeratoma,test,123
+data/SNU/images/actinickeratosis_30.jpg,actinic keratosis,train,28
+data/SNU/images/inflammedcyst_3.jpg,inflammed cyst,train,116
+data/SNU/images/keratosispilaris_11.jpg,keratosis pilaris,test,105
+data/SNU/images/actinickeratosis_24.jpg,actinic keratosis,train,28
+data/SNU/images/erythemanodosum_2.jpg,erythema nodosum,train,115
+data/SNU/images/actinickeratosis_18.jpg,actinic keratosis,test,28
+data/SNU/images/pyogenicgranuloma_40.jpg,pyogenic granuloma,train,7
+data/SNU/images/contactdermatitis_3.jpg,contact dermatitis,train,118
+data/SNU/images/acne_11.jpg,acne,train,87
+data/SNU/images/xeroticeczema_1.jpg,xerotic eczema,train,31
+data/SNU/images/seborrheicdermatitis_9.jpg,seborrheic dermatitis,val,90
+data/SNU/images/dermatofibroma_17.jpg,dermatofibroma,train,9
+data/SNU/images/ingrowingnail_7.jpg,ingrowing nail,train,45
+data/SNU/images/atopicdermatitis_1.jpg,atopic dermatitis,train,89
+data/SNU/images/pityriasisrosea_17.jpg,pityriasis rosea,train,108
+data/SNU/images/staphylococcalscaldedskinsyndrome_2.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/seborrheickeratosis_7.jpg,seborrheic keratosis,train,39
+data/SNU/images/malignantmelanoma_44.jpg,malignant melanoma,train,23
+data/SNU/images/tineapedis_7.jpg,tinea pedis,train,124
+data/SNU/images/verrucaplana_3.jpg,verruca plana,train,119
+data/SNU/images/lichenamyloidosis_5.jpg,lichen amyloidosis,train,129
+data/SNU/images/squamouscellcarcinoma_9.jpg,squamous cell carcinoma,test,11
+data/SNU/images/herpeszoster_4.jpg,herpes zoster,train,22
+data/SNU/images/fifthdisease_5.jpg,fifth disease,train,8
+data/SNU/images/prurigopigmentosa_9.jpg,prurigo pigmentosa,train,98
+data/SNU/images/insectbite_6.jpg,insect bite,train,125
+data/SNU/images/congenitalnevus_3.jpg,congenital nevus,train,120
+data/SNU/images/cafeaulaitmacule_10.jpg,cafe au lait macule,train,47
+data/SNU/images/tineaversicolor_1.jpg,tinea versicolor,test,60
+data/SNU/images/syringoma_0.jpg,syringoma,test,57
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_6.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/acutegeneralizedexanthematouspustulosis_1.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/seborrheickeratosis_12.jpg,seborrheic keratosis,train,39
+data/SNU/images/basalcellcarcinoma_8.jpg,basal cell carcinoma,train,36
+data/SNU/images/melanocyticnevus_14.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_15.jpg,bowen disease,test,101
+data/SNU/images/melanocyticnevus_28.jpg,melanocytic nevus,test,37
+data/SNU/images/urticarialvasculitis_1.jpg,urticarial vasculitis,val,96
+data/SNU/images/lichensimplexchronicus_14.jpg,lichen simplex chronicus,train,121
+data/SNU/images/telangiectasia_12.jpg,telangiectasia,train,133
+data/SNU/images/bowendisease_29.jpg,bowen disease,train,101
+data/SNU/images/onycholysis_5.jpg,onycholysis,train,131
+data/SNU/images/abnom_4.jpg,abnormal,train,130
+data/SNU/images/hemangioma_2.jpg,hemangioma,train,21
+data/SNU/images/guttatepsoriasis_4.jpg,guttate psoriasis,test,122
+data/SNU/images/lichensimplexchronicus_2.jpg,lichen simplex chronicus,train,121
+data/SNU/images/pityriasisrosea_8.jpg,pityriasis rosea,test,108
+data/SNU/images/pustularpsoriasis_4.jpg,pustular psoriasis,train,132
+data/SNU/images/porokeratosis_8.jpg,porokeratosis,train,113
+data/SNU/images/idiopathicguttatehypomelanosis_11.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/epidermalcyst_9.jpg,epidermal cyst,train,0
+data/SNU/images/drugeruption_7.jpg,drug eruption,train,80
+data/SNU/images/pyodermagangrenosum_6.jpg,pyoderma gangrenosum,val,127
+data/SNU/images/keratoacanthoma_17.jpg,keratoacanthoma,train,73
+data/SNU/images/telangiectasia_5.jpg,telangiectasia,train,133
+data/SNU/images/erythemamultiforme_9.jpg,erythema multiforme,train,110
+data/SNU/images/erythemamultiforme_8.jpg,erythema multiforme,train,110
+data/SNU/images/keratoacanthoma_16.jpg,keratoacanthoma,test,73
+data/SNU/images/pyodermagangrenosum_7.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/telangiectasia_4.jpg,telangiectasia,test,133
+data/SNU/images/idiopathicguttatehypomelanosis_10.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/drugeruption_6.jpg,drug eruption,test,80
+data/SNU/images/epidermalcyst_8.jpg,epidermal cyst,train,0
+data/SNU/images/porokeratosis_9.jpg,porokeratosis,train,113
+data/SNU/images/pustularpsoriasis_5.jpg,pustular psoriasis,val,132
+data/SNU/images/pityriasisrosea_9.jpg,pityriasis rosea,val,108
+data/SNU/images/lichensimplexchronicus_3.jpg,lichen simplex chronicus,train,121
+data/SNU/images/abnom_5.jpg,abnormal,train,130
+data/SNU/images/guttatepsoriasis_5.jpg,guttate psoriasis,train,122
+data/SNU/images/hemangioma_3.jpg,hemangioma,train,21
+data/SNU/images/onycholysis_4.jpg,onycholysis,train,131
+data/SNU/images/bowendisease_28.jpg,bowen disease,val,101
+data/SNU/images/telangiectasia_13.jpg,telangiectasia,train,133
+data/SNU/images/melanocyticnevus_29.jpg,melanocytic nevus,train,37
+data/SNU/images/lichensimplexchronicus_15.jpg,lichen simplex chronicus,train,121
+data/SNU/images/urticarialvasculitis_0.jpg,urticarial vasculitis,train,96
+data/SNU/images/bowendisease_14.jpg,bowen disease,train,101
+data/SNU/images/melanocyticnevus_15.jpg,melanocytic nevus,train,37
+data/SNU/images/basalcellcarcinoma_9.jpg,basal cell carcinoma,train,36
+data/SNU/images/seborrheickeratosis_13.jpg,seborrheic keratosis,train,39
+data/SNU/images/tineaversicolor_0.jpg,tinea versicolor,val,60
+data/SNU/images/acutegeneralizedexanthematouspustulosis_0.jpg,acute generalized exanthematous pustulosis,test,95
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_7.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/syringoma_1.jpg,syringoma,train,57
+data/SNU/images/lichenamyloidosis_14.jpg,lichen amyloidosis,test,129
+data/SNU/images/congenitalnevus_2.jpg,congenital nevus,test,120
+data/SNU/images/insectbite_7.jpg,insect bite,train,125
+data/SNU/images/prurigopigmentosa_8.jpg,prurigo pigmentosa,train,98
+data/SNU/images/fifthdisease_4.jpg,fifth disease,train,8
+data/SNU/images/squamouscellcarcinoma_8.jpg,squamous cell carcinoma,train,11
+data/SNU/images/lichenamyloidosis_4.jpg,lichen amyloidosis,train,129
+data/SNU/images/herpeszoster_5.jpg,herpes zoster,train,22
+data/SNU/images/verrucaplana_2.jpg,verruca plana,train,119
+data/SNU/images/tineapedis_6.jpg,tinea pedis,train,124
+data/SNU/images/seborrheickeratosis_6.jpg,seborrheic keratosis,train,39
+data/SNU/images/malignantmelanoma_45.jpg,malignant melanoma,test,23
+data/SNU/images/staphylococcalscaldedskinsyndrome_3.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/pityriasisrosea_16.jpg,pityriasis rosea,train,108
+data/SNU/images/ingrowingnail_6.jpg,ingrowing nail,train,45
+data/SNU/images/dermatofibroma_16.jpg,dermatofibroma,train,9
+data/SNU/images/atopicdermatitis_0.jpg,atopic dermatitis,test,89
+data/SNU/images/contactdermatitis_2.jpg,contact dermatitis,test,118
+data/SNU/images/seborrheicdermatitis_8.jpg,seborrheic dermatitis,train,90
+data/SNU/images/xeroticeczema_0.jpg,xerotic eczema,train,31
+data/SNU/images/acne_10.jpg,acne,test,87
+data/SNU/images/pyogenicgranuloma_41.jpg,pyogenic granuloma,train,7
+data/SNU/images/actinickeratosis_19.jpg,actinic keratosis,train,28
+data/SNU/images/erythemanodosum_3.jpg,erythema nodosum,train,115
+data/SNU/images/keratosispilaris_10.jpg,keratosis pilaris,train,105
+data/SNU/images/inflammedcyst_2.jpg,inflammed cyst,train,116
+data/SNU/images/actinickeratosis_25.jpg,actinic keratosis,train,28
+data/SNU/images/actinickeratosis_31.jpg,actinic keratosis,train,28
+data/SNU/images/angiokeratoma_7.jpg,angiokeratoma,val,123
+data/SNU/images/exfoliativedermatitis_12.jpg,exfoliative dermatitis,train,92
+data/SNU/images/skintag_5.jpg,skin tag,train,128
+data/SNU/images/vasculitis_2.jpg,vasculitis,val,97
+data/SNU/images/freckle_9.jpg,freckle,train,81
+data/SNU/images/pompholyx_7.jpg,pompholyx,test,25
+data/SNU/images/drugeruption_11.jpg,drug eruption,train,80
+data/SNU/images/milia_10.jpg,milia,val,51
+data/SNU/images/vasculitis_0.jpg,vasculitis,train,97
+data/SNU/images/drugeruption_13.jpg,drug eruption,train,80
+data/SNU/images/pompholyx_5.jpg,pompholyx,train,25
+data/SNU/images/exfoliativedermatitis_10.jpg,exfoliative dermatitis,val,92
+data/SNU/images/angiokeratoma_5.jpg,angiokeratoma,train,123
+data/SNU/images/skintag_7.jpg,skin tag,train,128
+data/SNU/images/actinickeratosis_27.jpg,actinic keratosis,test,28
+data/SNU/images/inflammedcyst_0.jpg,inflammed cyst,val,116
+data/SNU/images/keratosispilaris_12.jpg,keratosis pilaris,train,105
+data/SNU/images/actinickeratosis_33.jpg,actinic keratosis,train,28
+data/SNU/images/vitiligo_9.jpg,vitiligo,test,82
+data/SNU/images/poroma_8.jpg,poroma,test,83
+data/SNU/images/pityriasisalba_8.jpg,pityriasis alba,train,84
+data/SNU/images/erythemanodosum_1.jpg,erythema nodosum,test,115
+data/SNU/images/atopicdermatitis_2.jpg,atopic dermatitis,train,89
+data/SNU/images/dermatofibroma_14.jpg,dermatofibroma,val,9
+data/SNU/images/ingrowingnail_4.jpg,ingrowing nail,train,45
+data/SNU/images/acne_12.jpg,acne,train,87
+data/SNU/images/lupuserythematosus_8.jpg,lupus erythematosus,test,19
+data/SNU/images/xeroticeczema_2.jpg,xerotic eczema,train,31
+data/SNU/images/contactdermatitis_0.jpg,contact dermatitis,train,118
+data/SNU/images/staphylococcalscaldedskinsyndrome_1.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/dermatofibroma_28.jpg,dermatofibroma,train,9
+data/SNU/images/pityriasisrosea_14.jpg,pityriasis rosea,train,108
+data/SNU/images/malignantmelanoma_47.jpg,malignant melanoma,train,23
+data/SNU/images/seborrheickeratosis_4.jpg,seborrheic keratosis,train,39
+data/SNU/images/verrucaplana_0.jpg,verruca plana,train,119
+data/SNU/images/lichenplanus_9.jpg,lichen planus,test,91
+data/SNU/images/tineapedis_4.jpg,tinea pedis,test,124
+data/SNU/images/fifthdisease_6.jpg,fifth disease,test,8
+data/SNU/images/impetigo_9.jpg,impetigo,test,99
+data/SNU/images/insectbite_5.jpg,insect bite,test,125
+data/SNU/images/herpeszoster_7.jpg,herpes zoster,test,22
+data/SNU/images/lichenamyloidosis_6.jpg,lichen amyloidosis,val,129
+data/SNU/images/morphea_19.jpg,morphea,train,49
+data/SNU/images/syringoma_3.jpg,syringoma,train,57
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_5.jpg,pigmented progressive purpuric dermatosis,val,126
+data/SNU/images/acutegeneralizedexanthematouspustulosis_2.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/tineaversicolor_2.jpg,tinea versicolor,train,60
+data/SNU/images/congenitalnevus_0.jpg,congenital nevus,train,120
+data/SNU/images/pyodermagangrenosum_14.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/bowendisease_16.jpg,bowen disease,train,101
+data/SNU/images/seborrheickeratosis_11.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_17.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_39.jpg,seborrheic keratosis,test,39
+data/SNU/images/telangiectasia_11.jpg,telangiectasia,train,133
+data/SNU/images/amyloidosis_8.jpg,amyloidosis,train,103
+data/SNU/images/urticarialvasculitis_2.jpg,urticarial vasculitis,test,96
+data/SNU/images/hemangioma_1.jpg,hemangioma,val,21
+data/SNU/images/guttatepsoriasis_7.jpg,guttate psoriasis,train,122
+data/SNU/images/abnom_7.jpg,abnormal,test,130
+data/SNU/images/onycholysis_6.jpg,onycholysis,train,131
+data/SNU/images/lichensimplexchronicus_1.jpg,lichen simplex chronicus,val,121
+data/SNU/images/drugeruption_4.jpg,drug eruption,test,80
+data/SNU/images/idiopathicguttatehypomelanosis_12.jpg,idiopathic guttate hypomelanosis,test,41
+data/SNU/images/pustularpsoriasis_7.jpg,pustular psoriasis,train,132
+data/SNU/images/urticariapigmentosa_20.jpg,urticaria pigmentosa,train,14
+data/SNU/images/sebaceoushyperplasia_8.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/rosacea_18.jpg,rosacea,test,72
+data/SNU/images/telangiectasia_6.jpg,telangiectasia,val,133
+data/SNU/images/pyodermagangrenosum_5.jpg,pyoderma gangrenosum,test,127
+data/SNU/images/keratoacanthoma_14.jpg,keratoacanthoma,test,73
+data/SNU/images/telangiectasia_7.jpg,telangiectasia,train,133
+data/SNU/images/keratoacanthoma_15.jpg,keratoacanthoma,train,73
+data/SNU/images/pyodermagangrenosum_4.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/sebaceoushyperplasia_9.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/pustularpsoriasis_6.jpg,pustular psoriasis,train,132
+data/SNU/images/drugeruption_5.jpg,drug eruption,train,80
+data/SNU/images/lichensimplexchronicus_0.jpg,lichen simplex chronicus,train,121
+data/SNU/images/onycholysis_7.jpg,onycholysis,train,131
+data/SNU/images/guttatepsoriasis_6.jpg,guttate psoriasis,val,122
+data/SNU/images/hemangioma_0.jpg,hemangioma,val,21
+data/SNU/images/abnom_6.jpg,abnormal,train,130
+data/SNU/images/lichensimplexchronicus_16.jpg,lichen simplex chronicus,train,121
+data/SNU/images/urticarialvasculitis_3.jpg,urticarial vasculitis,val,96
+data/SNU/images/telangiectasia_10.jpg,telangiectasia,train,133
+data/SNU/images/seborrheickeratosis_38.jpg,seborrheic keratosis,train,39
+data/SNU/images/amyloidosis_9.jpg,amyloidosis,train,103
+data/SNU/images/melanocyticnevus_16.jpg,melanocytic nevus,test,37
+data/SNU/images/seborrheickeratosis_10.jpg,seborrheic keratosis,train,39
+data/SNU/images/bowendisease_17.jpg,bowen disease,train,101
+data/SNU/images/congenitalnevus_1.jpg,congenital nevus,val,120
+data/SNU/images/pyodermagangrenosum_15.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/acutegeneralizedexanthematouspustulosis_3.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_4.jpg,pigmented progressive purpuric dermatosis,test,126
+data/SNU/images/syringoma_2.jpg,syringoma,train,57
+data/SNU/images/morphea_18.jpg,morphea,train,49
+data/SNU/images/tineaversicolor_3.jpg,tinea versicolor,test,60
+data/SNU/images/herpeszoster_6.jpg,herpes zoster,train,22
+data/SNU/images/lichenamyloidosis_7.jpg,lichen amyloidosis,train,129
+data/SNU/images/insectbite_4.jpg,insect bite,train,125
+data/SNU/images/impetigo_8.jpg,impetigo,train,99
+data/SNU/images/fifthdisease_7.jpg,fifth disease,train,8
+data/SNU/images/tineapedis_5.jpg,tinea pedis,train,124
+data/SNU/images/verrucaplana_1.jpg,verruca plana,train,119
+data/SNU/images/lichenplanus_8.jpg,lichen planus,train,91
+data/SNU/images/malignantmelanoma_46.jpg,malignant melanoma,train,23
+data/SNU/images/seborrheickeratosis_5.jpg,seborrheic keratosis,train,39
+data/SNU/images/pityriasisrosea_15.jpg,pityriasis rosea,train,108
+data/SNU/images/staphylococcalscaldedskinsyndrome_0.jpg,staphylococcal scalded skin syndrome,val,117
+data/SNU/images/dermatofibroma_29.jpg,dermatofibroma,train,9
+data/SNU/images/xeroticeczema_3.jpg,xerotic eczema,train,31
+data/SNU/images/lupuserythematosus_9.jpg,lupus erythematosus,val,19
+data/SNU/images/contactdermatitis_1.jpg,contact dermatitis,val,118
+data/SNU/images/atopicdermatitis_3.jpg,atopic dermatitis,train,89
+data/SNU/images/ingrowingnail_5.jpg,ingrowing nail,train,45
+data/SNU/images/dermatofibroma_15.jpg,dermatofibroma,val,9
+data/SNU/images/erythemanodosum_0.jpg,erythema nodosum,train,115
+data/SNU/images/pyogenicgranuloma_42.jpg,pyogenic granuloma,train,7
+data/SNU/images/vitiligo_8.jpg,vitiligo,test,82
+data/SNU/images/pityriasisalba_9.jpg,pityriasis alba,train,84
+data/SNU/images/poroma_9.jpg,poroma,train,83
+data/SNU/images/actinickeratosis_32.jpg,actinic keratosis,train,28
+data/SNU/images/actinickeratosis_26.jpg,actinic keratosis,train,28
+data/SNU/images/keratosispilaris_13.jpg,keratosis pilaris,test,105
+data/SNU/images/inflammedcyst_1.jpg,inflammed cyst,train,116
+data/SNU/images/skintag_6.jpg,skin tag,train,128
+data/SNU/images/angiokeratoma_4.jpg,angiokeratoma,train,123
+data/SNU/images/exfoliativedermatitis_11.jpg,exfoliative dermatitis,train,92
+data/SNU/images/pompholyx_4.jpg,pompholyx,train,25
+data/SNU/images/drugeruption_12.jpg,drug eruption,train,80
+data/SNU/images/vasculitis_1.jpg,vasculitis,train,97
+data/SNU/images/exfoliativedermatitis_15.jpg,exfoliative dermatitis,train,92
+data/SNU/images/angiokeratoma_0.jpg,angiokeratoma,train,123
+data/SNU/images/pyogenicgranuloma_9.jpg,pyogenic granuloma,train,7
+data/SNU/images/skintag_2.jpg,skin tag,train,128
+data/SNU/images/vasculitis_5.jpg,vasculitis,train,97
+data/SNU/images/drugeruption_16.jpg,drug eruption,train,80
+data/SNU/images/pompholyx_0.jpg,pompholyx,train,25
+data/SNU/images/eczemaherpeticum_10.jpg,eczema herpeticum,test,50
+data/SNU/images/erythemanodosum_4.jpg,erythema nodosum,train,115
+data/SNU/images/keratosispilaris_17.jpg,keratosis pilaris,train,105
+data/SNU/images/inflammedcyst_5.jpg,inflammed cyst,train,116
+data/SNU/images/actinickeratosis_22.jpg,actinic keratosis,train,28
+data/SNU/images/actinickeratosis_36.jpg,actinic keratosis,train,28
+data/SNU/images/staphylococcalscaldedskinsyndrome_4.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/pityriasisrosea_11.jpg,pityriasis rosea,test,108
+data/SNU/images/dermatofibroma_39.jpg,dermatofibroma,val,9
+data/SNU/images/dermatofibroma_11.jpg,dermatofibroma,train,9
+data/SNU/images/ingrowingnail_1.jpg,ingrowing nail,train,45
+data/SNU/images/squamouscellcarcinoma_43.jpg,squamous cell carcinoma,train,11
+data/SNU/images/atopicdermatitis_7.jpg,atopic dermatitis,train,89
+data/SNU/images/contactdermatitis_5.jpg,contact dermatitis,train,118
+data/SNU/images/xeroticeczema_7.jpg,xerotic eczema,train,31
+data/SNU/images/verrucaplana_5.jpg,verruca plana,train,119
+data/SNU/images/tineapedis_1.jpg,tinea pedis,val,124
+data/SNU/images/pustularpsoriasis_12.jpg,pustular psoriasis,test,132
+data/SNU/images/abscess_9.jpg,abscess,train,94
+data/SNU/images/seborrheickeratosis_1.jpg,seborrheic keratosis,train,39
+data/SNU/images/malignantmelanoma_42.jpg,malignant melanoma,train,23
+data/SNU/images/tineaversicolor_7.jpg,tinea versicolor,train,60
+data/SNU/images/acutegeneralizedexanthematouspustulosis_7.jpg,acute generalized exanthematous pustulosis,test,95
+data/SNU/images/syringoma_6.jpg,syringoma,val,57
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_0.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/pyodermagangrenosum_11.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/congenitalnevus_5.jpg,congenital nevus,test,120
+data/SNU/images/lichenamyloidosis_13.jpg,lichen amyloidosis,train,129
+data/SNU/images/fifthdisease_3.jpg,fifth disease,train,8
+data/SNU/images/confluentreticulatedpapillomatosis_8.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/insectbite_0.jpg,insect bite,test,125
+data/SNU/images/lichenamyloidosis_3.jpg,lichen amyloidosis,train,129
+data/SNU/images/herpeszoster_2.jpg,herpes zoster,train,22
+data/SNU/images/telangiectasia_14.jpg,telangiectasia,train,133
+data/SNU/images/granulomaannulare_8.jpg,granuloma annulare,test,102
+data/SNU/images/seborrheickeratosis_28.jpg,seborrheic keratosis,train,39
+data/SNU/images/urticarialvasculitis_7.jpg,urticarial vasculitis,train,96
+data/SNU/images/livedoreticularis_9.jpg,livedo reticularis,train,106
+data/SNU/images/lichensimplexchronicus_12.jpg,lichen simplex chronicus,test,121
+data/SNU/images/bowendisease_13.jpg,bowen disease,train,101
+data/SNU/images/seborrheickeratosis_14.jpg,seborrheic keratosis,train,39
+data/SNU/images/steatocystomamultiplex_8.jpg,steatocystoma multiplex,train,107
+data/SNU/images/melanocyticnevus_12.jpg,melanocytic nevus,train,37
+data/SNU/images/xanthelasma_10.jpg,xanthelasma,train,65
+data/SNU/images/lichensimplexchronicus_4.jpg,lichen simplex chronicus,train,121
+data/SNU/images/mucocele_8.jpg,mucocele,test,109
+data/SNU/images/abnom_2.jpg,abnormal,train,130
+data/SNU/images/guttatepsoriasis_2.jpg,guttate psoriasis,train,122
+data/SNU/images/hemangioma_4.jpg,hemangioma,train,21
+data/SNU/images/onycholysis_3.jpg,onycholysis,train,131
+data/SNU/images/melasma_8.jpg,melasma,train,93
+data/SNU/images/keratoacanthoma_11.jpg,keratoacanthoma,train,73
+data/SNU/images/pyodermagangrenosum_0.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/palmoplantarpustulosis_8.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/urticariapigmentosa_19.jpg,urticaria pigmentosa,test,14
+data/SNU/images/telangiectasia_3.jpg,telangiectasia,test,133
+data/SNU/images/drugeruption_1.jpg,drug eruption,train,80
+data/SNU/images/pustularpsoriasis_2.jpg,pustular psoriasis,test,132
+data/SNU/images/pustularpsoriasis_3.jpg,pustular psoriasis,test,132
+data/SNU/images/drugeruption_0.jpg,drug eruption,train,80
+data/SNU/images/freckle_10.jpg,freckle,val,81
+data/SNU/images/urticariapigmentosa_18.jpg,urticaria pigmentosa,train,14
+data/SNU/images/palmoplantarpustulosis_9.jpg,palmoplantar pustulosis,train,112
+data/SNU/images/pyodermagangrenosum_1.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/keratoacanthoma_10.jpg,keratoacanthoma,train,73
+data/SNU/images/telangiectasia_2.jpg,telangiectasia,train,133
+data/SNU/images/melasma_9.jpg,melasma,train,93
+data/SNU/images/onycholysis_2.jpg,onycholysis,train,131
+data/SNU/images/abnom_3.jpg,abnormal,test,130
+data/SNU/images/hemangioma_5.jpg,hemangioma,train,21
+data/SNU/images/guttatepsoriasis_3.jpg,guttate psoriasis,train,122
+data/SNU/images/mucocele_9.jpg,mucocele,train,109
+data/SNU/images/lichensimplexchronicus_5.jpg,lichen simplex chronicus,test,121
+data/SNU/images/melanocyticnevus_13.jpg,melanocytic nevus,train,37
+data/SNU/images/steatocystomamultiplex_9.jpg,steatocystoma multiplex,test,107
+data/SNU/images/seborrheickeratosis_15.jpg,seborrheic keratosis,train,39
+data/SNU/images/bowendisease_12.jpg,bowen disease,val,101
+data/SNU/images/seborrheickeratosis_29.jpg,seborrheic keratosis,train,39
+data/SNU/images/lichensimplexchronicus_13.jpg,lichen simplex chronicus,train,121
+data/SNU/images/livedoreticularis_8.jpg,livedo reticularis,test,106
+data/SNU/images/urticarialvasculitis_6.jpg,urticarial vasculitis,train,96
+data/SNU/images/granulomaannulare_9.jpg,granuloma annulare,test,102
+data/SNU/images/lichenamyloidosis_2.jpg,lichen amyloidosis,train,129
+data/SNU/images/herpeszoster_3.jpg,herpes zoster,test,22
+data/SNU/images/insectbite_1.jpg,insect bite,val,125
+data/SNU/images/confluentreticulatedpapillomatosis_9.jpg,confluent and reticulated papillomatosis,train,56
+data/SNU/images/fifthdisease_2.jpg,fifth disease,train,8
+data/SNU/images/pyodermagangrenosum_10.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/lichenamyloidosis_12.jpg,lichen amyloidosis,train,129
+data/SNU/images/congenitalnevus_4.jpg,congenital nevus,train,120
+data/SNU/images/tineaversicolor_6.jpg,tinea versicolor,train,60
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_1.jpg,pigmented progressive purpuric dermatosis,test,126
+data/SNU/images/syringoma_7.jpg,syringoma,train,57
+data/SNU/images/acutegeneralizedexanthematouspustulosis_6.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/seborrheickeratosis_0.jpg,seborrheic keratosis,train,39
+data/SNU/images/abscess_8.jpg,abscess,train,94
+data/SNU/images/malignantmelanoma_43.jpg,malignant melanoma,train,23
+data/SNU/images/pustularpsoriasis_13.jpg,pustular psoriasis,train,132
+data/SNU/images/tineapedis_0.jpg,tinea pedis,train,124
+data/SNU/images/verrucaplana_4.jpg,verruca plana,train,119
+data/SNU/images/contactdermatitis_4.jpg,contact dermatitis,train,118
+data/SNU/images/xeroticeczema_6.jpg,xerotic eczema,train,31
+data/SNU/images/ingrowingnail_0.jpg,ingrowing nail,test,45
+data/SNU/images/dermatofibroma_10.jpg,dermatofibroma,train,9
+data/SNU/images/atopicdermatitis_6.jpg,atopic dermatitis,test,89
+data/SNU/images/squamouscellcarcinoma_42.jpg,squamous cell carcinoma,train,11
+data/SNU/images/pityriasisrosea_10.jpg,pityriasis rosea,val,108
+data/SNU/images/dermatofibroma_38.jpg,dermatofibroma,test,9
+data/SNU/images/staphylococcalscaldedskinsyndrome_5.jpg,staphylococcal scalded skin syndrome,test,117
+data/SNU/images/actinickeratosis_37.jpg,actinic keratosis,train,28
+data/SNU/images/inflammedcyst_4.jpg,inflammed cyst,test,116
+data/SNU/images/keratosispilaris_16.jpg,keratosis pilaris,train,105
+data/SNU/images/actinickeratosis_23.jpg,actinic keratosis,test,28
+data/SNU/images/erythemanodosum_5.jpg,erythema nodosum,test,115
+data/SNU/images/eczemaherpeticum_11.jpg,eczema herpeticum,test,50
+data/SNU/images/pompholyx_1.jpg,pompholyx,train,25
+data/SNU/images/drugeruption_17.jpg,drug eruption,train,80
+data/SNU/images/vasculitis_4.jpg,vasculitis,train,97
+data/SNU/images/skintag_3.jpg,skin tag,test,128
+data/SNU/images/bullousdisease_12.jpg,bullous disease,test,16
+data/SNU/images/pyogenicgranuloma_8.jpg,pyogenic granuloma,val,7
+data/SNU/images/angiokeratoma_1.jpg,angiokeratoma,train,123
+data/SNU/images/exfoliativedermatitis_14.jpg,exfoliative dermatitis,test,92
+data/SNU/images/bullousdisease_10.jpg,bullous disease,val,16
+data/SNU/images/skintag_1.jpg,skin tag,train,128
+data/SNU/images/exfoliativedermatitis_16.jpg,exfoliative dermatitis,val,92
+data/SNU/images/angiokeratoma_3.jpg,angiokeratoma,test,123
+data/SNU/images/drugeruption_15.jpg,drug eruption,train,80
+data/SNU/images/pompholyx_3.jpg,pompholyx,train,25
+data/SNU/images/vasculitis_6.jpg,vasculitis,train,97
+data/SNU/images/bluenevus_8.jpg,blue nevus,test,86
+data/SNU/images/erythemanodosum_7.jpg,erythema nodosum,val,115
+data/SNU/images/viralexanthem_9.jpg,viral exanthem,val,85
+data/SNU/images/perioraldermatitis_8.jpg,perioral dermatitis,test,10
+data/SNU/images/actinickeratosis_35.jpg,actinic keratosis,test,28
+data/SNU/images/acne_9.jpg,acne,train,87
+data/SNU/images/actinickeratosis_21.jpg,actinic keratosis,test,28
+data/SNU/images/keratosispilaris_14.jpg,keratosis pilaris,val,105
+data/SNU/images/inflammedcyst_6.jpg,inflammed cyst,train,116
+data/SNU/images/venouslake_9.jpg,venous lake,train,88
+data/SNU/images/pityriasisrosea_12.jpg,pityriasis rosea,train,108
+data/SNU/images/staphylococcalscaldedskinsyndrome_7.jpg,staphylococcal scalded skin syndrome,test,117
+data/SNU/images/xeroticeczema_4.jpg,xerotic eczema,test,31
+data/SNU/images/contactdermatitis_6.jpg,contact dermatitis,train,118
+data/SNU/images/squamouscellcarcinoma_40.jpg,squamous cell carcinoma,train,11
+data/SNU/images/atopicdermatitis_4.jpg,atopic dermatitis,train,89
+data/SNU/images/dermatofibroma_12.jpg,dermatofibroma,train,9
+data/SNU/images/ingrowingnail_2.jpg,ingrowing nail,train,45
+data/SNU/images/exfoliativedermatitis_8.jpg,exfoliative dermatitis,train,92
+data/SNU/images/tineapedis_2.jpg,tinea pedis,test,124
+data/SNU/images/verrucaplana_6.jpg,verruca plana,train,119
+data/SNU/images/malignantmelanoma_41.jpg,malignant melanoma,train,23
+data/SNU/images/seborrheickeratosis_2.jpg,seborrheic keratosis,val,39
+data/SNU/images/pustularpsoriasis_11.jpg,pustular psoriasis,train,132
+data/SNU/images/congenitalnevus_6.jpg,congenital nevus,train,120
+data/SNU/images/neurofibromatosis_8.jpg,neurofibromatosis,train,63
+data/SNU/images/lichenamyloidosis_10.jpg,lichen amyloidosis,train,129
+data/SNU/images/pyodermagangrenosum_12.jpg,pyoderma gangrenosum,test,127
+data/SNU/images/acutegeneralizedexanthematouspustulosis_4.jpg,acute generalized exanthematous pustulosis,val,95
+data/SNU/images/syringoma_5.jpg,syringoma,test,57
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_3.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/portwinestain_8.jpg,port wine stain,train,62
+data/SNU/images/tineaversicolor_4.jpg,tinea versicolor,val,60
+data/SNU/images/herpeszoster_1.jpg,herpes zoster,train,22
+data/SNU/images/lichenamyloidosis_0.jpg,lichen amyloidosis,train,129
+data/SNU/images/fifthdisease_0.jpg,fifth disease,train,8
+data/SNU/images/insectbite_3.jpg,insect bite,train,125
+data/SNU/images/pityriasislichenoideschronica_8.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/bowendisease_8.jpg,bowen disease,train,101
+data/SNU/images/urticarialvasculitis_4.jpg,urticarial vasculitis,train,96
+data/SNU/images/keratosispilaris_8.jpg,keratosis pilaris,test,105
+data/SNU/images/lichensimplexchronicus_11.jpg,lichen simplex chronicus,train,121
+data/SNU/images/melanocyticnevus_39.jpg,melanocytic nevus,train,37
+data/SNU/images/urticaria_9.jpg,urticaria,test,104
+data/SNU/images/seborrheickeratosis_17.jpg,seborrheic keratosis,test,39
+data/SNU/images/melanocyticnevus_11.jpg,melanocytic nevus,train,37
+data/SNU/images/bowendisease_10.jpg,bowen disease,train,101
+data/SNU/images/lichensimplexchronicus_7.jpg,lichen simplex chronicus,test,121
+data/SNU/images/onycholysis_0.jpg,onycholysis,train,131
+data/SNU/images/guttatepsoriasis_1.jpg,guttate psoriasis,train,122
+data/SNU/images/hemangioma_7.jpg,hemangioma,val,21
+data/SNU/images/abnom_1.jpg,abnormal,train,130
+data/SNU/images/telangiectasia_0.jpg,telangiectasia,train,133
+data/SNU/images/keratoacanthoma_12.jpg,keratoacanthoma,train,73
+data/SNU/images/pyodermagangrenosum_3.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/pustularpsoriasis_1.jpg,pustular psoriasis,train,132
+data/SNU/images/sebaceoushyperplasia_18.jpg,sebaceous hyperplasia,train,111
+data/SNU/images/lentigo_9.jpg,lentigo,train,114
+data/SNU/images/drugeruption_2.jpg,drug eruption,val,80
+data/SNU/images/drugeruption_3.jpg,drug eruption,train,80
+data/SNU/images/pustularpsoriasis_0.jpg,pustular psoriasis,train,132
+data/SNU/images/lentigo_8.jpg,lentigo,train,114
+data/SNU/images/telangiectasia_1.jpg,telangiectasia,test,133
+data/SNU/images/pyodermagangrenosum_2.jpg,pyoderma gangrenosum,val,127
+data/SNU/images/keratoacanthoma_13.jpg,keratoacanthoma,train,73
+data/SNU/images/hemangioma_6.jpg,hemangioma,train,21
+data/SNU/images/guttatepsoriasis_0.jpg,guttate psoriasis,test,122
+data/SNU/images/abnom_0.jpg,abnormal,train,130
+data/SNU/images/onycholysis_1.jpg,onycholysis,test,131
+data/SNU/images/lichensimplexchronicus_6.jpg,lichen simplex chronicus,train,121
+data/SNU/images/bowendisease_11.jpg,bowen disease,test,101
+data/SNU/images/melanocyticnevus_10.jpg,melanocytic nevus,train,37
+data/SNU/images/seborrheickeratosis_16.jpg,seborrheic keratosis,train,39
+data/SNU/images/melanocyticnevus_38.jpg,melanocytic nevus,train,37
+data/SNU/images/urticaria_8.jpg,urticaria,train,104
+data/SNU/images/lichensimplexchronicus_10.jpg,lichen simplex chronicus,train,121
+data/SNU/images/keratosispilaris_9.jpg,keratosis pilaris,train,105
+data/SNU/images/urticarialvasculitis_5.jpg,urticarial vasculitis,train,96
+data/SNU/images/bowendisease_9.jpg,bowen disease,train,101
+data/SNU/images/insectbite_2.jpg,insect bite,train,125
+data/SNU/images/fifthdisease_1.jpg,fifth disease,train,8
+data/SNU/images/pityriasislichenoideschronica_9.jpg,pityriasis lichenoides chronica,train,100
+data/SNU/images/herpeszoster_0.jpg,herpes zoster,train,22
+data/SNU/images/lichenamyloidosis_1.jpg,lichen amyloidosis,test,129
+data/SNU/images/pigmentedprogressivepurpuricdermatosis_2.jpg,pigmented progressive purpuric dermatosis,train,126
+data/SNU/images/syringoma_4.jpg,syringoma,train,57
+data/SNU/images/acutegeneralizedexanthematouspustulosis_5.jpg,acute generalized exanthematous pustulosis,train,95
+data/SNU/images/tineaversicolor_5.jpg,tinea versicolor,train,60
+data/SNU/images/portwinestain_9.jpg,port wine stain,test,62
+data/SNU/images/lichenamyloidosis_11.jpg,lichen amyloidosis,val,129
+data/SNU/images/neurofibromatosis_9.jpg,neurofibromatosis,test,63
+data/SNU/images/congenitalnevus_7.jpg,congenital nevus,train,120
+data/SNU/images/pyodermagangrenosum_13.jpg,pyoderma gangrenosum,train,127
+data/SNU/images/pustularpsoriasis_10.jpg,pustular psoriasis,train,132
+data/SNU/images/malignantmelanoma_40.jpg,malignant melanoma,test,23
+data/SNU/images/seborrheickeratosis_3.jpg,seborrheic keratosis,test,39
+data/SNU/images/verrucaplana_7.jpg,verruca plana,test,119
+data/SNU/images/tineapedis_3.jpg,tinea pedis,train,124
+data/SNU/images/exfoliativedermatitis_9.jpg,exfoliative dermatitis,train,92
+data/SNU/images/atopicdermatitis_5.jpg,atopic dermatitis,train,89
+data/SNU/images/squamouscellcarcinoma_41.jpg,squamous cell carcinoma,train,11
+data/SNU/images/ingrowingnail_3.jpg,ingrowing nail,test,45
+data/SNU/images/dermatofibroma_13.jpg,dermatofibroma,train,9
+data/SNU/images/xeroticeczema_5.jpg,xerotic eczema,train,31
+data/SNU/images/contactdermatitis_7.jpg,contact dermatitis,test,118
+data/SNU/images/staphylococcalscaldedskinsyndrome_6.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/venouslake_8.jpg,venous lake,train,88
+data/SNU/images/pityriasisrosea_13.jpg,pityriasis rosea,test,108
+data/SNU/images/actinickeratosis_20.jpg,actinic keratosis,train,28
+data/SNU/images/acne_8.jpg,acne,train,87
+data/SNU/images/inflammedcyst_7.jpg,inflammed cyst,train,116
+data/SNU/images/keratosispilaris_15.jpg,keratosis pilaris,train,105
+data/SNU/images/actinickeratosis_34.jpg,actinic keratosis,train,28
+data/SNU/images/perioraldermatitis_9.jpg,perioral dermatitis,train,10
+data/SNU/images/viralexanthem_8.jpg,viral exanthem,test,85
+data/SNU/images/eczemaherpeticum_12.jpg,eczema herpeticum,train,50
+data/SNU/images/erythemanodosum_6.jpg,erythema nodosum,train,115
+data/SNU/images/bluenevus_9.jpg,blue nevus,test,86
+data/SNU/images/vasculitis_7.jpg,vasculitis,train,97
+data/SNU/images/pompholyx_2.jpg,pompholyx,train,25
+data/SNU/images/drugeruption_14.jpg,drug eruption,test,80
+data/SNU/images/angiokeratoma_2.jpg,angiokeratoma,train,123
+data/SNU/images/exfoliativedermatitis_17.jpg,exfoliative dermatitis,test,92
+data/SNU/images/skintag_0.jpg,skin tag,train,128
+data/SNU/images/bullousdisease_11.jpg,bullous disease,train,16
+data/SNU/images/otanevus_1.jpg,ota nevus,train,2
+data/SNU/images/melanonychia_4.jpg,melanonychia,train,75
+data/SNU/images/angiofibroma_5.jpg,angiofibroma,train,74
+data/SNU/images/mucouscyst_3.jpg,mucous cyst,train,58
+data/SNU/images/poikiloderma_11.jpg,poikiloderma,train,48
+data/SNU/images/epidermalcyst_18.jpg,epidermal cyst,train,0
+data/SNU/images/staphylococcalscaldedskinsyndrome_11.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/actinickeratosis_47.jpg,actinic keratosis,train,28
+data/SNU/images/tineacruris_7.jpg,tinea cruris,val,64
+data/SNU/images/alopeciaareata_1.jpg,alopecia areata,train,5
+data/SNU/images/dermatofibroma_2.jpg,dermatofibroma,train,9
+data/SNU/images/pyogenicgranuloma_37.jpg,pyogenic granuloma,train,7
+data/SNU/images/fifthdisease_14.jpg,fifth disease,train,8
+data/SNU/images/pyogenicgranuloma_23.jpg,pyogenic granuloma,test,7
+data/SNU/images/tineafaciale_8.jpg,tinea faciale,train,18
+data/SNU/images/onychomycosis_13.jpg,onychomycosis,train,68
+data/SNU/images/squamouscellcarcinoma_32.jpg,squamous cell carcinoma,train,11
+data/SNU/images/squamouscellcarcinoma_26.jpg,squamous cell carcinoma,train,11
+data/SNU/images/organoidnevus_5.jpg,organoid nevus,train,76
+data/SNU/images/seborrheicdermatitis_11.jpg,seborrheic dermatitis,train,90
+data/SNU/images/folliculitis_12.jpg,folliculitis,train,30
+data/SNU/images/keratoderma_3.jpg,keratoderma,train,42
+data/SNU/images/nevusdepigmentosus_4.jpg,nevus depigmentosus,train,77
+data/SNU/images/malignantmelanoma_27.jpg,malignant melanoma,train,23
+data/SNU/images/juvenilexanthogranuloma_19.jpg,juvenile xanthogranuloma,test,27
+data/SNU/images/nevusspilus_8.jpg,nevus spilus,train,26
+data/SNU/images/hemangioma_13.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_33.jpg,malignant melanoma,test,23
+data/SNU/images/molluscumcontagiosum_6.jpg,molluscum contagiosum,train,66
+data/SNU/images/tineacorporis_4.jpg,tinea corporis,val,79
+data/SNU/images/xanthelasma_7.jpg,xanthelasma,train,65
+data/SNU/images/onycholysis_14.jpg,onycholysis,train,131
+data/SNU/images/epidermalnevus_5.jpg,epidermal nevus,test,78
+data/SNU/images/prurigonodularis_9.jpg,prurigo nodularis,train,34
+data/SNU/images/beckernevus_2.jpg,becker nevus,train,59
+data/SNU/images/subungalhematoma_9.jpg,subungual hematoma,train,32
+data/SNU/images/urticaria_16.jpg,urticaria,test,104
+data/SNU/images/folliculitis_0.jpg,folliculitis,train,30
+data/SNU/images/erythemaannularecentrifugum_7.jpg,erythema annulare centrifugum,val,67
+data/SNU/images/basalcellcarcinoma_10.jpg,basal cell carcinoma,val,36
+data/SNU/images/striaedistensae_9.jpg,striae distensae,val,20
+data/SNU/images/lymphangioma_1.jpg,lymphangioma,train,38
+data/SNU/images/nummulareczema_11.jpg,nummular eczema,val,29
+data/SNU/images/handeczema_8.jpg,hand eczema,val,35
+data/SNU/images/scabies_6.jpg,scabies,train,69
+data/SNU/images/onychomycosis_6.jpg,onychomycosis,train,68
+data/SNU/images/neurofibroma_6.jpg,neurofibroma,val,70
+data/SNU/images/mucosalmelanoticmacule_7.jpg,mucosal melanotic macule,test,71
+data/SNU/images/melanocyticnevus_0.jpg,melanocytic nevus,test,37
+data/SNU/images/rosacea_7.jpg,rosacea,train,72
+data/SNU/images/psoriasis_2.jpg,psoriasis,train,61
+data/SNU/images/acanthosisnigricans_8.jpg,acanthosis nigricans,train,54
+data/SNU/images/keratoacanthoma_7.jpg,keratoacanthoma,train,73
+data/SNU/images/juvenilexanthogranuloma_3.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/keratoacanthoma_6.jpg,keratoacanthoma,train,73
+data/SNU/images/juvenilexanthogranuloma_2.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/acanthosisnigricans_9.jpg,acanthosis nigricans,train,54
+data/SNU/images/psoriasis_3.jpg,psoriasis,train,61
+data/SNU/images/rosacea_6.jpg,rosacea,train,72
+data/SNU/images/mucosalmelanoticmacule_6.jpg,mucosal melanotic macule,test,71
+data/SNU/images/melanocyticnevus_1.jpg,melanocytic nevus,test,37
+data/SNU/images/neurofibroma_7.jpg,neurofibroma,train,70
+data/SNU/images/scabies_7.jpg,scabies,train,69
+data/SNU/images/handeczema_9.jpg,hand eczema,train,35
+data/SNU/images/onychomycosis_7.jpg,onychomycosis,train,68
+data/SNU/images/lymphangioma_0.jpg,lymphangioma,test,38
+data/SNU/images/nummulareczema_10.jpg,nummular eczema,train,29
+data/SNU/images/melanocyticnevus_62.jpg,melanocytic nevus,test,37
+data/SNU/images/striaedistensae_8.jpg,striae distensae,val,20
+data/SNU/images/basalcellcarcinoma_11.jpg,basal cell carcinoma,test,36
+data/SNU/images/folliculitis_1.jpg,folliculitis,train,30
+data/SNU/images/erythemaannularecentrifugum_6.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/subungalhematoma_8.jpg,subungual hematoma,train,32
+data/SNU/images/beckernevus_3.jpg,becker nevus,test,59
+data/SNU/images/prurigonodularis_8.jpg,prurigo nodularis,train,34
+data/SNU/images/epidermalnevus_4.jpg,epidermal nevus,train,78
+data/SNU/images/molluscumcontagiosum_7.jpg,molluscum contagiosum,test,66
+data/SNU/images/onycholysis_15.jpg,onycholysis,test,131
+data/SNU/images/prurigopigmentosa_10.jpg,prurigo pigmentosa,train,98
+data/SNU/images/xanthelasma_6.jpg,xanthelasma,test,65
+data/SNU/images/tineacorporis_5.jpg,tinea corporis,train,79
+data/SNU/images/malignantmelanoma_32.jpg,malignant melanoma,train,23
+data/SNU/images/juvenilexanthogranuloma_18.jpg,juvenile xanthogranuloma,test,27
+data/SNU/images/malignantmelanoma_26.jpg,malignant melanoma,val,23
+data/SNU/images/nevusdepigmentosus_5.jpg,nevus depigmentosus,train,77
+data/SNU/images/hemangioma_12.jpg,hemangioma,test,21
+data/SNU/images/nevusspilus_9.jpg,nevus spilus,train,26
+data/SNU/images/organoidnevus_4.jpg,organoid nevus,train,76
+data/SNU/images/seborrheicdermatitis_10.jpg,seborrheic dermatitis,train,90
+data/SNU/images/squamouscellcarcinoma_27.jpg,squamous cell carcinoma,train,11
+data/SNU/images/keratoderma_2.jpg,keratoderma,train,42
+data/SNU/images/folliculitis_13.jpg,folliculitis,test,30
+data/SNU/images/onychomycosis_12.jpg,onychomycosis,test,68
+data/SNU/images/tineafaciale_9.jpg,tinea faciale,train,18
+data/SNU/images/acanthosisnigricans_10.jpg,acanthosis nigricans,train,54
+data/SNU/images/squamouscellcarcinoma_33.jpg,squamous cell carcinoma,train,11
+data/SNU/images/pyogenicgranuloma_22.jpg,pyogenic granuloma,val,7
+data/SNU/images/fifthdisease_15.jpg,fifth disease,val,8
+data/SNU/images/pyogenicgranuloma_36.jpg,pyogenic granuloma,train,7
+data/SNU/images/dermatofibroma_3.jpg,dermatofibroma,train,9
+data/SNU/images/alopeciaareata_0.jpg,alopecia areata,train,5
+data/SNU/images/actinickeratosis_46.jpg,actinic keratosis,train,28
+data/SNU/images/tineacruris_6.jpg,tinea cruris,val,64
+data/SNU/images/epidermalcyst_19.jpg,epidermal cyst,train,0
+data/SNU/images/staphylococcalscaldedskinsyndrome_10.jpg,staphylococcal scalded skin syndrome,test,117
+data/SNU/images/mucouscyst_2.jpg,mucous cyst,train,58
+data/SNU/images/poikiloderma_10.jpg,poikiloderma,train,48
+data/SNU/images/angiofibroma_4.jpg,angiofibroma,train,74
+data/SNU/images/melanonychia_5.jpg,melanonychia,train,75
+data/SNU/images/otanevus_0.jpg,ota nevus,test,2
+data/SNU/images/angiofibroma_6.jpg,angiofibroma,train,74
+data/SNU/images/melanonychia_7.jpg,melanonychia,train,75
+data/SNU/images/otanevus_2.jpg,ota nevus,train,2
+data/SNU/images/staphylococcalscaldedskinsyndrome_12.jpg,staphylococcal scalded skin syndrome,train,117
+data/SNU/images/paronychia_9.jpg,paronychia,train,1
+data/SNU/images/poikiloderma_12.jpg,poikiloderma,train,48
+data/SNU/images/mucouscyst_0.jpg,mucous cyst,train,58
+data/SNU/images/cellulitis_8.jpg,cellulitis,train,6
+data/SNU/images/tineacruris_4.jpg,tinea cruris,train,64
+data/SNU/images/actinickeratosis_44.jpg,actinic keratosis,train,28
+data/SNU/images/pyogenicgranuloma_20.jpg,pyogenic granuloma,test,7
+data/SNU/images/dermatofibroma_1.jpg,dermatofibroma,test,9
+data/SNU/images/alopeciaareata_2.jpg,alopecia areata,val,5
+data/SNU/images/pyogenicgranuloma_34.jpg,pyogenic granuloma,train,7
+data/SNU/images/pityriasisalba_14.jpg,pityriasis alba,train,84
+data/SNU/images/fifthdisease_17.jpg,fifth disease,train,8
+data/SNU/images/folliculitis_11.jpg,folliculitis,train,30
+data/SNU/images/keratoderma_0.jpg,keratoderma,test,42
+data/SNU/images/squamouscellcarcinoma_25.jpg,squamous cell carcinoma,train,11
+data/SNU/images/seborrheicdermatitis_12.jpg,seborrheic dermatitis,test,90
+data/SNU/images/organoidnevus_6.jpg,organoid nevus,train,76
+data/SNU/images/squamouscellcarcinoma_31.jpg,squamous cell carcinoma,train,11
+data/SNU/images/onychomycosis_10.jpg,onychomycosis,train,68
+data/SNU/images/perioraldermatitis_18.jpg,perioral dermatitis,train,10
+data/SNU/images/squamouscellcarcinoma_19.jpg,squamous cell carcinoma,val,11
+data/SNU/images/urticariapigmentosa_8.jpg,urticaria pigmentosa,train,14
+data/SNU/images/malignantmelanoma_30.jpg,malignant melanoma,train,23
+data/SNU/images/hemangioma_10.jpg,hemangioma,train,21
+data/SNU/images/herpeszoster_21.jpg,herpes zoster,test,22
+data/SNU/images/nevusdepigmentosus_7.jpg,nevus depigmentosus,val,77
+data/SNU/images/malignantmelanoma_24.jpg,malignant melanoma,test,23
+data/SNU/images/actinickeratosis_9.jpg,actinic keratosis,train,28
+data/SNU/images/epidermalnevus_6.jpg,epidermal nevus,val,78
+data/SNU/images/tineacorporis_7.jpg,tinea corporis,train,79
+data/SNU/images/xanthelasma_4.jpg,xanthelasma,train,65
+data/SNU/images/malignantmelanoma_18.jpg,malignant melanoma,train,23
+data/SNU/images/molluscumcontagiosum_5.jpg,molluscum contagiosum,train,66
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_19.jpg,pityriasis lichenoides et varioliformis acuta,test,24
+data/SNU/images/urticaria_15.jpg,urticaria,train,104
+data/SNU/images/beckernevus_1.jpg,becker nevus,train,59
+data/SNU/images/erythemaannularecentrifugum_4.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/folliculitis_3.jpg,folliculitis,test,30
+data/SNU/images/idiopathicguttatehypomelanosis_9.jpg,idiopathic guttate hypomelanosis,train,41
+data/SNU/images/basalcellcarcinoma_13.jpg,basal cell carcinoma,val,36
+data/SNU/images/melanocyticnevus_60.jpg,melanocytic nevus,train,37
+data/SNU/images/onychomycosis_5.jpg,onychomycosis,train,68
+data/SNU/images/scabies_5.jpg,scabies,test,69
+data/SNU/images/nummulareczema_12.jpg,nummular eczema,train,29
+data/SNU/images/lymphangioma_2.jpg,lymphangioma,train,38
+data/SNU/images/melanocyticnevus_48.jpg,melanocytic nevus,train,37
+data/SNU/images/eczemaherpeticum_8.jpg,eczema herpeticum,train,50
+data/SNU/images/neurofibroma_5.jpg,neurofibroma,train,70
+data/SNU/images/naildystrophy_8.jpg,nail dystrophy,test,52
+data/SNU/images/varicella_8.jpg,varicella,train,46
+data/SNU/images/poikiloderma_9.jpg,poikiloderma,train,48
+data/SNU/images/melanocyticnevus_3.jpg,melanocytic nevus,val,37
+data/SNU/images/mucosalmelanoticmacule_4.jpg,mucosal melanotic macule,train,71
+data/SNU/images/angularcheilitis_9.jpg,angular cheilitis,val,55
+data/SNU/images/rosacea_4.jpg,rosacea,test,72
+data/SNU/images/psoriasis_1.jpg,psoriasis,train,61
+data/SNU/images/juvenilexanthogranuloma_0.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/keratoacanthoma_4.jpg,keratoacanthoma,train,73
+data/SNU/images/juvenilexanthogranuloma_1.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/keratoacanthoma_5.jpg,keratoacanthoma,train,73
+data/SNU/images/psoriasis_0.jpg,psoriasis,train,61
+data/SNU/images/rosacea_5.jpg,rosacea,train,72
+data/SNU/images/angularcheilitis_8.jpg,angular cheilitis,train,55
+data/SNU/images/melanocyticnevus_2.jpg,melanocytic nevus,val,37
+data/SNU/images/mucosalmelanoticmacule_5.jpg,mucosal melanotic macule,train,71
+data/SNU/images/varicella_9.jpg,varicella,train,46
+data/SNU/images/poikiloderma_8.jpg,poikiloderma,train,48
+data/SNU/images/naildystrophy_9.jpg,nail dystrophy,train,52
+data/SNU/images/neurofibroma_4.jpg,neurofibroma,train,70
+data/SNU/images/eczemaherpeticum_9.jpg,eczema herpeticum,train,50
+data/SNU/images/melanocyticnevus_49.jpg,melanocytic nevus,train,37
+data/SNU/images/nummulareczema_13.jpg,nummular eczema,train,29
+data/SNU/images/lymphangioma_3.jpg,lymphangioma,train,38
+data/SNU/images/onychomycosis_4.jpg,onychomycosis,train,68
+data/SNU/images/scabies_4.jpg,scabies,train,69
+data/SNU/images/idiopathicguttatehypomelanosis_8.jpg,idiopathic guttate hypomelanosis,test,41
+data/SNU/images/melanocyticnevus_61.jpg,melanocytic nevus,test,37
+data/SNU/images/basalcellcarcinoma_12.jpg,basal cell carcinoma,train,36
+data/SNU/images/erythemaannularecentrifugum_5.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/folliculitis_2.jpg,folliculitis,train,30
+data/SNU/images/beckernevus_0.jpg,becker nevus,train,59
+data/SNU/images/urticaria_14.jpg,urticaria,val,104
+data/SNU/images/onycholysis_16.jpg,onycholysis,train,131
+data/SNU/images/xanthelasma_5.jpg,xanthelasma,train,65
+data/SNU/images/tineacorporis_6.jpg,tinea corporis,train,79
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_18.jpg,pityriasis lichenoides et varioliformis acuta,val,24
+data/SNU/images/molluscumcontagiosum_4.jpg,molluscum contagiosum,train,66
+data/SNU/images/malignantmelanoma_19.jpg,malignant melanoma,val,23
+data/SNU/images/epidermalnevus_7.jpg,epidermal nevus,train,78
+data/SNU/images/hemangioma_11.jpg,hemangioma,train,21
+data/SNU/images/herpeszoster_20.jpg,herpes zoster,train,22
+data/SNU/images/actinickeratosis_8.jpg,actinic keratosis,train,28
+data/SNU/images/malignantmelanoma_25.jpg,malignant melanoma,train,23
+data/SNU/images/nevusdepigmentosus_6.jpg,nevus depigmentosus,train,77
+data/SNU/images/malignantmelanoma_31.jpg,malignant melanoma,train,23
+data/SNU/images/urticariapigmentosa_9.jpg,urticaria pigmentosa,val,14
+data/SNU/images/impetigo_14.jpg,impetigo,test,99
+data/SNU/images/squamouscellcarcinoma_18.jpg,squamous cell carcinoma,train,11
+data/SNU/images/squamouscellcarcinoma_30.jpg,squamous cell carcinoma,train,11
+data/SNU/images/onychomycosis_11.jpg,onychomycosis,train,68
+data/SNU/images/keratoderma_1.jpg,keratoderma,val,42
+data/SNU/images/folliculitis_10.jpg,folliculitis,train,30
+data/SNU/images/seborrheicdermatitis_13.jpg,seborrheic dermatitis,train,90
+data/SNU/images/organoidnevus_7.jpg,organoid nevus,train,76
+data/SNU/images/squamouscellcarcinoma_24.jpg,squamous cell carcinoma,val,11
+data/SNU/images/fifthdisease_16.jpg,fifth disease,train,8
+data/SNU/images/pyogenicgranuloma_35.jpg,pyogenic granuloma,train,7
+data/SNU/images/alopeciaareata_3.jpg,alopecia areata,train,5
+data/SNU/images/dermatofibroma_0.jpg,dermatofibroma,train,9
+data/SNU/images/pyogenicgranuloma_21.jpg,pyogenic granuloma,test,7
+data/SNU/images/tineacruris_5.jpg,tinea cruris,train,64
+data/SNU/images/cellulitis_9.jpg,cellulitis,train,6
+data/SNU/images/actinickeratosis_45.jpg,actinic keratosis,train,28
+data/SNU/images/poikiloderma_13.jpg,poikiloderma,train,48
+data/SNU/images/paronychia_8.jpg,paronychia,test,1
+data/SNU/images/mucouscyst_1.jpg,mucous cyst,train,58
+data/SNU/images/otanevus_3.jpg,ota nevus,test,2
+data/SNU/images/melanonychia_6.jpg,melanonychia,train,75
+data/SNU/images/angiofibroma_7.jpg,angiofibroma,test,74
+data/SNU/images/mucouscyst_5.jpg,mucous cyst,train,58
+data/SNU/images/angiofibroma_3.jpg,angiofibroma,train,74
+data/SNU/images/epidermalcyst_22.jpg,epidermal cyst,train,0
+data/SNU/images/insectbite_11.jpg,insect bite,train,125
+data/SNU/images/melanonychia_2.jpg,melanonychia,test,75
+data/SNU/images/otanevus_7.jpg,ota nevus,train,2
+data/SNU/images/condyloma_8.jpg,condyloma,train,3
+data/SNU/images/pyogenicgranuloma_25.jpg,pyogenic granuloma,train,7
+data/SNU/images/keloid_9.jpg,keloid,train,4
+data/SNU/images/dermatofibroma_4.jpg,dermatofibroma,val,9
+data/SNU/images/alopeciaareata_7.jpg,alopecia areata,test,5
+data/SNU/images/pyogenicgranuloma_31.jpg,pyogenic granuloma,train,7
+data/SNU/images/pityriasisalba_11.jpg,pityriasis alba,val,84
+data/SNU/images/fifthdisease_12.jpg,fifth disease,train,8
+data/SNU/images/actinickeratosis_41.jpg,actinic keratosis,train,28
+data/SNU/images/pyogenicgranuloma_19.jpg,pyogenic granuloma,train,7
+data/SNU/images/tineacruris_1.jpg,tinea cruris,train,64
+data/SNU/images/impetigo_10.jpg,impetigo,train,99
+data/SNU/images/riehlmelanosis_8.jpg,riehl melanosis,train,13
+data/SNU/images/squamouscellcarcinoma_20.jpg,squamous cell carcinoma,train,11
+data/SNU/images/organoidnevus_3.jpg,organoid nevus,val,76
+data/SNU/images/folliculitis_14.jpg,folliculitis,train,30
+data/SNU/images/furuncle_9.jpg,furuncle,train,15
+data/SNU/images/keratoderma_5.jpg,keratoderma,test,42
+data/SNU/images/squamouscellcarcinoma_34.jpg,squamous cell carcinoma,train,11
+data/SNU/images/striaedistensae_19.jpg,striae distensae,test,20
+data/SNU/images/epidermalnevus_3.jpg,epidermal nevus,train,78
+data/SNU/images/molluscumcontagiosum_0.jpg,molluscum contagiosum,train,66
+data/SNU/images/tineacorporis_2.jpg,tinea corporis,train,79
+data/SNU/images/xanthelasma_1.jpg,xanthelasma,train,65
+data/SNU/images/onycholysis_12.jpg,onycholysis,val,131
+data/SNU/images/herpeszoster_18.jpg,herpes zoster,train,22
+data/SNU/images/hemangioma_29.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_35.jpg,malignant melanoma,test,23
+data/SNU/images/malignantmelanoma_8.jpg,malignant melanoma,train,23
+data/SNU/images/nevusdepigmentosus_2.jpg,nevus depigmentosus,test,77
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_20.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/malignantmelanoma_21.jpg,malignant melanoma,train,23
+data/SNU/images/hemangioma_15.jpg,hemangioma,train,21
+data/SNU/images/folliculitis_6.jpg,folliculitis,val,30
+data/SNU/images/erythemaannularecentrifugum_1.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/nummulareczema_8.jpg,nummular eczema,train,29
+data/SNU/images/urticaria_10.jpg,urticaria,val,104
+data/SNU/images/xeroticeczema_19.jpg,xerotic eczema,train,31
+data/SNU/images/beckernevus_4.jpg,becker nevus,test,59
+data/SNU/images/androgenicalopecia_9.jpg,androgenic alopecia,train,33
+data/SNU/images/melanocyticnevus_59.jpg,melanocytic nevus,train,37
+data/SNU/images/scabies_0.jpg,scabies,train,69
+data/SNU/images/onychomycosis_0.jpg,onychomycosis,train,68
+data/SNU/images/lymphangioma_7.jpg,lymphangioma,train,38
+data/SNU/images/basalcellcarcinoma_16.jpg,basal cell carcinoma,train,36
+data/SNU/images/erythemaabigne_8.jpg,erythema ab igne,test,43
+data/SNU/images/cafeaulaitmacule_9.jpg,cafe au lait macule,train,47
+data/SNU/images/morphea_8.jpg,morphea,test,49
+data/SNU/images/mucosalmelanoticmacule_1.jpg,mucosal melanotic macule,train,71
+data/SNU/images/melanocyticnevus_6.jpg,melanocytic nevus,train,37
+data/SNU/images/neurofibroma_0.jpg,neurofibroma,test,70
+data/SNU/images/keratoacanthoma_1.jpg,keratoacanthoma,val,73
+data/SNU/images/juvenilexanthogranuloma_5.jpg,juvenile xanthogranuloma,test,27
+data/SNU/images/rosacea_1.jpg,rosacea,test,72
+data/SNU/images/psoriasis_4.jpg,psoriasis,test,61
+data/SNU/images/psoriasis_5.jpg,psoriasis,train,61
+data/SNU/images/rosacea_0.jpg,rosacea,val,72
+data/SNU/images/keratoacanthoma_0.jpg,keratoacanthoma,train,73
+data/SNU/images/juvenilexanthogranuloma_4.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/neurofibroma_1.jpg,neurofibroma,test,70
+data/SNU/images/cellulitis_12.jpg,cellulitis,test,6
+data/SNU/images/mucosalmelanoticmacule_0.jpg,mucosal melanotic macule,train,71
+data/SNU/images/morphea_9.jpg,morphea,train,49
+data/SNU/images/melanocyticnevus_7.jpg,melanocytic nevus,val,37
+data/SNU/images/cafeaulaitmacule_8.jpg,cafe au lait macule,train,47
+data/SNU/images/erythemaabigne_9.jpg,erythema ab igne,train,43
+data/SNU/images/basalcellcarcinoma_17.jpg,basal cell carcinoma,test,36
+data/SNU/images/lymphangioma_6.jpg,lymphangioma,train,38
+data/SNU/images/nummulareczema_16.jpg,nummular eczema,train,29
+data/SNU/images/scabies_1.jpg,scabies,train,69
+data/SNU/images/melanocyticnevus_58.jpg,melanocytic nevus,train,37
+data/SNU/images/onychomycosis_1.jpg,onychomycosis,test,68
+data/SNU/images/androgenicalopecia_8.jpg,androgenic alopecia,test,33
+data/SNU/images/beckernevus_5.jpg,becker nevus,train,59
+data/SNU/images/urticaria_11.jpg,urticaria,train,104
+data/SNU/images/xeroticeczema_18.jpg,xerotic eczema,test,31
+data/SNU/images/folliculitis_7.jpg,folliculitis,train,30
+data/SNU/images/nummulareczema_9.jpg,nummular eczema,train,29
+data/SNU/images/erythemaannularecentrifugum_0.jpg,erythema annulare centrifugum,test,67
+data/SNU/images/malignantmelanoma_20.jpg,malignant melanoma,val,23
+data/SNU/images/nevusdepigmentosus_3.jpg,nevus depigmentosus,train,77
+data/SNU/images/malignantmelanoma_9.jpg,malignant melanoma,train,23
+data/SNU/images/hemangioma_14.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_34.jpg,malignant melanoma,train,23
+data/SNU/images/molluscumcontagiosum_1.jpg,molluscum contagiosum,val,66
+data/SNU/images/herpeszoster_19.jpg,herpes zoster,train,22
+data/SNU/images/hemangioma_28.jpg,hemangioma,train,21
+data/SNU/images/onycholysis_13.jpg,onycholysis,val,131
+data/SNU/images/xanthelasma_0.jpg,xanthelasma,train,65
+data/SNU/images/tineacorporis_3.jpg,tinea corporis,train,79
+data/SNU/images/striaedistensae_18.jpg,striae distensae,test,20
+data/SNU/images/epidermalnevus_2.jpg,epidermal nevus,test,78
+data/SNU/images/squamouscellcarcinoma_35.jpg,squamous cell carcinoma,train,11
+data/SNU/images/organoidnevus_2.jpg,organoid nevus,train,76
+data/SNU/images/squamouscellcarcinoma_21.jpg,squamous cell carcinoma,train,11
+data/SNU/images/keratoderma_4.jpg,keratoderma,train,42
+data/SNU/images/furuncle_8.jpg,furuncle,test,15
+data/SNU/images/folliculitis_15.jpg,folliculitis,train,30
+data/SNU/images/riehlmelanosis_9.jpg,riehl melanosis,train,13
+data/SNU/images/impetigo_11.jpg,impetigo,train,99
+data/SNU/images/pyogenicgranuloma_18.jpg,pyogenic granuloma,train,7
+data/SNU/images/actinickeratosis_40.jpg,actinic keratosis,train,28
+data/SNU/images/tineacruris_0.jpg,tinea cruris,train,64
+data/SNU/images/fifthdisease_13.jpg,fifth disease,train,8
+data/SNU/images/pityriasisalba_10.jpg,pityriasis alba,train,84
+data/SNU/images/pyogenicgranuloma_30.jpg,pyogenic granuloma,train,7
+data/SNU/images/alopeciaareata_6.jpg,alopecia areata,train,5
+data/SNU/images/dermatofibroma_5.jpg,dermatofibroma,test,9
+data/SNU/images/pyogenicgranuloma_24.jpg,pyogenic granuloma,train,7
+data/SNU/images/keloid_8.jpg,keloid,val,4
+data/SNU/images/condyloma_9.jpg,condyloma,val,3
+data/SNU/images/otanevus_6.jpg,ota nevus,train,2
+data/SNU/images/melanonychia_3.jpg,melanonychia,train,75
+data/SNU/images/angiofibroma_2.jpg,angiofibroma,train,74
+data/SNU/images/insectbite_10.jpg,insect bite,train,125
+data/SNU/images/mucouscyst_4.jpg,mucous cyst,val,58
+data/SNU/images/poikiloderma_14.jpg,poikiloderma,train,48
+data/SNU/images/mucouscyst_6.jpg,mucous cyst,train,58
+data/SNU/images/otanevus_4.jpg,ota nevus,test,2
+data/SNU/images/melanonychia_1.jpg,melanonychia,train,75
+data/SNU/images/insectbite_12.jpg,insect bite,test,125
+data/SNU/images/angiofibroma_0.jpg,angiofibroma,train,74
+data/SNU/images/epidermalcyst_21.jpg,epidermal cyst,test,0
+data/SNU/images/alopeciaareata_4.jpg,alopecia areata,train,5
+data/SNU/images/dermatofibroma_7.jpg,dermatofibroma,train,9
+data/SNU/images/pyogenicgranuloma_32.jpg,pyogenic granuloma,train,7
+data/SNU/images/fifthdisease_11.jpg,fifth disease,test,8
+data/SNU/images/pityriasisalba_12.jpg,pityriasis alba,val,84
+data/SNU/images/pyogenicgranuloma_26.jpg,pyogenic granuloma,train,7
+data/SNU/images/tineacruris_2.jpg,tinea cruris,train,64
+data/SNU/images/actinickeratosis_42.jpg,actinic keratosis,train,28
+data/SNU/images/impetigo_13.jpg,impetigo,train,99
+data/SNU/images/wart_9.jpg,wart,train,12
+data/SNU/images/herpessimplex_8.jpg,herpes simplex,test,17
+data/SNU/images/squamouscellcarcinoma_37.jpg,squamous cell carcinoma,test,11
+data/SNU/images/bullousdisease_8.jpg,bullous disease,train,16
+data/SNU/images/keratoderma_6.jpg,keratoderma,test,42
+data/SNU/images/squamouscellcarcinoma_23.jpg,squamous cell carcinoma,train,11
+data/SNU/images/organoidnevus_0.jpg,organoid nevus,test,76
+data/SNU/images/tineacorporis_1.jpg,tinea corporis,train,79
+data/SNU/images/xanthelasma_2.jpg,xanthelasma,train,65
+data/SNU/images/onycholysis_11.jpg,onycholysis,train,131
+data/SNU/images/molluscumcontagiosum_3.jpg,molluscum contagiosum,test,66
+data/SNU/images/epidermalnevus_0.jpg,epidermal nevus,train,78
+data/SNU/images/hemangioma_16.jpg,hemangioma,test,21
+data/SNU/images/nevusdepigmentosus_1.jpg,nevus depigmentosus,train,77
+data/SNU/images/malignantmelanoma_22.jpg,malignant melanoma,train,23
+data/SNU/images/malignantmelanoma_36.jpg,malignant melanoma,val,23
+data/SNU/images/erythemaannularecentrifugum_2.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/folliculitis_5.jpg,folliculitis,train,30
+data/SNU/images/beckernevus_7.jpg,becker nevus,train,59
+data/SNU/images/urticaria_13.jpg,urticaria,train,104
+data/SNU/images/seborrheickeratosis_48.jpg,seborrheic keratosis,val,39
+data/SNU/images/nummulareczema_14.jpg,nummular eczema,train,29
+data/SNU/images/lymphangioma_4.jpg,lymphangioma,train,38
+data/SNU/images/onychomycosis_3.jpg,onychomycosis,train,68
+data/SNU/images/scabies_3.jpg,scabies,train,69
+data/SNU/images/basalcellcarcinoma_29.jpg,basal cell carcinoma,train,36
+data/SNU/images/hypertrophicscar_8.jpg,hypertrophic scar,test,40
+data/SNU/images/basalcellcarcinoma_15.jpg,basal cell carcinoma,train,36
+data/SNU/images/lichenstriatus_8.jpg,lichen striatus,train,44
+data/SNU/images/melanocyticnevus_5.jpg,melanocytic nevus,train,37
+data/SNU/images/mucosalmelanoticmacule_2.jpg,mucosal melanotic macule,train,71
+data/SNU/images/neurofibroma_3.jpg,neurofibroma,train,70
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_8.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/milia_8.jpg,milia,train,51
+data/SNU/images/cellulitis_10.jpg,cellulitis,train,6
+data/SNU/images/juvenilexanthogranuloma_6.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/keratoacanthoma_2.jpg,keratoacanthoma,train,73
+data/SNU/images/rosacea_2.jpg,rosacea,train,72
+data/SNU/images/psoriasis_7.jpg,psoriasis,val,61
+data/SNU/images/lichennitidus_8.jpg,lichen nitidus,train,53
+data/SNU/images/lichennitidus_9.jpg,lichen nitidus,train,53
+data/SNU/images/psoriasis_6.jpg,psoriasis,train,61
+data/SNU/images/rosacea_3.jpg,rosacea,train,72
+data/SNU/images/juvenilexanthogranuloma_7.jpg,juvenile xanthogranuloma,train,27
+data/SNU/images/keratoacanthoma_3.jpg,keratoacanthoma,train,73
+data/SNU/images/cellulitis_11.jpg,cellulitis,train,6
+data/SNU/images/milia_9.jpg,milia,test,51
+data/SNU/images/pityriasislichenoidesetvarioliformisacuta_9.jpg,pityriasis lichenoides et varioliformis acuta,train,24
+data/SNU/images/neurofibroma_2.jpg,neurofibroma,train,70
+data/SNU/images/melanocyticnevus_4.jpg,melanocytic nevus,train,37
+data/SNU/images/mucosalmelanoticmacule_3.jpg,mucosal melanotic macule,train,71
+data/SNU/images/hypertrophicscar_9.jpg,hypertrophic scar,train,40
+data/SNU/images/lichenstriatus_9.jpg,lichen striatus,train,44
+data/SNU/images/basalcellcarcinoma_14.jpg,basal cell carcinoma,train,36
+data/SNU/images/onychomycosis_2.jpg,onychomycosis,train,68
+data/SNU/images/basalcellcarcinoma_28.jpg,basal cell carcinoma,train,36
+data/SNU/images/scabies_2.jpg,scabies,test,69
+data/SNU/images/nummulareczema_15.jpg,nummular eczema,test,29
+data/SNU/images/lymphangioma_5.jpg,lymphangioma,val,38
+data/SNU/images/seborrheickeratosis_49.jpg,seborrheic keratosis,train,39
+data/SNU/images/urticaria_12.jpg,urticaria,train,104
+data/SNU/images/beckernevus_6.jpg,becker nevus,train,59
+data/SNU/images/erythemaannularecentrifugum_3.jpg,erythema annulare centrifugum,train,67
+data/SNU/images/folliculitis_4.jpg,folliculitis,val,30
+data/SNU/images/malignantmelanoma_37.jpg,malignant melanoma,train,23
+data/SNU/images/hemangioma_17.jpg,hemangioma,train,21
+data/SNU/images/malignantmelanoma_23.jpg,malignant melanoma,train,23
+data/SNU/images/nevusdepigmentosus_0.jpg,nevus depigmentosus,train,77
+data/SNU/images/epidermalnevus_1.jpg,epidermal nevus,train,78
+data/SNU/images/onycholysis_10.jpg,onycholysis,train,131
+data/SNU/images/xanthelasma_3.jpg,xanthelasma,train,65
+data/SNU/images/tineacorporis_0.jpg,tinea corporis,train,79
+data/SNU/images/molluscumcontagiosum_2.jpg,molluscum contagiosum,train,66
+data/SNU/images/keratoderma_7.jpg,keratoderma,train,42
+data/SNU/images/bullousdisease_9.jpg,bullous disease,train,16
+data/SNU/images/folliculitis_16.jpg,folliculitis,test,30
+data/SNU/images/organoidnevus_1.jpg,organoid nevus,train,76
+data/SNU/images/squamouscellcarcinoma_22.jpg,squamous cell carcinoma,test,11
+data/SNU/images/squamouscellcarcinoma_36.jpg,squamous cell carcinoma,train,11
+data/SNU/images/herpessimplex_9.jpg,herpes simplex,train,17
+data/SNU/images/impetigo_12.jpg,impetigo,train,99
+data/SNU/images/wart_8.jpg,wart,train,12
+data/SNU/images/tineacruris_3.jpg,tinea cruris,train,64
+data/SNU/images/actinickeratosis_43.jpg,actinic keratosis,train,28
+data/SNU/images/pyogenicgranuloma_27.jpg,pyogenic granuloma,train,7
+data/SNU/images/pityriasisalba_13.jpg,pityriasis alba,train,84
+data/SNU/images/fifthdisease_10.jpg,fifth disease,train,8
+data/SNU/images/pyogenicgranuloma_33.jpg,pyogenic granuloma,test,7
+data/SNU/images/dermatofibroma_6.jpg,dermatofibroma,train,9
+data/SNU/images/alopeciaareata_5.jpg,alopecia areata,test,5
+data/SNU/images/epidermalcyst_20.jpg,epidermal cyst,test,0
+data/SNU/images/angiofibroma_1.jpg,angiofibroma,train,74
+data/SNU/images/melanonychia_0.jpg,melanonychia,train,75
+data/SNU/images/otanevus_5.jpg,ota nevus,val,2
+data/SNU/images/mucouscyst_7.jpg,mucous cyst,train,58

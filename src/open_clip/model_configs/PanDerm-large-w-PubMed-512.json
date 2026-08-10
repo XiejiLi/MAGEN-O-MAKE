@@ -1,0 +1,16 @@
+{
+    "embed_dim": 768,
+    "vision_cfg": {
+        "image_size": 224,
+        "layers": 12,
+        "width": 768,
+        "patch_size": 16,
+        "pretrain_path": "/weight/panderm_weight/panderm-large-vit.pth"
+    },
+    "text_cfg": {
+        "context_length": 512,
+        "hf_model_name": "Tsubasaz/clinical-pubmed-bert-base-512",
+        "hf_tokenizer_name": "Tsubasaz/clinical-pubmed-bert-base-512",
+        "hf_pooler_type": "mean_pooler"
+    }
+}
