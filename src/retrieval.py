@@ -38,7 +38,7 @@ from open_clip_train.params import parse_args
 from open_clip_train.precision import get_autocast
 from test import load_checkpoint, random_seed
 
-RECALL_KS = (1, 5, 10, 50, 100)
+RECALL_KS = (10, 50, 100)
 
 
 class RetrievalCsvDataset(Dataset):

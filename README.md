@@ -170,10 +170,10 @@ Ranks every SkinCAP image against all 3,989 captions and vice versa:
 bash script/retrieval_eval.sh
 ```
 
-| Direction | R@1 | R@5 | R@10 | R@50 | R@100 | Median rank |
-|---|---|---|---|---|---|---|
-| image → text | 0.0481 | 0.1587 | 0.2464 | 0.4954 | 0.6074 | 52 |
-| text → image | 0.0451 | 0.1574 | 0.2429 | 0.5069 | 0.6174 | 48 |
+| Direction | R@10 | R@50 | R@100 | Median rank |
+|---|---|---|---|---|
+| image → text | 0.2464 | 0.4954 | 0.6074 | 52 |
+| text → image | 0.2429 | 0.5069 | 0.6174 | 48 |
 
 ## Linear probing
 
