@@ -45,7 +45,8 @@ pip install -r requirements.txt
 |---|---|---|
 | O-MAKE | CLIP ViT-B/16 | [🤗 Xieji-Li/MAGEN-O-MAKE](https://huggingface.co/Xieji-Li/MAGEN-O-MAKE) |
 
-### Quick start(Zero-Shot Skin Cancer Classification)
+<details>
+<summary><b>Quick start — zero-shot skin cancer classification</b></summary>
 
 ```python
 import torch
@@ -83,27 +84,70 @@ mkdir -p checkpoints
 hf download Xieji-Li/MAGEN-O-MAKE O-MAKE_epoch_15.pt --local-dir checkpoints
 ```
 
+</details>
+
 ## Data preparation
 
-Download `MAGEN-O-MAKE_downstream.tar.gz` (7.0 GB) from
-[Google Drive](https://drive.google.com/drive/folders/1OnLA1gBFg0To7TplSVEE7FzO6vmmLvQ4) and unpack
-it at the repository root:
+Both parts unpack at the repository root; every image path in the metadata is relative to it, so run
+all commands from there.
+
+<details>
+<summary><b>Training data — Derm1M-AgentAug (403,563 image-text pairs)</b></summary>
+
+[🤗 Xieji-Li/Derm1M-AgentAug](https://huggingface.co/datasets/Xieji-Li/Derm1M-AgentAug) holds the
+MAGEN-augmented captions together with their images.
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset('Xieji-Li/Derm1M-AgentAug', split='train')
+```
+
+`script/pretrain.sh` reads images from disk, so materialise them once at `data/pretrain/images/`
+using each row's `filename`:
+
+```python
+import os
+for row in ds:
+    path = row['filename']            # data/pretrain/images/<source>/<file>
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    row['image'].save(path)
+```
+
+| Column | Description |
+|---|---|
+| `filename` | image path relative to the repository root |
+| `truncated_caption` | MAGEN caption, truncated to the text encoder's context length |
+| `ontology_caption` | names the diagnosis along its Derm1M ontology path |
+| `visual_concept_caption` | lists the visual findings observed in the image |
+| `subcaption_1` … `subcaption_8` | the caption split into knowledge aspects |
+| `sub_caption_mask` | 8-element mask marking which subcaptions are present |
+| `knowledge_masks` | 3-element mask over (caption, ontology, visual-concept) |
+| `ontology_label` | index into the disease hierarchy, `-1` when unmapped |
+| `source`, `source_type` | corpus of origin |
+
+</details>
+
+<details>
+<summary><b>Evaluation data — downstream benchmarks (7.0 GB)</b></summary>
+
+Download `MAGEN-O-MAKE_downstream.tar.gz` from
+[Google Drive](https://drive.google.com/drive/folders/1OnLA1gBFg0To7TplSVEE7FzO6vmmLvQ4) and unpack it:
 
 ```bash
 tar -xzf MAGEN-O-MAKE_downstream.tar.gz    # creates data/downstream/ and meta/downstream/
 ```
 
 ```
-data
-├── pretrain/                 Derm1M-AgentAug (pretrained dataset)
-└── downstream/
-    ├── Daffodil/   ├── ISIC2018/   ├── SD-128/    ├── SNU/
-    ├── F17K/       ├── PAD/        ├── SD-198/    └── skin_cap/
+data/downstream/
+├── Daffodil/   ├── ISIC2018/   ├── SD-128/    ├── SNU/
+├── F17K/       ├── PAD/        ├── SD-198/    └── skin_cap/
 ```
 
-Each dataset directory holds `images/` plus its metadata CSVs, and `meta/downstream/` carries the
-train/val/test splits used by linear probing and fine-tuning. Every image path is relative to the
-repository root, so run all commands from there.
+Each dataset directory holds `images/` plus its metadata CSVs. `meta/downstream/` carries the
+train/val/test splits used by linear probing and fine-tuning.
+
+</details>
 
 ## Zero-shot disease classification
 
@@ -134,9 +178,7 @@ Drop any `--eval-<dataset>` flag to skip that benchmark.
 
 ### Results
 
-Top-1 accuracy against open-source dermatology and general-domain VLMs, as reported in the paper,
-using the 8-template prompt ensemble (`OPENAI_SKIN_TEMPLATES`). The last two columns are long-tail
-splits covering rare conditions the model was never given a label for.
+Top-1 accuracy against open-source dermatology and general-domain VLMs.
 
 | Model | PAD | F17K | SD-128 | SNU-134 | Daffodil | **Avg.** | SD-Tails | SNU-Tails | **Avg.** |
 |---|---|---|---|---|---|---|---|---|---|
@@ -190,15 +232,8 @@ batch size 2048, with multi-aspect knowledge contrastive learning (`--MKCL --sub
 --num_subcaptions 8`) and Ontology-Based Multi-Knowledge Contrastive Learning (`--OHCL --OHCL_temp 0.07
 --OHCL_beta 0.5 --loss_type 'cross entropy'`).
 
-The MAGEN-augmented pretraining corpus (**Derm1M-AgentAug**) will be released on Hugging Face upon
-acceptance; unpack it into `data/pretrain/`. The script expects a CSV with one row per image-text
-pair and these columns:
-
-| Column | Description |
-|---|---|
-| `filename` | image path relative to the repository root, i.e. `data/pretrain/images/<file>` |
-| `truncated_caption` | MAGEN-generated caption, split into `--num_subcaptions` knowledge aspects |
-| `label` | disease label, used for the disease-specific aspect weighting |
+It reads the MAGEN-augmented corpus from `data/pretrain/` — see
+[Data preparation](#data-preparation) for the schema and how to materialise the images.
 
 The ontology asset used by O-MAKE ships with the code:
 `src/open_clip_train/ontology/ontology_distance.npy` holds the precomputed pairwise distances in the
