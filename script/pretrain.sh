@@ -38,7 +38,7 @@ python src/main.py \
     --OHCL \
     --OHCL_temp 0.07 \
     --OHCL_beta 0.5 \
-    --loss_type 'KL' \
+    --loss_type 'cross entropy' \
     --zeroshot-frequency 1 \
     --zeroshot-eval3=data/F17K/MAKE_F17K.csv \
     --zeroshot-eval9=data/SNU/MAKE_SNU.csv \

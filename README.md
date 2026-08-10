@@ -46,10 +46,6 @@ cd MAGEN-O-MAKE
 pip install -r requirements.txt
 ```
 
-Install the PyTorch build that matches your CUDA version first if the default wheel does not suit
-your driver. The pipelines were verified with `torch 2.4-2.7` and `timm 0.9.16-1.0.15`; `open_clip`
-itself is vendored under `src/open_clip`, so no separate `open_clip_torch` install is needed.
-
 ## Pretrained model
 
 | Model | Architecture | Weights |
@@ -65,9 +61,14 @@ import open_clip   # pip install open_clip_torch
 
 model, preprocess = open_clip.create_model_from_pretrained('hf-hub:Xieji-Li/MAGEN-O-MAKE')
 tokenizer = open_clip.get_tokenizer('hf-hub:Xieji-Li/MAGEN-O-MAKE')
+model.eval()
 
-labels = ['melanoma', 'basal cell carcinoma', 'nevus', 'seborrheic keratosis']
-image = preprocess(Image.open('lesion.jpg').convert('RGB')).unsqueeze(0)
+# The six PAD-UFES-20 classes.
+labels = ['nevus', 'basal cell carcinoma', 'actinic keratosis',
+          'seborrheic keratosis', 'squamous cell carcinoma', 'melanoma']
+
+# A biopsy-confirmed melanoma from the PAD-UFES-20 test split.
+image = preprocess(Image.open('data/PAD/images/PAT_611_1158_156.png').convert('RGB')).unsqueeze(0)
 text = tokenizer([f'This is a skin image of {c}' for c in labels])
 
 with torch.no_grad():
@@ -75,10 +76,24 @@ with torch.no_grad():
     text_features = model.encode_text(text)
     image_features /= image_features.norm(dim=-1, keepdim=True)
     text_features /= text_features.norm(dim=-1, keepdim=True)
-    probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
+    probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)[0]
 
-print(dict(zip(labels, probs[0].tolist())))
+for label, p in sorted(zip(labels, probs.tolist()), key=lambda kv: -kv[1]):
+    print(f'{label:25s} {p:.4f}')
 ```
+
+```
+melanoma                  0.9227
+seborrheic keratosis      0.0682
+nevus                     0.0063
+basal cell carcinoma      0.0011
+actinic keratosis         0.0010
+squamous cell carcinoma   0.0006
+```
+
+The image comes from the dataset bundle in [Data preparation](#data-preparation). This single-template
+prompt is the simplest possible use; the reported benchmarks below ensemble 8 templates
+(`OPENAI_SKIN_TEMPLATES` in `src/open_clip/zero_shot_metadata.py`).
 
 To reproduce the numbers below instead, download `O-MAKE_epoch_15.pt` from the same Hugging Face
 repository into `checkpoints/` and use the scripts in `script/`:
@@ -129,7 +144,7 @@ ensemble (`OPENAI_SKIN_TEMPLATES`):
 
 | Benchmark | Classes | Metric | Score |
 |---|---|---|---|
-| PAD-UFES-20 | 6 | AUROC / Accuracy | 0.9176 / 0.6675 |
+| PAD-UFES-20 | 6 | Top-1 / - | 0.6675 / - |
 | Fitzpatrick17K | 113 | Top-1 / Top-5 | 0.3716 / 0.6620 |
 | SNU | 134 | Top-1 / Top-5 | 0.3898 / 0.7235 |
 | SD-128 | 128 | Top-1 / Top-5 | 0.4595 / 0.7711 |
@@ -175,7 +190,7 @@ bash script/pretrain.sh
 This reproduces the released checkpoint: CLIP ViT-B/16 initialised from OpenAI weights, 15 epochs at
 batch size 2048, with multi-aspect knowledge contrastive learning (`--MKCL --subcaptions
 --num_subcaptions 8`) and ontology-guided hierarchical contrastive learning (`--OHCL --OHCL_temp 0.07
---OHCL_beta 0.5 --loss_type KL`).
+--OHCL_beta 0.5 --loss_type 'cross entropy'`).
 
 The MAGEN-augmented pretraining corpus (**Derm1M-AgentAug**) is not yet public. The script expects a
 CSV with one row per image-text pair and these columns:
@@ -199,9 +214,7 @@ used for diagnosis, triage, or any other clinical decision-making.
 ## Acknowledgements
 
 Built on [open_clip](https://github.com/mlfoundations/open_clip). The pretraining corpus derives from
-[Derm1M](https://github.com/SiyuanYan1/Derm1M); the linear-probing and fine-tuning harnesses are
-adapted from [PanDerm](https://github.com/SiyuanYan1/PanDerm), and this work extends
-[MAKE](https://github.com/SiyuanYan1/MAKE) (MICCAI'25).
+[Derm1M](https://github.com/SiyuanYan1/Derm1M); this work extends [MAKE](https://github.com/SiyuanYan1/MAKE) (MICCAI'25).
 
 ## Citation
 

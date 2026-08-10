@@ -11,7 +11,7 @@ set -euo pipefail
 
 MODEL=${MODEL:-'open_clip_ViT-B-16'}
 CHECKPOINT=${CHECKPOINT-'checkpoints/O-MAKE_epoch_15.pt'}  # note: '-' not ':-', so CHECKPOINT='' means "no checkpoint"
-PERCENT_DATA=${PERCENT_DATA:-0.5}
+PERCENT_DATA=${PERCENT_DATA:-0.1}
 GPU=${GPU:-0}
 OUTPUT_ROOT=${OUTPUT_ROOT:-'logs/linear_probe'}
 
