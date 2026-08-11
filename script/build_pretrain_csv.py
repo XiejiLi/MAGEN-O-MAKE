@@ -31,7 +31,7 @@ REQUIRED = [
     'ontology_label',
 ]
 # Not used for training, kept so others can analyse the corpus by origin.
-PROVENANCE = ['source', 'source_type']
+PROVENANCE = ['source', 'source_type', 'agent_generated']
 
 OLD_ROOT = '/VL_Data/'
 NEW_ROOT = 'data/pretrain/images/'
@@ -47,10 +47,31 @@ def main():
     ap.add_argument('--out', required=True, help='where to write the release CSV')
     ap.add_argument('--image-root', default=None,
                     help='if given, verify a sample of images resolves under this prefix')
+    ap.add_argument('--original-csv', nargs='+', required=True,
+                    help='the pre-MAGEN Derm1M caption CSV(s); a row is marked '
+                         'agent_generated when its caption differs from the original')
     args = ap.parse_args()
 
     df = pd.read_csv(args.source)
     print(f'read {len(df)} rows, {len(df.columns)} columns')
+
+    # MAGEN rewrites only part of the corpus, so mark which captions it produced.
+    original = {}
+    for path in args.original_csv:
+        o = pd.read_csv(path, usecols=['filename', 'caption'])
+        original.update(dict(zip(o['filename'].astype(str), o['caption'].astype(str))))
+    print(f'loaded {len(original)} original captions')
+
+    unmatched = [f for f in df['filename'].astype(str) if f not in original]
+    if unmatched:
+        sys.exit(f'{len(unmatched)} rows have no original caption to compare against, '
+                 f'e.g. {unmatched[0]!r}; pass the right --original-csv')
+    df['agent_generated'] = [
+        str(cap).strip() != original[str(fn)].strip()
+        for fn, cap in zip(df['filename'], df['caption'])
+    ]
+    n = int(df['agent_generated'].sum())
+    print(f'agent_generated: {n} True / {len(df) - n} False ({100 * n / len(df):.1f}% rewritten)')
 
     keep = REQUIRED + PROVENANCE
     missing = [c for c in keep if c not in df.columns]
