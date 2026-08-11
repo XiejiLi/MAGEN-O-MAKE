@@ -258,26 +258,25 @@ Built on [open_clip](https://github.com/mlfoundations/open_clip). The pretrainin
 
 ## Citation
 
-This work (IEEE Transactions on Medical Imaging):
-
 ```bibtex
-@article{li2025magenomake,
-  title   = {Multi-Aspect Knowledge-Enhanced Dermatological Vision-Language Pretraining with Multi-Agent Data Generation},
-  author  = {Li, Xieji and Yan, Siyuan and Liu, Yingsheng and Soyer, H. Peter and Janda, Monika and Mar, Victoria and Ge, Zongyuan},
-  journal = {IEEE Transactions on Medical Imaging},
-  year    = {2025},
-  note    = {arXiv:2512.03445; TODO: add volume/pages/DOI once assigned}
+@article{li2025multi,
+  title={Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-Agent Data Generation},
+  author={Li, Xieji and Yan, Siyuan and Liu, Yingsheng and Soyer, H Peter and Janda, Monika and Mar, Victoria and Ge, Zongyuan},
+  journal={arXiv preprint arXiv:2512.03445},
+  year={2025}
 }
 ```
 
 The MICCAI'25 conference version this extends:
 
 ```bibtex
-@inproceedings{yan2025make,
-  title     = {MAKE: Multi-Aspect Knowledge-Enhanced Vision-Language Pretraining for Zero-shot Dermatological Assessment},
-  author    = {Yan, Siyuan and others},
-  booktitle = {Medical Image Computing and Computer Assisted Intervention (MICCAI)},
-  year      = {2025},
-  note      = {arXiv:2505.09372}
+@misc{yan2025makemultiaspectknowledgeenhancedvisionlanguage,
+      title={MAKE: Multi-Aspect Knowledge-Enhanced Vision-Language Pretraining for Zero-shot Dermatological Assessment}, 
+      author={Siyuan Yan and Xieji Li and Ming Hu and Yiwen Jiang and Zhen Yu and Zongyuan Ge},
+      year={2025},
+      eprint={2505.09372},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.09372}, 
 }
 ```
