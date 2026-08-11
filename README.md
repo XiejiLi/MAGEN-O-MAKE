@@ -3,8 +3,8 @@
 Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-Agent Data Generation
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2512.03445"><img src="https://img.shields.io/badge/arXiv-2512.03445-b31b1b.svg" alt="arXiv"></a>
-  <a href="https://arxiv.org/abs/2505.09372"><img src="https://img.shields.io/badge/MICCAI'25-MAKE-8a2be2.svg" alt="MICCAI 2025 conference paper"></a>
+  <a href="https://arxiv.org/abs/2512.03445"><img src="https://img.shields.io/badge/IEEE%20TMI-2512.03445-00629b.svg" alt="IEEE TMI"></a>
+  <a href="https://arxiv.org/abs/2505.09372"><img src="https://img.shields.io/badge/MICCAI'25-MAKE-8a2be2.svg" alt="MICCAI 2025 conference version"></a>
   <a href="https://huggingface.co/Xieji-Li/MAGEN-O-MAKE"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model-MAGEN--O--MAKE-yellow" alt="Hugging Face Model"></a>
   <a href="https://huggingface.co/datasets/Xieji-Li/Derm1M-AgentAug"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Derm1M--AgentAug-yellow" alt="Hugging Face Dataset"></a>
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License">
@@ -258,11 +258,26 @@ Built on [open_clip](https://github.com/mlfoundations/open_clip). The pretrainin
 
 ## Citation
 
+This work (IEEE Transactions on Medical Imaging):
+
 ```bibtex
 @article{li2025magenomake,
   title   = {Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-Agent Data Generation},
   author  = {Li, Xieji and Yan, Siyuan and Liu, Yingsheng and Soyer, H. Peter and Janda, Monika and Mar, Victoria and Ge, Zongyuan},
-  journal = {arXiv preprint arXiv:2512.03445},
-  year    = {2025}
+  journal = {IEEE Transactions on Medical Imaging},
+  year    = {2025},
+  note    = {arXiv:2512.03445; TODO: add volume/pages/DOI once assigned}
+}
+```
+
+The MICCAI'25 conference version this extends:
+
+```bibtex
+@inproceedings{yan2025make,
+  title     = {MAKE: Multi-Aspect Knowledge-Enhanced Vision-Language Pretraining for Zero-shot Dermatological Assessment},
+  author    = {Yan, Siyuan and others},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+  year      = {2025},
+  note      = {arXiv:2505.09372}
 }
 ```
