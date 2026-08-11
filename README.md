@@ -151,7 +151,7 @@ data/downstream/
 ```
 
 Each dataset directory holds `images/` plus its metadata CSVs. `meta/downstream/` carries the
-train/val/test splits used by linear probing and fine-tuning.
+train/val/test splits used by zero-shot, linear probing and fine-tuning.
 
 </details>
 
@@ -165,8 +165,7 @@ which runs all seven benchmarks:
 
 ```bash
 python src/test.py \
-    --model 'ViT-B-16' \
-    --resume checkpoints/O-MAKE_epoch_15.pt \
+    --model 'hf-hub:Xieji-Li/MAGEN-O-MAKE' \
     --batch-size 512 \
     --workers 8 \
     --csv-img-key filename \
@@ -180,7 +179,9 @@ python src/test.py \
     --eval-snu-tails data/downstream/SNU/MAKE_SNU_tails.csv
 ```
 
-Drop any `--eval-<dataset>` flag to skip that benchmark.
+Drop any `--eval-<dataset>` flag to skip that benchmark. The weights are fetched from the Hub; to
+score a local checkpoint instead, pass `--model ViT-B-16 --resume checkpoints/O-MAKE_epoch_15.pt`
+(or set `MODEL` and `CHECKPOINT` for the script).
 
 ### Results
 

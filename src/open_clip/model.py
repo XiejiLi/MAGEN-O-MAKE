@@ -268,7 +268,14 @@ class CLIP(nn.Module):
         self.transformer.grad_checkpointing = enable
 
     def encode_image(self, image, normalize: bool = False):
-        features, patch_embeddings = self.visual(image)
+        out = self.visual(image)
+        if not isinstance(out, (tuple, list)):
+            # A tower built from the plain ViT-B-16 config -- e.g. a checkpoint
+            # loaded straight from hf-hub, whose config omits patch_embeddings --
+            # returns pooled features only. That is all inference needs; training
+            # with --MKCL uses the patch branch and needs the repo's model config.
+            return F.normalize(out, dim=-1), None, None
+        features, patch_embeddings = out
         return F.normalize(features, dim=-1), F.normalize(patch_embeddings, dim=-1) if normalize else features, patch_embeddings
 
     def encode_text(self, text, normalize: bool = False):
@@ -386,7 +393,14 @@ class CustomTextCLIP(nn.Module):
         self.text.set_grad_checkpointing(enable)
 
     def encode_image(self, image, normalize: bool = False):
-        features, patch_embeddings = self.visual(image)
+        out = self.visual(image)
+        if not isinstance(out, (tuple, list)):
+            # A tower built from the plain ViT-B-16 config -- e.g. a checkpoint
+            # loaded straight from hf-hub, whose config omits patch_embeddings --
+            # returns pooled features only. That is all inference needs; training
+            # with --MKCL uses the patch branch and needs the repo's model config.
+            return F.normalize(out, dim=-1), None, None
+        features, patch_embeddings = out
         return F.normalize(features, dim=-1), F.normalize(patch_embeddings, dim=-1) if normalize else features, patch_embeddings
 
     def encode_text(self, text, normalize: bool = False):
