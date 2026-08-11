@@ -1,0 +1,427 @@
+{
+ "Hair diseases": {
+  "Alopecia areata": {},
+  "Androgenetic alopecia": {},
+  "Central centrifugal cicatricial alopecia": {},
+  "Alopecia mucinosa": {},
+  "Hypertrichosis": {}
+ },
+ "Nail diseases, nail disease": {
+  "Beau's lines": {},
+  "Koilonychia": {},
+  "Leukonychia": {},
+  "Median nail dystrophy": {},
+  "Nail dystrophy": {},
+  "Nail psoriasis": {},
+  "Onycholysis": {},
+  "Onychomycosis": {},
+  "Onychoschizia": {},
+  "Paronychia": {},
+  "Pincer nail deformity": {}
+ },
+ "exogenous": {
+  "Foreign body reaction of the skin": {},
+  "Arsenical keratosis": {},
+  "Actinic solar damage(actinic keratosis), Actinic keratosis": {},
+  "Actinic solar damage(cutis rhomboidalis nuchae)": {},
+  "Actinic solar damage(pigmentation)": {},
+  "Actinic solar damage(solar elastosis)": {},
+  "Actinic solar damage(solar purpura)": {},
+  "Actinic solar damage(telangiectasia)": {},
+  "Favre Racouchot": {},
+  "Actinic granuloma": {},
+  "Poikiloderma of Civatte": {},
+  "Sunburn": {
+   "Polymorphous light eruption": {},
+   "sun spots": {}
+  },
+  "physical": {
+   "Poisoning by nematocyst": {},
+   "Chondrodermatitis nodularis helicis": {},
+   "Knuckle pads": {},
+   "Miliaria": {},
+   "Juvenile plantar dermatosis": {},
+   "Factitial dermatitis": {},
+   "Radiodermatitis": {},
+   "Chilblain": {},
+   "Burn of skin": {
+    "Burn of forearm": {}
+   }
+  }
+ },
+ "hereditary": {
+  "Porphyria": {},
+  "Crowe's sign": {},
+  "Darier-White disease, Dariers disease": {},
+  "Ichthyosis": {},
+  "Keratosis pilaris": {
+   "Keratosis pilaris rubra faciei": {}
+  },
+  "Epidermolysis bullosa": {},
+  "Neurofibromatosis": {},
+  "Keratoderma, Hyperkeratosis palmaris et plantaris": {},
+  "Tuberous sclerosis": {},
+  "Xeroderma pigmentosum": {},
+  "Ehlers danlos syndrome": {},
+  "Hailey hailey disease": {},
+  "Acrokeratosis verruciformis": {}
+ },
+ "inflammatory": {
+  "infectious": {
+   "bacterial": {
+    "Infected eczema": {},
+    "Skin lesion in drug addict": {},
+    "Localized skin infection": {},
+    "Skin and soft tissue atypical mycobacterial infection": {},
+    "Skin diseases caused by warts": {},
+    "Mycosis fungoides": {},
+    "Pyoderma": {
+     "Impetigo": {},
+     "Abscess": {},
+     "Ecthyma, ecthyma gangrenosum": {}
+    },
+    "Cellulitis": {},
+    "Pitted keratolysis": {},
+    "Syphilis": {},
+    "Lyme disease": {},
+    "Folliculitis": {
+     "Majocchi granuloma": {},
+     "Furuncle": {}
+    },
+    "Staphylococcal scalded skin syndrome": {}
+   },
+   "fungal": {
+    "Kerion": {},
+    "Dermatophyte infections": {},
+    "Tinea": {},
+    "Tinea corporis": {},
+    "Tinea cruris": {},
+    "Tinea faciale": {},
+    "Tinea manus": {},
+    "Tinea pedis": {},
+    "Tinea versicolor": {},
+    "Tinea capitis": {},
+    "Candidiasis": {
+     "Candida intertrigo": {},
+     "Intertrigo": {}
+    },
+    "Pityrosporum folliculitis": {},
+    "Subcutaneous/Deep fungal infection, deep fungal infection, Subcutaneous": {},
+    "Fungal dermatitis": {}
+   },
+   "viral": {
+    "Parvovirus B19 infection": {},
+    "Condyloma acuminatum, Condyloma": {},
+    "Herpes simplex virus": {},
+    "Herpes zoster": {},
+    "Varicella": {},
+    "Molluscum contagiosum": {},
+    "Viral exanthem": {
+     "Unilateral laterothoracic exanthem": {},
+     "Viral exanthems: roseola, Sixth disease": {}
+    },
+    "Hand foot and mouth disease": {}
+   },
+   "parasitic": {
+    "Elephantiasis nostras": {},
+    "Sand-worm eruption": {},
+    "Scabies": {},
+    "Insect bite": {},
+    "Tungiasis": {},
+    "Cutaneous larva migrans": {},
+    "Tick bite": {
+     "Erythema migrans, Palpable migrating erythema": {}
+    },
+    "Nematode infection": {},
+    "Cutaneous leishmaniasis": {}
+   }
+  },
+  "non-infectious": {
+   "steroid acne": {},
+   "Acne urticata": {},
+   "Necrobiosis lipoidica": {},
+   "Degos disease": {},
+   "Morphea": {},
+   "Cutaneous lupus": {
+    "Lupus erythematosus": {}
+   },
+   "Autoimmune dermatitis": {},
+   "Localized cutaneous vasculitis": {},
+   "Pseudo-glucagonoma syndrome": {},
+   "Pruritus ani": {},
+   "Relapsing polychondritis": {},
+   "Erosive pustular dermatosis of the scalp": {},
+   "Neutrophilic dermatoses": {},
+   "Rheumatoid nodule": {},
+   "Geographic tongue": {},
+   "Pyoderma gangrenosum": {},
+   "hidradenitis suppurativa": {},
+   "perioral dermatitis": {},
+   "pseudofolliculitis barbae": {},
+   "Rosacea": {},
+   "Angular cheilitis": {},
+   "Drug eruption, Drug eruptions & reactions": {
+    "Stevens-Johnson syndrome": {}
+   },
+   "Psoriasis": {
+    "Guttate psoriasis": {},
+    "Inverse psoriasis": {},
+    "Psoriasis (plaque)": {},
+    "Pustular psoriasis": {},
+    "Scalp psoriasis": {},
+    "Parapsoriasis": {}
+   },
+   "Palmoplantar pustulosis": {},
+   "Acne keloidalis nuchae": {},
+   "Acne vulgaris": {},
+   "Disseminated actinic porokeratosis": {},
+   "Fixed drug eruption": {},
+   "Lymphocytic infiltrate of jessner": {},
+   "Eczema": {
+    "Acute constitutional eczema": {},
+    "Contact dermatitis": {},
+    "contact dermatitis caused by rhus diversiloba": {},
+    "Allergic contact dermatitis": {},
+    "Irritant contact dermatitis": {
+     "Phytophotodermatitis": {}
+    },
+    "Cheilitis": {},
+    "Dry skin eczema": {},
+    "Dyshidrosiform eczema": {},
+    "Hand eczema": {},
+    "Discoid eczema": {},
+    "Nummular eczema": {},
+    "keratolysis exfoliativa of wende": {},
+    "Seborrheic dermatitis": {},
+    "Infantile atopic dermatitis": {},
+    "Lichen simplex chronicus, ": {},
+    "Neurodermatitis": {}
+   },
+   "Erythema multiforme": {},
+   "Atopic dermatitis": {
+    "Atopic winter feet": {}
+   },
+   "Bullous disease": {
+    "Bullous pemphigoid": {
+     "childhood bullous pemphigoid": {}
+    },
+    "Pemphigus vulgaris": {},
+    "acquired autoimmune bullous diseaseherpes gestationis": {},
+    "": {}
+   },
+   "Transient acantholytic dermatosis, Grover's disease, Transient acantholytic dermatosis": {},
+   "Prurigo": {
+    "Prurigo nodularis": {},
+    "Prurigo pigmentosa": {}
+   },
+   "Sweet syndrome, sweet’s syndrome": {},
+   "Behcets disease": {},
+   "Muzzle rash": {},
+   "Urticarial vasculitis": {},
+   "Erythema nodosum": {},
+   "Annular erythema": {},
+   "Pityriasis rubra pilaris": {},
+   "lichen sclerosis et atrophicus, Lichen sclerosus et atrophicus": {},
+   "Pityriasis lichenoides": {
+    "Pityriasis lichenoides chronica": {},
+    "Pityriasis lichenoides et varioliformis acuta": {}
+   },
+   "Lichen planus": {},
+   "Lichen spinulosus": {},
+   "Granuloma annulare": {},
+   "Pityriasis rosea": {},
+   "Sarcoidosis, Cutaneous sarcoidosis": {},
+   "Pigmented purpuric eruption, Pigmented progressive purpuric dermatosis": {},
+   "Stasis dermatitis": {},
+   "Acute dermatitis": {},
+   "Confluent and reticulated papillomatosis": {},
+   "Chronic actinic dermatitis": {},
+   "Erythema annulare centrifugum": {},
+   "Acute generalized exanthematous pustulosis": {},
+   "Rhinophyma": {},
+   "Lichen striatus": {},
+   "Leukocytoclastic vasculitis": {},
+   "Granuloma faciale": {}
+  },
+  "Dermatitis (acute and chronic)": {
+   "Exfoliative dermatitis": {},
+   "Acute vesicular dermatitis": {}
+  },
+  "Inflammatory dermatosis": {},
+  "Chronic dermatitis, NOS": {}
+ },
+ "proliferations": {
+  "benign": {
+   "melanocytic": {
+    "Melasma, Lentigo": {},
+    "Melanocytic nevus": {},
+    "halo nevus": {},
+    "nevus incipiens": {},
+    "Campbell de morgan spots": {},
+    "Naevus comedonicus": {},
+    "Nevus depigmentosus": {},
+    "nevus spilus": {},
+    "Organoid nevus": {},
+    "Blue nevus": {},
+    "Compound nevus": {},
+    "Congenital nevus": {},
+    "Dysplastic nevus": {},
+    "Junction nevus": {},
+    "Café au lait macule": {},
+    "Ota nevus": {},
+    "Becker nevus": {}
+   },
+   "non-melanocytic": {
+    "Scleromyxedema": {},
+    "Poroma": {},
+    "Diffuse xanthoma": {},
+    "Histiocytosis of skin": {},
+    "Calcinosis cutis": {},
+    "Eruptive xanthoma": {},
+    "Langerhans cell histiocytosis": {},
+    "Amyloidosis": {},
+    "Porokeratosis": {
+     "Porokeratosis of Mibelli": {}
+    },
+    "Fox-fordyce disease": {},
+    "Cutaneous sarcoidosis": {},
+    "Angioma, Hemangioma": {
+     "Strawberry birthmarks": {}
+    },
+    "Angiofibroma": {},
+    "Apocrine hydrocystoma": {},
+    "Benign keratosis": {},
+    "Dermatofibroma": {},
+    "Dermatosis papulosa nigra": {},
+    "Digital fibroma": {},
+    "Dilated pore of Winer": {},
+    "Epidermal nevus": {},
+    "Fibroma molle": {},
+    "Keloid": {},
+    "Lipoma": {},
+    "Milia": {},
+    "Neurofibroma": {},
+    "Nevus sebaceous of Jadassohn": {},
+    "Pyogenic granuloma": {},
+    "Sebaceous gland hyperplasia, Sebaceous hyperplasia": {},
+    "Seborrheic keratosis": {
+     "irritated seborrheic keratosis (from \"sk/isk\")": {},
+     "Seborrheic keratoses": {}
+    },
+    "Skin tag": {},
+    "Syringoma": {},
+    "Verruca vulgaris": {
+     "Flat wart": {},
+     "Condyloma acuminatum": {}
+    },
+    "Angiokeratoma": {},
+    "Juvenile xanthogranuloma": {},
+    "Xanthelasma": {},
+    "Port wine stain": {},
+    "Venous lake": {}
+   }
+  },
+  "cysts, cyst": {
+   "Epidermoid cyst": {},
+   "Myxoid cyst": {},
+   "Pilar cyst": {},
+   "Mucocele": {},
+   "Eruptive odontogenic cyst": {},
+   "Steatocystoma multiplex": {}
+  },
+  "malignant": {
+   "melanocytic": {
+    "Lentigo maligna melanoma, Lentigo maligna": {},
+    "Malignant melanoma, melanoma": {},
+    "Superficial spreading melanoma SSM": {},
+    "Mucosal melanotic macule": {}
+   },
+   "non-melanocytic": {
+    "Lymphangioma": {},
+    "Mucinosis": {},
+    "Basal cell carcinoma": {},
+    "Bowen's disease": {},
+    "Keratoacanthoma": {},
+    "Metastatic carcinoma": {},
+    "Squamous cell carcinoma": {},
+    "Kaposi sarcoma": {
+     "Kaposi's sarcoma of skin": {}
+    },
+    "Cutaneous T-cell lymphoma, cutaneous t cell lymphoma": {},
+    "Cutaneous B-cell lymphoma": {},
+    "Merkel cell carcinoma": {}
+   }
+  }
+ },
+ "reaction patterns and descriptive terms": {
+  "Hyperkeratosis palmaris et plantaris": {},
+  "Superficial gyrate erythema": {},
+  "Telangiectasia macularis eruptiva perstans": {},
+  "Erythema gyratum repens": {},
+  "Pruritic urticarial papules and plaques of pregnancy, PUPPP": {},
+  "Animal bite - wound": {},
+  "Wound/Abrasion": {
+   "Local infection of wound": {}
+  },
+  "Flushing": {},
+  "Callus": {},
+  "Clubbing of fingers": {},
+  "Cutaneous horn": {},
+  "Desquamation": {},
+  "Erythema craquele": {},
+  "Exfoliative erythroderma": {},
+  "Follicular mucinosis": {},
+  "Granulation tissue": {},
+  "Livedo reticularis": {},
+  "Pseudorhinophyma": {},
+  "Striae": {
+   "Red stretch marks": {}
+  },
+  "Scar": {
+   "Hypertrophic scar": {}
+  },
+  "Stasis edema": {},
+  "Steroid use abuse, Steroid use abusemisuse dermatitis": {
+   "misuse dermatitis": {}
+  },
+  "Ulcers, Erosion of skin": {
+   "Ulcer": {},
+   "Stasis ulcer": {},
+   "Foot ulcer": {},
+   "Pressure ulcer": {},
+   "Traumatic ulcer": {}
+  },
+  "Xerosis": {
+   "Xerotic eczema": {}
+  },
+  "Hyperpigmentation": {
+   "Erythema dyschromicum perstans": {},
+   "Melanin pigmentation due to exogenous substance": {},
+   "Hemosiderin pigmentation of skin due to venous insufficiency": {},
+   "Post-inflammatory pigmentation, post-inflammatory hyperpigmentation": {},
+   "Pigmentation of pregnancy": {},
+   "Drug-induced pigmentary changes": {},
+   "Medication-induced cutaneous pigmentation": {},
+   "Riehl melanosis": {}
+  },
+  "Acanthosis nigricans": {},
+  "Poikiloderma": {},
+  "Hypersensitivity, allergic reaction": {
+   "Contact purpura": {},
+   "Urticaria": {
+    "Urticaria pigmentosa": {}
+   },
+   "Post-inflammatory hypopigmentation": {}
+  },
+  "Vitiligo": {},
+  "Spider veins": {},
+  "Idiopathic guttate hypomelanosis": {},
+  "Erythema elevatum diutinum": {},
+  "Hematoma of skin": {},
+  "Cholestasis of pregnancy": {},
+  "Polymorphic eruption of pregnancy": {},
+  "Papular dermatoses of pregnancy": {},
+  "Prurigo of pregnancy": {},
+  "Prurigo gravidarum": {}
+ }
+}

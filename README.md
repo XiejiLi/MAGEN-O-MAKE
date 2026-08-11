@@ -20,6 +20,7 @@ We propose a novel medical VLP framework combining **MAGEN** (Multi-Agent data G
 ## Repository layout
 
 ```
+├── magen/                      MAGEN multi-agent data generation (recaptions Derm1M)
 ├── src/                        O-MAKE pretraining + evaluation
 ├── linear_probe/               frozen-encoder linear probing
 ├── finetune/                   end-to-end fine-tuning
