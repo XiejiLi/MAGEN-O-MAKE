@@ -35,6 +35,9 @@ PROVENANCE = ['source', 'source_type']
 
 OLD_ROOT = '/VL_Data/'
 NEW_ROOT = 'data/pretrain/images/'
+# Internal column: where the image actually sits under --image-root. Consumed by
+# build_pretrain_parquet.py and stripped from anything released.
+SOURCE_PATH = '_source_path'
 
 
 def main():
@@ -61,22 +64,32 @@ def main():
     if bad.any():
         sys.exit(f'{bad.sum()} paths do not start with {OLD_ROOT}, e.g. '
                  f'{df.loc[bad, "filename"].iloc[0]!r}')
-    df['filename'] = df['filename'].astype(str).str.replace(OLD_ROOT, NEW_ROOT, n=1, regex=False)
+
+    # Original location, relative to --image-root, kept for the parquet builder.
+    df[SOURCE_PATH] = df['filename'].astype(str).str.slice(len(OLD_ROOT))
+
+    # Released layout: one directory per corpus, named by the `source` column
+    # rather than the internal working directory names. Verified collision-free.
+    df['filename'] = (NEW_ROOT + df['source'].astype(str) + '/'
+                      + df[SOURCE_PATH].map(os.path.basename))
+    dupes = df['filename'].duplicated().sum()
+    if dupes:
+        sys.exit(f'{dupes} duplicate filenames after normalisation; refusing to '
+                 f'write a CSV whose images would overwrite each other')
 
     if args.image_root:
         import random
         random.seed(0)
-        sample = random.sample(df['filename'].tolist(), min(300, len(df)))
+        sample = random.sample(df[SOURCE_PATH].tolist(), min(300, len(df)))
         missing_imgs = [p for p in sample
-                        if not os.path.exists(os.path.join(
-                            args.image_root, p[len(NEW_ROOT):]))]
+                        if not os.path.exists(os.path.join(args.image_root, p))]
         print(f'sampled {len(sample)} images under {args.image_root}: '
               f'{len(missing_imgs)} missing')
 
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     df.to_csv(args.out, index=False)
     print(f'\nwrote {args.out}  ({os.path.getsize(args.out) / 1e6:.0f} MB, '
-          f'{len(df)} rows, {len(df.columns)} columns)')
+          f'{len(df)} rows, {len(df.columns)} columns incl. {SOURCE_PATH})')
     print(f'example filename: {df["filename"].iloc[0]}')
 
 

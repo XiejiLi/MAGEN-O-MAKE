@@ -23,13 +23,7 @@ import pandas as pd
 from datasets import Dataset, Features, Image, Value
 
 PATH_PREFIX = 'data/pretrain/images/'
-
-
-def resolve(rel_path, image_root):
-    """data/pretrain/images/<rest> -> <image_root>/<rest>"""
-    if not rel_path.startswith(PATH_PREFIX):
-        raise ValueError(f'unexpected path: {rel_path}')
-    return os.path.join(image_root, rel_path[len(PATH_PREFIX):])
+SOURCE_PATH = '_source_path'   # written by build_pretrain_csv.py, never released
 
 
 def main():
@@ -50,7 +44,11 @@ def main():
     os.makedirs(args.out, exist_ok=True)
     print(f'{len(df)} rows, {len(df.columns)} columns -> {args.out}')
 
-    text_cols = [c for c in df.columns if c != 'filename']
+    if SOURCE_PATH not in df.columns:
+        sys.exit(f'{args.csv} has no {SOURCE_PATH} column; rebuild it with '
+                 f'script/build_pretrain_csv.py')
+    # Everything except the image path itself and the internal locator column.
+    text_cols = [c for c in df.columns if c not in ('filename', SOURCE_PATH)]
     # Declaring `image` as datasets.Image() writes HuggingFace feature metadata
     # into the parquet schema, which is what makes the dataset viewer render the
     # column as a picture and load_dataset return a decoded PIL image.
@@ -75,8 +73,8 @@ def main():
         shard_idx += 1
 
     for record in df.to_dict('records'):
-        rel = str(record['filename'])
-        src = resolve(rel, args.image_root)
+        rel = str(record['filename'])                       # released path
+        src = os.path.join(args.image_root, str(record[SOURCE_PATH]))   # on-disk path
         try:
             with open(src, 'rb') as fh:
                 data = fh.read()
