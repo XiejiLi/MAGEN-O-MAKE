@@ -179,10 +179,6 @@ python src/test.py \
     --eval-snu-tails data/downstream/SNU/MAKE_SNU_tails.csv
 ```
 
-Drop any `--eval-<dataset>` flag to skip that benchmark. The weights are fetched from the Hub; to
-score a local checkpoint instead, pass `--model ViT-B-16 --resume checkpoints/O-MAKE_epoch_15.pt`
-(or set `MODEL` and `CHECKPOINT` for the script).
-
 ### Results
 
 Top-1 accuracy against open-source dermatology and general-domain VLMs.
