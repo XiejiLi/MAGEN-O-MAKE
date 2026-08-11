@@ -97,6 +97,11 @@ all commands from there.
 [🤗 Xieji-Li/Derm1M-AgentAug](https://huggingface.co/datasets/Xieji-Li/Derm1M-AgentAug) holds the
 MAGEN-augmented captions together with their images.
 
+> The images and the original captions come from **[Derm1M](https://github.com/SiyuanYan1/Derm1M)**.
+> Derm1M-AgentAug is a derivative that adds MAGEN-generated captions and knowledge-aspect
+> decompositions; MAGEN rewrote 186,069 of the 403,563 training captions (46.1%), and the
+> `agent_generated` column marks which. Please cite Derm1M alongside this work.
+
 ```python
 from datasets import load_dataset
 
@@ -124,6 +129,7 @@ for row in ds:
 | `sub_caption_mask` | 8-element mask marking which subcaptions are present |
 | `knowledge_masks` | 3-element mask over (caption, ontology, visual-concept) |
 | `ontology_label` | index into the disease hierarchy, `-1` when unmapped |
+| `agent_generated` | `True` if MAGEN rewrote this caption, `False` if it is the original Derm1M text |
 | `source`, `source_type` | corpus of origin |
 
 </details>
@@ -252,9 +258,9 @@ Built on [open_clip](https://github.com/mlfoundations/open_clip). The pretrainin
 ## Citation
 
 ```bibtex
-@article{magenomake2025,
+@article{li2025magenomake,
   title   = {Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-Agent Data Generation},
-  author  = {TODO: fill in the author list},
+  author  = {Li, Xieji and Yan, Siyuan and Liu, Yingsheng and Soyer, H. Peter and Janda, Monika and Mar, Victoria and Ge, Zongyuan},
   journal = {arXiv preprint arXiv:2512.03445},
   year    = {2025}
 }
