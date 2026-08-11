@@ -21,8 +21,8 @@ import re
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def get_args_parser():
     parser = argparse.ArgumentParser('linear probing for skin image classification', add_help=False)
-    parser.add_argument('--csv_path', default="/home/share/Uni_Eval/Derm7pt/atlas-clinical-all.csv" , type=str,
-                    help='csv file path')
+    parser.add_argument('--csv_path', required=True, type=str,
+                    help='metadata CSV with image_path / label / split columns')
     parser.add_argument('--csv_filename', default="" , type=str,
                     help='csv file name')
     parser.add_argument('--image_key', default="filename" , type=str,

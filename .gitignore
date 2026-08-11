@@ -10,6 +10,7 @@ checkpoints/
 
 # Run outputs
 logs/
+magen/work/
 wandb/
 output/
 *.log

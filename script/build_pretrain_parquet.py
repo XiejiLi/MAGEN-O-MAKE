@@ -12,7 +12,7 @@ repository, hence the packing.
 Usage:
     python script/build_pretrain_parquet.py \
         --csv data/pretrain/MAGEN_train.csv \
-        --image-root /home/share/VL_Data \
+        --image-root /path/to/derm1m/images \
         --out /path/to/parquet_shards
 """
 import argparse
