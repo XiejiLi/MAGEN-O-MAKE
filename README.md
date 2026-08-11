@@ -4,7 +4,8 @@ Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-A
 
 <p align="center">
   <a href="https://arxiv.org/abs/2512.03445"><img src="https://img.shields.io/badge/arXiv-2512.03445-b31b1b.svg" alt="arXiv"></a>
-  <a href="https://huggingface.co/Xieji-Li/MAGEN-O-MAKE"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Xieji--Li/MAGEN--O--MAKE-yellow" alt="Hugging Face"></a>
+  <a href="https://huggingface.co/Xieji-Li/MAGEN-O-MAKE"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model-MAGEN--O--MAKE-yellow" alt="Hugging Face Model"></a>
+  <a href="https://huggingface.co/datasets/Xieji-Li/Derm1M-AgentAug"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Derm1M--AgentAug-yellow" alt="Hugging Face Dataset"></a>
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License">
 </p>
 
