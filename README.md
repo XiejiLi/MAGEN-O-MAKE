@@ -237,7 +237,7 @@ bash script/pretrain.sh
 This reproduces the released checkpoint: CLIP ViT-B/16 initialised from OpenAI weights, 15 epochs at
 batch size 2048, with multi-aspect knowledge contrastive learning (`--MKCL --subcaptions
 --num_subcaptions 8`) and Ontology-Based Multi-Knowledge Contrastive Learning (`--OHCL --OHCL_temp 0.07
---OHCL_beta 0.5 --loss_type 'cross entropy'`).
+--OHCL_beta 0.5`).
 
 It reads the MAGEN-augmented corpus from `data/pretrain/` — see
 [Data preparation](#data-preparation) for the schema and how to materialise the images.
