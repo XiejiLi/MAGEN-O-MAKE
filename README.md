@@ -32,6 +32,9 @@ We propose a novel medical VLP framework combining **MAGEN** (Multi-Agent data G
     └── downstream/             zero-shot benchmark datasets
 ```
 
+Each of `magen/`, `linear_probe/` and `finetune/` is self-contained; `magen/` has its own
+[README](magen/README.md) covering the data-generation pipeline.
+
 ## Environment
 
 ```bash
@@ -104,6 +107,8 @@ MAGEN-augmented captions together with their images.
 > Derm1M-AgentAug is a derivative that adds MAGEN-generated captions and knowledge-aspect
 > decompositions; MAGEN rewrote 186,069 of the 403,563 training captions (46.1%), and the
 > `agent_generated` column marks which. Please cite Derm1M alongside this work.
+>
+> The pipeline that produced these captions is released under [`magen/`](magen/README.md).
 
 ```python
 from datasets import load_dataset
@@ -227,6 +232,16 @@ bash script/finetune.sh                  # PAD, F17K, SNU, SD-128, Daffodil, ISI
 DATASETS='PAD' bash script/finetune.sh   # a single dataset
 ```
 
+## Data generation (MAGEN)
+
+[`magen/`](magen/README.md) holds the multi-agent pipeline that turned Derm1M into
+Derm1M-AgentAug: it scores every image-text pair, recaptions the mismatched ones with a captioning
+agent grounded in a disease shortlist, verifies the diagnosis against structured disease knowledge,
+and decomposes each caption into the knowledge aspects O-MAKE aligns against.
+
+The exact prompt for each of the three agents is reproduced there. The captioning agent's weights
+are not released — see [`magen/README.md`](magen/README.md) for why.
+
 ## Pretraining
 
 ```bash
@@ -239,7 +254,8 @@ batch size 2048, with multi-aspect knowledge contrastive learning (`--MKCL --sub
 --OHCL_beta 0.5`).
 
 It reads the MAGEN-augmented corpus from `data/pretrain/` — see
-[Data preparation](#data-preparation) for the schema and how to materialise the images.
+[Data preparation](#data-preparation) for the schema and how to materialise the images, and
+[`magen/`](magen/README.md) for how that corpus was generated.
 
 The ontology asset used by O-MAKE ships with the code:
 `src/open_clip_train/ontology/ontology_distance.npy` holds the precomputed pairwise distances in the
