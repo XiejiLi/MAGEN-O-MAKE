@@ -1,6 +1,6 @@
 # MAGEN-O-MAKE
 
-Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-Agent Data Generation
+Multi-Aspect Knowledge-Enhanced Dermatological Vision-Language Pretraining with Multi-Agent Data Generation
 
 <p align="center">
   <a href="https://arxiv.org/abs/2512.03445"><img src="https://img.shields.io/badge/IEEE%20TMI-2512.03445-00629b.svg" alt="IEEE TMI"></a>
@@ -262,7 +262,7 @@ This work (IEEE Transactions on Medical Imaging):
 
 ```bibtex
 @article{li2025magenomake,
-  title   = {Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-Agent Data Generation},
+  title   = {Multi-Aspect Knowledge-Enhanced Dermatological Vision-Language Pretraining with Multi-Agent Data Generation},
   author  = {Li, Xieji and Yan, Siyuan and Liu, Yingsheng and Soyer, H. Peter and Janda, Monika and Mar, Victoria and Ge, Zongyuan},
   journal = {IEEE Transactions on Medical Imaging},
   year    = {2025},
