@@ -4,6 +4,7 @@ Multi-Aspect Knowledge-Enhanced Medical Vision-Language Pretraining with Multi-A
 
 <p align="center">
   <a href="https://arxiv.org/abs/2512.03445"><img src="https://img.shields.io/badge/arXiv-2512.03445-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2505.09372"><img src="https://img.shields.io/badge/MICCAI'25-MAKE-8a2be2.svg" alt="MICCAI 2025 conference paper"></a>
   <a href="https://huggingface.co/Xieji-Li/MAGEN-O-MAKE"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model-MAGEN--O--MAKE-yellow" alt="Hugging Face Model"></a>
   <a href="https://huggingface.co/datasets/Xieji-Li/Derm1M-AgentAug"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Derm1M--AgentAug-yellow" alt="Hugging Face Dataset"></a>
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License">
@@ -252,7 +253,8 @@ non-commercial research use.
 ## Acknowledgements
 
 Built on [open_clip](https://github.com/mlfoundations/open_clip). The pretraining corpus derives from
-[Derm1M](https://github.com/SiyuanYan1/Derm1M); this work extends [MAKE](https://github.com/SiyuanYan1/MAKE) (MICCAI'25).
+[Derm1M](https://github.com/SiyuanYan1/Derm1M); this work extends [MAKE](https://github.com/SiyuanYan1/MAKE)
+([MICCAI'25](https://arxiv.org/abs/2505.09372)).
 
 ## Citation
 
