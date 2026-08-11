@@ -138,7 +138,7 @@ for row in ds:
 </details>
 
 <details>
-<summary><b>Evaluation data — downstream benchmarks (7.0 GB)</b></summary>
+<summary><b>Evaluation data — Downstream Benchmarks</b></summary>
 
 Download `MAGEN-O-MAKE_downstream.tar.gz` from
 [Google Drive](https://drive.google.com/drive/folders/1OnLA1gBFg0To7TplSVEE7FzO6vmmLvQ4) and unpack it:
